@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Jurrasic",
+    "artist": "John Williams",
+    "content": "content/jurrasic.musicxml",
+    "thumbnail": "",
+    "image": "images/jurrasic.jpeg"
+  },
+  {
+    "title": "Love Story",
+    "artist": "Indila",
+    "content": "content/love_story.musicxml",
+    "thumbnail": "",
+    "image": "images/love_story.jpeg"
+  }
+]

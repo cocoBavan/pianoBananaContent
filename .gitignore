@@ -1,0 +1,9 @@
+# Local utility scripts — NOT committed to the public repo
+/scripts/
+
+# macOS
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
