@@ -22,5 +22,13 @@
     "content": "content/squigly.musicxml",
     "thumbnail": "",
     "image": ""
+  },
+  {
+    "title": "Threebar",
+    "artist": "Unknown Artist",
+    "difficulty": "hard",
+    "content": "content/threebar.musicxml",
+    "thumbnail": "",
+    "image": ""
   }
 ]
