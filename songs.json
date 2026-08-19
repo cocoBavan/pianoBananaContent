@@ -14,5 +14,13 @@
     "thumbnail": "",
     "image": "images/love_story.jpeg",
     "difficulty": "medium"
+  },
+  {
+    "title": "Squigly",
+    "artist": "Bavan",
+    "difficulty": "easy",
+    "content": "content/squigly.musicxml",
+    "thumbnail": "",
+    "image": ""
   }
 ]
