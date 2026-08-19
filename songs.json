@@ -30,5 +30,13 @@
     "content": "content/threebar.musicxml",
     "thumbnail": "",
     "image": ""
+  },
+  {
+    "title": "Tie",
+    "artist": "Unknown Artist",
+    "difficulty": "veryhard",
+    "content": "content/tie.musicxml",
+    "thumbnail": "",
+    "image": ""
   }
 ]
