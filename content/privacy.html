@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Piano Banana</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              piano: {
+                dark: "#121316",
+                surface: "#1d1f24",
+                border: "#2e323b",
+                accent: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .print-only {
+        display: none;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .shadow-card {
+          box-shadow: none !important;
+          border: 1px solid #e2e8f0 !important;
+        }
+      }
+      .highlight-mark {
+        background-color: #fef08a;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900"
+  >
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 no-print transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-tr from-amber-500 to-yellow-300 flex items-center justify-center shadow-md shadow-amber-500/20 text-slate-950 font-black text-xl"
+            >
+              <!-- Custom SVG Piano Banana Icon -->
+              <svg
+                class="w-6 h-6 sm:w-7 sm:h-7 text-slate-900"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2v-5h2v5zm0-7h-2V7h2v2.5z"
+                />
+                <path
+                  d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM19 18H6c-2.21 0-4-1.79-4-4 0-2.05 1.53-3.76 3.56-3.97l1.07-.11.5-.95C8.08 7.14 9.94 6 12 6c2.62 0 4.88 1.86 5.39 4.43l.3 1.5 1.53.11c1.56.1 2.78 1.41 2.78 2.96 0 1.65-1.35 3-3 3z"
+                  opacity="0.3"
+                />
+                <path d="M7 9h2v6H7zm4 0h2v6h-2zm4 0h2v6h-2z" fill="#1e293b" />
+              </svg>
+            </div>
+            <div>
+              <span
+                class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight"
+                >Piano Banana</span
+              >
+              <span
+                class="text-xs font-semibold text-amber-600 tracking-wider uppercase"
+                >Privacy First App</span
+              >
+            </div>
+          </div>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <button
+              onclick="window.print()"
+              class="inline-flex items-center gap-2 px-3.5 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg
+                class="w-4 h-4 text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                ></path>
+              </svg>
+              <span class="hidden sm:inline">Print / Save PDF</span>
+            </button>
+
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold text-slate-900 bg-amber-400 hover:bg-amber-500 rounded-lg shadow-sm transition-all"
+            >
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section
+      class="bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-slate-50 border-b border-slate-200/60 py-10 sm:py-14"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            Effective Date: August 21, 2026
+          </div>
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4"
+          >
+            Privacy Policy
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed">
+            At <strong class="text-slate-900">Piano Banana</strong>, we believe
+            your sheet music, practice history, and personal photos belong to
+            you—and only you. Learn how we handle your image scans with total
+            privacy.
+          </p>
+        </div>
+
+        <!-- Key Privacy Guarantees Grid -->
+        <div
+          class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print"
+        >
+          <!-- Card 1 -->
+          <div
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">
+                Zero Server Storage
+              </h3>
+              <p class="text-xs text-slate-500 leading-normal">
+                Your pictures & sheet music data are never saved on our servers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-xl bg-blue-100 text-blue-700 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">
+                100% On-Device
+              </h3>
+              <p class="text-xs text-slate-500 leading-normal">
+                All app state, converted notes, and history live solely inside
+                your phone.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M13 10V3L4 14h7v7l9-11h-7z"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">
+                Pass-Through AI
+              </h3>
+              <p class="text-xs text-slate-500 leading-normal">
+                Images are processed in real-time and immediately wiped after
+                conversion.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between"
+          >
+            <div>
+              <div
+                class="w-10 h-10 rounded-xl bg-purple-100 text-purple-700 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M18.364 18.364A9 9 0 005.636 5.636m12.728 12.728A9 9 0 015.636 5.636m12.728 12.728L5.636 5.636"
+                  ></path>
+                </svg>
+              </div>
+              <h3 class="font-bold text-slate-900 text-base mb-1">
+                No Data Selling
+              </h3>
+              <p class="text-xs text-slate-500 leading-normal">
+                We do not sell, track, or share your musical data with third
+                parties.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main
+      class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+    >
+      <!-- Interactive Filter/Search Bar -->
+      <div class="mb-8 no-print">
+        <div class="relative max-w-xl">
+          <input
+            type="text"
+            id="policySearch"
+            placeholder="Search privacy terms (e.g., 'camera', 'AI', 'storage', 'delete')..."
+            class="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-sm transition-all text-sm"
+          />
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          id="searchResultsCount"
+          class="text-xs text-slate-500 mt-2 hidden"
+        ></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Sidebar Navigation (Table of Contents) -->
+        <aside class="lg:col-span-4 sticky top-24 no-print hidden lg:block">
+          <div
+            class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3"
+          >
+            <h2
+              class="text-xs font-bold uppercase tracking-wider text-slate-400 px-2"
+            >
+              Table of Contents
+            </h2>
+            <nav class="space-y-1 text-sm font-medium" id="tocNav">
+              <a
+                href="#overview"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >1. Overview & Vision</a
+              >
+              <a
+                href="#camera-processing"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >2. How Sheet Music Scanning Works</a
+              >
+              <a
+                href="#ai-engine"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >3. AI Engine & Pass-Through Data</a
+              >
+              <a
+                href="#device-storage"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >4. On-Device Local Storage</a
+              >
+              <a
+                href="#permissions"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >5. Device Permissions Requested</a
+              >
+              <a
+                href="#analytics"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >6. Analytics & Crash Reports</a
+              >
+              <a
+                href="#third-parties"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >7. Third-Party Service Providers</a
+              >
+              <a
+                href="#children"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >8. Children's Privacy</a
+              >
+              <a
+                href="#user-control"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >9. Your Control & Data Deletion</a
+              >
+              <a
+                href="#updates"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >10. Policy Updates</a
+              >
+              <a
+                href="#contact"
+                class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+                >11. Contact Us</a
+              >
+            </nav>
+
+            <div class="pt-4 border-t border-slate-100">
+              <div
+                class="bg-amber-50 border border-amber-200/80 rounded-xl p-3 text-xs text-amber-900"
+              >
+                <strong>Need help?</strong>
+                <p class="mt-1 text-amber-800/90">
+                  If you have specific questions about our privacy practices,
+                  please contact us directly.
+                </p>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <!-- Main Content Clauses -->
+        <div class="lg:col-span-8 space-y-8" id="policyContent">
+          <!-- Section 1 -->
+          <section
+            id="overview"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >1</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Overview & Core Privacy Vision
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                Welcome to <strong>Piano Banana</strong> ("we", "our", or "us").
+                Piano Banana is an intelligent mobile application designed to
+                assist musicians by recognizing sheet music, transcribing
+                musical notes, and returning playable or structured music data
+                directly back to your device.
+              </p>
+              <p>
+                We built Piano Banana around a core principle:
+                <strong>Your creative work is private.</strong> Unlike
+                traditional cloud applications that archive your uploads in
+                distant database clusters, Piano Banana acts as an immediate
+                processing pipeline without persisting any of your content on
+                server storage.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 2 -->
+          <section
+            id="camera-processing"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >2</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                How Sheet Music Scanning Works
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base"
+            >
+              <p>
+                When you capture or upload a photograph of a music score inside
+                Piano Banana, the following sequence occurs:
+              </p>
+              <ol class="list-decimal list-inside space-y-2 pl-2">
+                <li>
+                  <strong>Image Capture:</strong> You photograph a sheet music
+                  page using your device camera or select a photo from your
+                  local media library.
+                </li>
+                <li>
+                  <strong>Secure Transmission:</strong> The image is encrypted
+                  using industry-standard SSL/TLS (HTTPS) during transit and
+                  dispatched to our processing endpoint.
+                </li>
+                <li>
+                  <strong>AI Analysis:</strong> The AI engine inspects the image
+                  solely to detect staves, clefs, key signatures, and musical
+                  note values.
+                </li>
+                <li>
+                  <strong>Data Return:</strong> The extracted musical output
+                  (such as MIDI, XML, or interactive playback formats) is
+                  returned directly back to your application.
+                </li>
+                <li>
+                  <strong>Immediate Purge:</strong> Once the server finishes
+                  generating the musical response, the source image and
+                  transient files are
+                  <strong
+                    >permanently deleted from server RAM/volatile memory</strong
+                  >.
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <!-- Section 3 -->
+          <section
+            id="ai-engine"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >3</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                AI Engine & Zero Server Retention
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p class="font-medium text-slate-800">
+                We guarantee that nothing from your scans is stored on
+                server-side disks or used to train public machine learning
+                models.
+              </p>
+              <div
+                class="bg-slate-50 border-l-4 border-amber-500 p-4 rounded-r-xl my-3"
+              >
+                <p class="text-xs sm:text-sm text-slate-700 font-semibold mb-1">
+                  Our Pass-Through Guarantee:
+                </p>
+                <p class="text-xs sm:text-sm text-slate-600">
+                  Server memory holds image data strictly during the millisecond
+                  runtime required to calculate musical geometry. No database
+                  entries, persistent logs, or cloud backups of your music
+                  sheets are ever created.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 4 -->
+          <section
+            id="device-storage"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >4</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                On-Device Local Storage
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                Because our servers store zero user data,
+                <strong
+                  >100% of your saved items, music history, favorite scores,
+                  sound preferences, and offline transcriptions are stored
+                  directly on your personal device</strong
+                >.
+              </p>
+              <ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+                <li>
+                  Your sheet music library remains in your device's isolated app
+                  sandbox storage.
+                </li>
+                <li>
+                  If you back up your device via iOS iCloud Backup or Android
+                  System Backup, your local Piano Banana data follows your
+                  system backup settings.
+                </li>
+                <li>
+                  Deleting the Piano Banana app from your device will
+                  permanently erase all locally stored sheet music unless you
+                  have exported your files externally.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 5 -->
+          <section
+            id="permissions"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >5</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Device Permissions Requested
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base"
+            >
+              <p>
+                To provide core features, Piano Banana requests access to
+                specific hardware capabilities:
+              </p>
+
+              <div class="space-y-3">
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200"
+                >
+                  <div
+                    class="p-2 rounded-lg bg-amber-100 text-amber-800 shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M3 9a2 2 0 012-2h0.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-sm">
+                      Camera Permission
+                    </h4>
+                    <p class="text-xs text-slate-500">
+                      Required solely to photograph physical sheet music pages
+                      directly within the application.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200"
+                >
+                  <div
+                    class="p-2 rounded-lg bg-amber-100 text-amber-800 shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-sm">
+                      Photo Library Permission
+                    </h4>
+                    <p class="text-xs text-slate-500">
+                      Allows you to select previously saved images or PDFs of
+                      musical scores for AI processing.
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="flex items-start gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200"
+                >
+                  <div
+                    class="p-2 rounded-lg bg-amber-100 text-amber-800 shrink-0"
+                  >
+                    <svg
+                      class="w-5 h-5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-slate-900 text-sm">
+                      Microphone / Audio Output (Optional)
+                    </h4>
+                    <p class="text-xs text-slate-500">
+                      Used for interactive pitch playback or tuning utilities.
+                      We do not record or transmit ambient background
+                      conversations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Section 6 -->
+          <section
+            id="analytics"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >6</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Analytics & Diagnostics
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                To maintain app stability and improve recognition speeds, we may
+                collect minimal, aggregated telemetry data:
+              </p>
+              <ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+                <li>
+                  Anonymized crash reports (e.g., call stack traces, device
+                  model, operating system version).
+                </li>
+                <li>
+                  Aggregated performance metrics (e.g., average time taken for
+                  AI sheet transcription).
+                </li>
+              </ul>
+              <p class="text-xs text-slate-500">
+                * Note: Telemetry data contains no personally identifiable
+                information (PII) and can never be linked back to individual
+                sheet music scans.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 7 -->
+          <section
+            id="third-parties"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >7</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Third-Party Service Providers
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                We partner with secure cloud infrastructure providers (such as
+                Amazon Web Services / Google Cloud / OpenAI API) exclusively for
+                real-time computational inference.
+              </p>
+              <p>
+                All third-party infrastructure partners are contractually bound
+                under Data Processing Agreements (DPAs) strictly forbidding them
+                from storing, mining, or sharing any transient payload data
+                processed on behalf of Piano Banana users.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 8 -->
+          <section
+            id="children"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >8</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Children's Privacy
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                Piano Banana is suitable for music students of all ages,
+                including young children learning piano. Because we do not
+                collect accounts, personal profiles, real names, or persistent
+                images, we fully comply with COPPA (Children's Online Privacy
+                Protection Act) and GDPR child privacy standards.
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 9 -->
+          <section
+            id="user-control"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >9</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Your Data Rights & Deletion
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed space-y-3 text-sm sm:text-base"
+            >
+              <p>
+                Since all data resides on your phone, you have absolute control
+                over your information at all times:
+              </p>
+              <ul class="list-disc list-inside space-y-2 pl-2">
+                <li>
+                  <strong>Clear In-App Library:</strong> You can delete any
+                  saved sheet music score inside Piano Banana at any time.
+                </li>
+                <li>
+                  <strong>Reset App Data:</strong> Clearing the app storage or
+                  uninstalling Piano Banana instantly and permanently deletes
+                  all data from your device.
+                </li>
+                <li>
+                  <strong>No Account Deletion Request Needed:</strong> Because
+                  we don't store accounts on cloud servers, you don't need to
+                  request server-side deletion—your data is already yours alone.
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- Section 10 -->
+          <section
+            id="updates"
+            class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-sm"
+                >10</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">
+                Policy Updates
+              </h2>
+            </div>
+            <div
+              class="prose prose-slate text-slate-600 leading-relaxed text-sm sm:text-base"
+            >
+              <p>
+                We may update this Privacy Policy from time to time to reflect
+                improvements in Piano Banana or legal updates. Any changes will
+                be updated directly on this page with an updated "Effective
+                Date".
+              </p>
+            </div>
+          </section>
+
+          <!-- Section 11 -->
+          <section
+            id="contact"
+            class="policy-section bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 sm:p-8 rounded-2xl shadow-lg"
+          >
+            <div class="flex items-center gap-3 mb-4">
+              <span
+                class="w-8 h-8 rounded-lg bg-amber-400 text-slate-950 flex items-center justify-center font-bold text-sm"
+                >11</span
+              >
+              <h2 class="text-xl sm:text-2xl font-bold text-white">
+                Contact & Privacy Inquiries
+              </h2>
+            </div>
+            <p class="text-slate-300 text-sm sm:text-base mb-6">
+              Have questions about our zero-server privacy architecture or need
+              assistance with Piano Banana? We're happy to assist.
+            </p>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                <div
+                  class="text-xs uppercase font-semibold text-amber-400 mb-1"
+                >
+                  Email Support
+                </div>
+                <a
+                  href="mailto:admin@bltechconsult.com.au"
+                  class="text-base font-bold text-white hover:underline"
+                  >admin@bltechconsult.com.au</a
+                >
+              </div>
+              <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+                <div
+                  class="text-xs uppercase font-semibold text-amber-400 mb-1"
+                >
+                  Developer Studio
+                </div>
+                <div class="text-base font-bold text-white">BL Tech</div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 no-print mt-auto">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center"
+      >
+        <p class="text-xs text-slate-500">
+          &copy; 2026 Piano Banana. All rights reserved. Zero server tracking
+          guaranteed.
+        </p>
+        <div
+          class="mt-4 sm:mt-0 flex justify-center gap-6 text-xs text-slate-500 font-medium"
+        >
+          <a href="#overview" class="hover:text-amber-600 transition-colors"
+            >Privacy Overview</a
+          >
+          <a
+            href="#camera-processing"
+            class="hover:text-amber-600 transition-colors"
+            >How AI Works</a
+          >
+          <a href="#contact" class="hover:text-amber-600 transition-colors"
+            >Support</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts for TOC Highlighting and Filter Search -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Live Search Filter Functionality
+        const searchInput = document.getElementById("policySearch");
+        const sections = document.querySelectorAll(".policy-section");
+        const searchResultsCount =
+          document.getElementById("searchResultsCount");
+
+        searchInput.addEventListener("input", (e) => {
+          const query = e.target.value.toLowerCase().trim();
+          let matchCount = 0;
+
+          if (query === "") {
+            sections.forEach((sec) => (sec.style.display = "block"));
+            searchResultsCount.classList.add("hidden");
+            return;
+          }
+
+          sections.forEach((sec) => {
+            const text = sec.innerText.toLowerCase();
+            if (text.includes(query)) {
+              sec.style.display = "block";
+              matchCount++;
+            } else {
+              sec.style.display = "none";
+            }
+          });
+
+          searchResultsCount.textContent = `Found ${matchCount} section${matchCount === 1 ? "" : "s"} matching "${query}"`;
+          searchResultsCount.classList.remove("hidden");
+        });
+
+        // Smooth Highlight Active Table of Contents Link on Scroll
+        const observerOptions = {
+          root: null,
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: 0,
+        };
+
+        const tocLinks = document.querySelectorAll(".toc-link");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              tocLinks.forEach((link) => {
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.remove("text-slate-600");
+                } else {
+                  link.classList.remove(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.add("text-slate-600");
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
+  </body>
+</html>

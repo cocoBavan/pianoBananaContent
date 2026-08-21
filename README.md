@@ -25,6 +25,7 @@ Songs/
   {
     "title": "Happy Birthday",
     "artist": "Mildred J. Hill & Patty Hill",
+    "difficulty": "medium",
     "content": "content/happy_birthday.musicxml",
     "thumbnail": "thumbnails/happy_birthday.png",
     "image": "images/happy_birthday.png"
@@ -32,13 +33,14 @@ Songs/
 ]
 ```
 
-| Field       | Description                                          |
-|-------------|------------------------------------------------------|
-| `title`     | Song name                                            |
-| `artist`    | Singer or composer                                   |
-| `content`   | Path to the MusicXML file (inside `content/`)        |
-| `thumbnail` | Path to a small preview image (inside `thumbnails/`) |
-| `image`     | Path to a larger image (inside `images/`)            |
+| Field        | Description                                                              |
+| ------------ | ------------------------------------------------------------------------ |
+| `title`      | Song name                                                                |
+| `artist`     | Singer or composer                                                       |
+| `difficulty` | Level of difficulty: `veryeasy`, `easy`, `medium`, `hard`, or `veryhard` |
+| `content`    | Path to the MusicXML file (inside `content/`)                            |
+| `thumbnail`  | Path to a small preview image (inside `thumbnails/`)                     |
+| `image`      | Path to a larger image (inside `images/`)                                |
 
 All paths are relative to the repo root. If you skip a thumbnail or image, the field is
 stored as an empty string `""`.
@@ -56,8 +58,9 @@ The script asks for:
 
 1. **Title** — defaults to a cleaned-up version of the filename
 2. **Artist** — singer or composer
-3. **Thumbnail path** (optional) — drag & drop an image, or press Enter to skip
-4. **Image path** (optional) — drag & drop an image, or press Enter to skip
+3. **Difficulty** — `veryeasy`, `easy`, `medium`, `hard`, or `veryhard` (defaults to `medium`)
+4. **Thumbnail path** (optional) — drag & drop an image, or press Enter to skip
+5. **Image path** (optional) — drag & drop an image, or press Enter to skip
 
 It then:
 
@@ -74,6 +77,7 @@ You can supply everything up front and skip the questions:
 python3 scripts/add_song.py ~/Downloads/my_song.musicxml \
     --title "My Song" \
     --artist "Some Artist" \
+    --difficulty "medium" \
     --thumbnail ~/Downloads/thumb.png \
     --image ~/Downloads/full.png
 ```
