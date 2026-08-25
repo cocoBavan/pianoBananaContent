@@ -5,7 +5,8 @@
     "content": "content/jurrasic.musicxml",
     "thumbnail": "",
     "image": "images/jurrasic.jpeg",
-    "difficulty": "medium"
+    "difficulty": "veryhard",
+    "isFree": true
   },
   {
     "title": "Love Story",
@@ -13,30 +14,37 @@
     "content": "content/love_story.musicxml",
     "thumbnail": "",
     "image": "images/love_story.jpeg",
-    "difficulty": "medium"
+    "difficulty": "veryhard",
+    "isFree": true
   },
   {
-    "title": "Squigly",
+    "title": "Arpeggio",
     "artist": "Bavan",
-    "difficulty": "easy",
+    "difficulty": "hard",
     "content": "content/squigly.musicxml",
     "thumbnail": "",
-    "image": ""
+    "image": "images/arpeggio.png",
+    "isLearning": true,
+    "isFree": true
   },
   {
-    "title": "Threebar",
+    "title": "32nd Notes",
     "artist": "Unknown Artist",
     "difficulty": "hard",
     "content": "content/threebar.musicxml",
     "thumbnail": "",
-    "image": ""
+    "image": "images/32nd_notes.png",
+    "isLearning": true,
+    "isFree": true
   },
   {
     "title": "Tie",
     "artist": "Unknown Artist",
-    "difficulty": "veryhard",
+    "difficulty": "easy",
     "content": "content/tie.musicxml",
     "thumbnail": "",
-    "image": ""
+    "image": "images/tie.png",
+    "isLearning": true,
+    "isFree": true
   }
 ]
