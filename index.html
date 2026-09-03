@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piano Banana</title>
+    <meta
+      name="description"
+      content="Piano Banana — learn, play, and practice piano from your own sheet music."
+    />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              piano: {
+                dark: "#121316",
+                surface: "#1d1f24",
+                border: "#2e323b",
+                accent: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body
+    class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900"
+  >
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <div class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md shadow-amber-500/20 ring-1 ring-slate-200"
+            >
+              <img
+                src="images/icon_banan.jpeg"
+                alt="Piano Banana icon"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <span
+                class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight"
+                >Piano Banana</span
+              >
+              <span
+                class="text-xs font-semibold text-amber-600 tracking-wider uppercase"
+                >Learn Piano From Any Sheet</span
+              >
+            </div>
+          </div>
+
+          <!-- Nav Links -->
+          <nav class="flex items-center gap-2 sm:gap-4 text-sm font-semibold">
+            <a
+              href="privacy.html"
+              class="text-slate-600 hover:text-slate-900 transition-colors hidden sm:inline-flex"
+              >Privacy Policy</a
+            >
+            <a
+              href="terms.html"
+              class="text-slate-600 hover:text-slate-900 transition-colors hidden sm:inline-flex"
+              >Terms</a
+            >
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section
+      class="bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-slate-50 border-b border-slate-200/60 py-16 sm:py-24"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div
+          class="w-20 h-20 sm:w-28 sm:h-28 mx-auto rounded-3xl overflow-hidden shadow-xl shadow-amber-500/20 ring-1 ring-slate-200 mb-8"
+        >
+          <img
+            src="images/icon_banan.jpeg"
+            alt="Piano Banana icon"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <span
+          class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 border border-amber-300 text-amber-900 text-xs font-bold uppercase tracking-wider mb-5"
+        >
+          Sheet Music, Meet Your Fingertips
+        </span>
+        <h1
+          class="text-4xl sm:text-6xl font-black text-slate-900 tracking-tight leading-tight mb-5"
+        >
+          Practice piano with
+          <span class="text-amber-500">any song you love</span>
+        </h1>
+        <p class="text-lg sm:text-xl text-slate-600 leading-relaxed max-w-2xl mx-auto">
+          Point your camera at a printed score. Piano Banana turns it into a
+          playable, interactive lesson — notes, timing, and playback — all on
+          your iPhone, with zero server tracking.
+        </p>
+        <div
+          class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="privacy.html"
+            class="inline-flex items-center gap-2 px-6 py-3 text-base font-semibold text-slate-900 bg-amber-400 hover:bg-amber-500 rounded-xl shadow-sm transition-all"
+          >
+            Read the Privacy Policy
+          </a>
+          <a
+            href="terms.html"
+            class="inline-flex items-center gap-2 px-6 py-3 text-base font-medium text-slate-700 bg-white hover:bg-slate-100 border border-slate-300 rounded-xl transition-all"
+          >
+            Terms &amp; Conditions
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Info Cards -->
+    <section class="py-12 sm:py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid sm:grid-cols-3 gap-6">
+          <!-- Card 1 -->
+          <a
+            href="privacy.html"
+            class="group block bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                />
+              </svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1.5">
+              Privacy Policy
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Your sheet music, practice history, and photos stay on your
+              device. Learn exactly how we handle image scans.
+            </p>
+            <span
+              class="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-amber-600 group-hover:text-amber-700 transition-colors"
+            >
+              Read more
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Card 2 -->
+          <a
+            href="terms.html"
+            class="group block bg-white rounded-2xl border border-slate-200 p-6 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+              </svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1.5">
+              Terms &amp; Conditions
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              The rules of the road for using Piano Banana and its premium
+              features.
+            </p>
+            <span
+              class="inline-flex items-center gap-1 mt-4 text-sm font-semibold text-amber-600 group-hover:text-amber-700 transition-colors"
+            >
+              Read more
+              <svg
+                class="w-4 h-4"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                />
+              </svg>
+            </span>
+          </a>
+
+          <!-- Card 3 -->
+          <div
+            class="bg-white rounded-2xl border border-slate-200 p-6 shadow-sm"
+          >
+            <div
+              class="w-11 h-11 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 21v-4m0 0V5a2 2 0 012-2h6.5l1 1H21l-3 6 3 6h-8.5l-1-1H5a2 2 0 00-2 2zm9-13.5V9M12 9v9"
+                />
+              </svg>
+            </div>
+            <h2 class="text-lg font-bold text-slate-900 mb-1.5">
+              Privacy First App
+            </h2>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              All scanning and recognition happen on-device. Zero server
+              tracking, guaranteed.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center"
+      >
+        <p class="text-xs text-slate-500">
+          &copy; 2026 Piano Banana. All rights reserved. Zero server tracking
+          guaranteed.
+        </p>
+        <div
+          class="mt-4 sm:mt-0 flex justify-center gap-6 text-xs text-slate-500 font-medium"
+        >
+          <a href="privacy.html" class="hover:text-amber-600 transition-colors"
+            >Privacy Policy</a
+          >
+          <a href="terms.html" class="hover:text-amber-600 transition-colors"
+            >Terms &amp; Conditions</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
