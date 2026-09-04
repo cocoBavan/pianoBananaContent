@@ -1,5 +1,122 @@
 [
   {
+    "title": "Für Elise",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Playing_Für_Elisejpeg.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Ode to Joy",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Ode_to_Joy_.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Clair de Lune (Simplified)",
+    "artist": "Claude Debussy",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Clair_de_Lune.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Canon in D",
+    "artist": "Johann Pachelbel",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Canon_in_Djpeg.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Gymnopédie No. 1",
+    "artist": "Erik Satie",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Gymnopédie_No_1.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Moonlight Sonata (1st Movement)",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Moonlight_Sonata.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "The Four Seasons: Spring",
+    "artist": "Antonio Vivaldi",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Vivaldi_Spring.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Minuet in G major",
+    "artist": "Christian Petzold",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Minuet.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Morning Mood",
+    "artist": "Edvard Grieg",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Morning_Mood_Edvard_Grieg.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Prelude in C Major (BWV 846)",
+    "artist": "J.S. Bach",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Bach_Prelude.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Swan Lake (Theme)",
+    "artist": "Pyotr Ilyich Tchaikovsky",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Swan_Lake.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Rondo Alla Turca",
+    "artist": "W.A. Mozart",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Mozart_Rondo_Alla_Turca.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Eine kleine Nachtmusik",
+    "artist": "W.A. Mozart",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/Mozart.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
     "title": "Jurassic Park",
     "artist": "John Williams",
     "content": "content/jurrasic.banana",
