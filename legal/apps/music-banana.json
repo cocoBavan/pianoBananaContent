@@ -1,0 +1,108 @@
+{
+  "slug": "music-banana",
+  "name": "Music Banana",
+  "tagline": "Sheet music scanning for piano practice",
+  "icon": "images/icon_banan_256.jpg",
+  "monogram": "MB",
+  "accent": {
+    "chip": "bg-amber-400 text-slate-950",
+    "soft": "bg-amber-100 text-amber-800",
+    "text": "text-amber-600",
+    "hero": "from-amber-500/10 via-amber-500/5 to-slate-50",
+    "ring": "shadow-amber-500/20"
+  },
+  "effectiveDate": "September 23, 2026",
+  "status": "released",
+  "draft": false,
+
+  "promise": "Your library is yours. Reading a page gives your notes back to you, and session recordings can be switched off at any time.",
+  "purpose": "an intelligent mobile application that recognises sheet music, transcribes the notes, and returns playable or structured music data directly on your device",
+  "ratingNote": "Music & Education",
+  "dataSummary": "No account. Your saved scores and practice history stay in the app; session recordings show the screen and can be switched off in Settings.",
+
+  "ai": {
+    "mode": "on-device",
+    "title": "How Sheet Music Scanning Works",
+    "engine": "AI",
+    "summary": "Music Banana reads a page of sheet music and turns it into playable notes and structured music data. Your scans are not used to train machine-learning models, and they are not added to a shared library.",
+    "guarantee": "Your scans are not used to train models, not sold, and not published. Reading a page exists to give your notes back to you.",
+    "bullets": [
+      "<strong>Image capture:</strong> you photograph a sheet music page with your device camera, or select an image with the system photo picker.",
+      "<strong>Reading the page:</strong> the app detects staves, clefs, key signatures, and musical note values, using AI.",
+      "<strong>What comes back:</strong> the recognised music is returned to you as notes, MIDI, MusicXML, or interactive playback.",
+      "<strong>Your copy:</strong> the version you keep is the one you choose to save to your own library.",
+      "<strong>Not for training:</strong> what you scan is never used to train machine-learning models, and it is never sold or published."
+    ]
+  },
+
+  "storage": {
+    "summary": "<strong>All of your saved items, music history, favourite scores, sound preferences, and offline transcriptions are stored on your personal device</strong>, not in an account of ours.",
+    "bullets": [
+      "Your sheet music library remains in your device's isolated app sandbox storage.",
+      "If you back up your device through iCloud Backup or Android system backup, your local Music Banana data follows your system backup settings.",
+      "Deleting the Music Banana app permanently erases all locally stored sheet music unless you have exported your files first."
+    ]
+  },
+
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "Required solely to photograph physical sheet music pages directly inside the app.",
+      "optional": false
+    },
+    {
+      "name": "Photos",
+      "why": "You can choose an image or PDF of a score that you have already saved. Music Banana uses the system photo picker, which hands the app only the file you select — it does not give us access to your photo library.",
+      "optional": false
+    },
+    {
+      "name": "Tracking",
+      "why": "iOS asks whether we may measure which ads brought you to Music Banana. Declining does not restrict any feature of the app.",
+      "optional": true
+    }
+  ],
+
+  "accounts": null,
+
+  "analyticsIntro": "To keep the app stable and to measure whether our advertising works, two third-party measurement services receive telemetry — usage events, and session recordings while they are switched on. A recording can include the sheet that is on screen. Sessions are described in full below.",
+  "analytics": [
+    {
+      "name": "Product analytics",
+      "desc": "Anonymous usage events (app opened, scan started, paywall shown, purchase completed) together with device model, operating-system version, app version, and locale. There are no accounts, so no event carries a name or email address, and none can be linked back to a particular score."
+    },
+    {
+      "name": "Session recordings",
+      "desc": "On by default until you answer the question, which the app asks at the end of the first-run walkthrough. You can change your answer at any time in Settings ▸ Privacy, where it appears as “Help Improve Music Banana”, and answering no changes nothing about the app. A recording is a series of screenshots of Music Banana's own screens, so it can include the sheet you are working on. It carries no name and no email address, and screens belonging to iOS or to other apps — the photo picker, share sheets, and the keyboard — are kept out of every recording."
+    },
+    {
+      "name": "Advertising measurement",
+      "desc": "App install, app launch, and in-app purchase events, so we can tell which campaigns bring people to Music Banana. If you allow tracking at the system prompt, these events also carry your device's advertising identifier (IDFA). If you decline, the events are still sent but without that identifier, which means we receive only aggregated, non-identifying counts."
+    }
+  ],
+
+  "thirdPartiesIntro": "Apart from the two measurement services listed above, the only external service the app contacts is the content host that serves the built-in song library.",
+  "thirdParties": [
+    {
+      "name": "Measurement services",
+      "desc": "product analytics and session recordings, plus advertising measurement, as described above."
+    },
+    {
+      "name": "heyghoshi.com",
+      "desc": "our static content host, which serves the song catalogue and MusicXML files. These are <strong>downloads only</strong>: the request sends nothing about you or your device."
+    },
+    {
+      "name": "Apple",
+      "desc": "App Store distribution and in-app purchases, handled entirely by Apple."
+    }
+  ],
+
+  "childrenExtra": "The advertising measurement described above applies to all users and is controlled by the system tracking prompt, which a parent or guardian can decline.",
+
+  "rights": [
+    "<strong>Clear the in-app library:</strong> you can delete any saved score inside Music Banana at any time.",
+    "<strong>Switch off recordings:</strong> turn them off in Settings ▸ Privacy and they stop immediately. If you would like recordings that have already been sent to be deleted, email us and we will remove them.",
+    "<strong>Reset app data:</strong> clearing the app storage or uninstalling Music Banana instantly and permanently deletes all data from your device.",
+    "<strong>No deletion request needed for your library:</strong> because there are no accounts, there is nothing of that kind to request deletion of — your scores are yours alone."
+  ],
+  "rightsTail": "The one thing we do hold elsewhere is a session recording, and it carries no name and no email address. If you ask us to delete one, tell us roughly when the session happened and we will work with you to identify it."
+}

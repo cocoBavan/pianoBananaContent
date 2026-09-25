@@ -1,0 +1,9 @@
+<p>Depending on what {{app.name}} keeps, your control works like this:</p>
+<ul class="list-disc list-inside space-y-2 pl-2">
+  {{#app.rights}}
+  <li>{{this}}</li>
+  {{/app.rights}}
+</ul>
+{{#app.rightsTail}}
+<p>{{app.rightsTail}}</p>
+{{/app.rightsTail}}

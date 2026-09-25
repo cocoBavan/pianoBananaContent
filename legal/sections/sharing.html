@@ -1,0 +1,28 @@
+<p>{{app.sharing.intro}}</p>
+
+<h3 class="font-bold text-slate-900 text-sm mt-4 mb-2">
+  What a shared question contains
+</h3>
+<ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+  {{#app.sharing.contains}}
+  <li>{{this}}</li>
+  {{/app.sharing.contains}}
+</ul>
+
+<h3 class="font-bold text-slate-900 text-sm mt-4 mb-2">
+  What it never contains
+</h3>
+<ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+  {{#app.sharing.notContains}}
+  <li>{{this}}</li>
+  {{/app.sharing.notContains}}
+</ul>
+
+<div class="bg-slate-50 border-l-4 {{accent.border}} p-4 rounded-r-xl my-3">
+  <p class="text-xs sm:text-sm text-slate-700 font-semibold mb-1">
+    How a shared question reaches other children:
+  </p>
+  <p class="text-xs sm:text-sm text-slate-600">{{app.sharing.visibility}}</p>
+</div>
+
+<p>{{app.sharing.control}}</p>

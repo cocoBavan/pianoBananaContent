@@ -1,0 +1,167 @@
+[
+  {
+    "title": "Für Elise",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/fur_elise.banana",
+    "thumbnail": "",
+    "image": "images/Playing_Für_Elisejpeg.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Ode to Joy",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/ode_to_joy.banana",
+    "thumbnail": "",
+    "image": "images/Ode_to_Joy_.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Clair de Lune",
+    "artist": "Claude Debussy",
+    "content": "content/clair_de_lune.banana",
+    "thumbnail": "",
+    "image": "images/Clair_de_Lune.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Canon in D",
+    "artist": "Johann Pachelbel",
+    "content": "content/canon_in_d.banana",
+    "thumbnail": "",
+    "image": "images/Canon_in_Djpeg.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Gymnopédie No. 1",
+    "artist": "Erik Satie",
+    "content": "content/gymnopedie_no_1.banana",
+    "thumbnail": "",
+    "image": "images/Gymnopédie_No_1.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Moonlight Sonata (1st Movement)",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/moonlight_sonata_1st_movement.banana",
+    "thumbnail": "",
+    "image": "images/Moonlight_Sonata.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "The Four Seasons: Spring",
+    "artist": "Antonio Vivaldi",
+    "content": "content/the_four_seasons_spring.banana",
+    "thumbnail": "",
+    "image": "images/Vivaldi_Spring.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Minuet in G major",
+    "artist": "Christian Petzold",
+    "content": "content/minuet_in_g_major.banana",
+    "thumbnail": "",
+    "image": "images/Minuet.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Morning Mood",
+    "artist": "Edvard Grieg",
+    "content": "content/morning_mood.banana",
+    "thumbnail": "",
+    "image": "images/Morning_Mood_Edvard_Grieg.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Prelude in C Major (BWV 846)",
+    "artist": "J.S. Bach",
+    "content": "content/prelude_in_c_major_bwv_846.banana",
+    "thumbnail": "",
+    "image": "images/Bach_Prelude.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Swan Lake (Theme)",
+    "artist": "Pyotr Ilyich Tchaikovsky",
+    "content": "content/swan_lake.banana",
+    "thumbnail": "",
+    "image": "images/Swan_Lake.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Rondo Alla Turca",
+    "artist": "W.A. Mozart",
+    "content": "content/rondo_alla_turca.banana",
+    "thumbnail": "",
+    "image": "images/Mozart_Rondo_Alla_Turca.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
+    "title": "Eine kleine Nachtmusik",
+    "artist": "W.A. Mozart",
+    "content": "content/eine_kleine_nachtmusik.banana",
+    "thumbnail": "",
+    "image": "images/Mozart.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Jurassic Park",
+    "artist": "John Williams",
+    "content": "content/jurrasic.banana",
+    "thumbnail": "",
+    "image": "images/jurrasic.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Love Story",
+    "artist": "Indila",
+    "content": "content/love_story.banana",
+    "thumbnail": "",
+    "image": "images/love_story.jpeg",
+    "difficulty": "veryhard",
+    "isFree": true
+  },
+  {
+    "title": "Arpeggio",
+    "artist": "Ghoshi",
+    "difficulty": "hard",
+    "content": "content/squigly.banana",
+    "thumbnail": "",
+    "image": "images/arpeggio.png",
+    "isLearning": true,
+    "isFree": true
+  },
+  {
+    "title": "32nd Notes",
+    "artist": "Ghoshi",
+    "difficulty": "hard",
+    "content": "content/threebar.banana",
+    "thumbnail": "",
+    "image": "images/32nd_notes.png",
+    "isLearning": true,
+    "isFree": true
+  },
+  {
+    "title": "Tie",
+    "artist": "Ghoshi",
+    "difficulty": "easy",
+    "content": "content/tie.banana",
+    "thumbnail": "",
+    "image": "images/tie.png",
+    "isLearning": true,
+    "isFree": true
+  }
+]

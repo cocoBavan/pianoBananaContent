@@ -1,0 +1,56 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      # The repo root is the website, but not all of it should be reachable.
+      # legal/ is the source the policies are generated from; README.md, .github/
+      # and .gitignore are project files. Stage only the site and upload that.
+      #
+      # Must stay reachable, so never exclude these:
+      #   privacy/ terms/ privacy.html terms.html index.html  - the pages themselves
+      #   content/ songs.json premiumRestrictionEnabled.json images/ thumbnails/
+      #                                                       - fetched by the apps
+      - name: Assemble the public site
+        run: |
+          rsync -a \
+            --exclude '.git/' \
+            --exclude '.github/' \
+            --exclude 'legal/' \
+            --exclude 'scripts/' \
+            --exclude 'README.md' \
+            --exclude '.gitignore' \
+            ./ "$RUNNER_TEMP/site/"
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ${{ runner.temp }}/site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

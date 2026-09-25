@@ -1,0 +1,13 @@
+<p>
+  {{app.name}} is rated for general audiences ({{app.ratingNote}}) and is
+  <strong>not directed to children under 13</strong>.
+</p>
+{{^app.accounts}}
+<p>
+  We do not knowingly collect personal information from children: there are no
+  accounts, no profiles, and nowhere in the app to enter a name, email address,
+  or other personal detail.
+</p>
+{{/app.accounts}} {{#app.childrenExtra}}
+<p>{{app.childrenExtra}}</p>
+{{/app.childrenExtra}}

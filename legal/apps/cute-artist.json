@@ -1,0 +1,79 @@
+{
+  "slug": "cute-artist",
+  "name": "Cute Artist",
+  "tagline": "Drawing and colouring for young artists",
+  "icon": null,
+  "monogram": "CA",
+  "accent": {
+    "chip": "bg-rose-400 text-slate-950",
+    "soft": "bg-rose-100 text-rose-800",
+    "text": "text-rose-600",
+    "hero": "from-rose-500/10 via-rose-500/5 to-slate-50",
+    "ring": "shadow-rose-500/20"
+  },
+  "effectiveDate": "September 23, 2026",
+  "status": "coming-soon",
+  "draft": true,
+
+  "promise": "Your drawings stay on your device. No gallery, no upload, no account.",
+  "purpose": "a drawing and colouring app with brushes, stickers, and a canvas that works entirely on your device",
+  "ratingNote": "Entertainment & Art",
+  "dataSummary": "Drawings stay on your device. No account, no gallery, no upload. Only anonymous analytics and ad measurement leave the app.",
+
+  "ai": { "mode": "none" },
+
+  "storage": {
+    "summary": "Your drawings, brush settings, and colour palettes are created and kept on your device. We do not operate a gallery server and we do not upload your artwork anywhere.",
+    "bullets": [
+      "Drawings are saved in the app's isolated sandbox storage on your device.",
+      "If you export or share a drawing yourself, it leaves the app only because you chose to send it.",
+      "If you back up your device through iCloud Backup or Android system backup, your local Cute Artist data follows your system backup settings.",
+      "Deleting the Cute Artist app permanently erases your local drawings unless you have exported them first."
+    ]
+  },
+
+  "permissions": [
+    {
+      "name": "Photo Library (add only)",
+      "why": "Used only when you choose to save or export a finished drawing to your own photo library.",
+      "optional": true
+    },
+    {
+      "name": "Tracking",
+      "why": "iOS asks whether we may measure which ads brought you to Cute Artist. Declining does not restrict any feature of the app.",
+      "optional": true
+    }
+  ],
+
+  "accounts": null,
+
+  "analyticsIntro": "To keep the app stable and to measure whether our advertising works, two third-party measurement services receive limited telemetry. Neither receives your drawings, your canvas, or anything you create in the app. The only information that leaves your device is the anonymous telemetry described here and your App Store purchase receipt.",
+  "analytics": [
+    {
+      "name": "Product analytics",
+      "desc": "Anonymous usage events (app opened, brush selected, drawing saved, paywall shown, purchase completed) together with device model, operating-system version, app version, and locale. There are no accounts, so no event carries a name or email address, and none can be linked to a particular drawing."
+    },
+    {
+      "name": "Advertising measurement",
+      "desc": "App install, app launch, and in-app purchase events, so we can tell which campaigns bring people to Cute Artist. If you allow tracking at the system prompt, these events also carry your device's advertising identifier (IDFA). If you decline, the events are still sent but without that identifier, which means we receive only aggregated, non-identifying counts."
+    }
+  ],
+
+  "thirdPartiesIntro": "Apart from the two measurement services listed above, the app contacts no other service of ours. There is no Cute Artist content server: everything the app needs ships inside the download.",
+  "thirdParties": [
+    { "name": "Measurement services", "desc": "the product analytics and advertising measurement described above." },
+    {
+      "name": "Apple",
+      "desc": "App Store distribution, in-app purchases, and the App Store receipt check, handled entirely by Apple."
+    }
+  ],
+
+  "childrenExtra": "Cute Artist is made to be enjoyed by young artists, and we have deliberately kept it free of accounts, uploads, and user-generated content sharing. The advertising measurement described above applies to all users and is controlled by the system tracking prompt, which a parent or guardian can decline.",
+
+  "rights": [
+    "<strong>Clear your gallery:</strong> you can delete any drawing inside Cute Artist at any time.",
+    "<strong>Reset app data:</strong> clearing the app storage or uninstalling Cute Artist instantly and permanently deletes all drawings and settings from your device.",
+    "<strong>No deletion request needed:</strong> because we do not store accounts or artwork on cloud servers, there is no server-side copy to request deletion of."
+  ],
+  "rightsTail": "Nothing to export or request from us, because we hold nothing about you."
+}

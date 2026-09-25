@@ -1,0 +1,32 @@
+<p>{{app.accounts.intro}}</p>
+
+<h3 class="font-bold text-slate-900 text-sm mt-4 mb-2">What we hold</h3>
+<ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+  {{#app.accounts.collected}}
+  <li>{{this}}</li>
+  {{/app.accounts.collected}}
+</ul>
+
+<h3 class="font-bold text-slate-900 text-sm mt-4 mb-2">
+  What we do not collect
+</h3>
+<ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+  {{#app.accounts.notCollected}}
+  <li>{{this}}</li>
+  {{/app.accounts.notCollected}}
+</ul>
+
+<div class="space-y-3 mt-4">
+  <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+    <h4 class="font-bold text-slate-900 text-sm">Where it is stored</h4>
+    <p class="text-xs text-slate-500 mt-1">{{app.accounts.where}}</p>
+  </div>
+  <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+    <h4 class="font-bold text-slate-900 text-sm">How it is protected</h4>
+    <p class="text-xs text-slate-500 mt-1">{{app.accounts.security}}</p>
+  </div>
+  <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+    <h4 class="font-bold text-slate-900 text-sm">How long we keep it</h4>
+    <p class="text-xs text-slate-500 mt-1">{{app.accounts.retention}}</p>
+  </div>
+</div>

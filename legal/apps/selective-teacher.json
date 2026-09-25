@@ -1,0 +1,172 @@
+{
+  "slug": "selective-teacher",
+  "name": "Selective Teacher",
+  "tagline": "Practice and marking for selective school entry tests",
+  "icon": "images/icon_teacher_256.jpg",
+  "monogram": "ST",
+  "accent": {
+    "chip": "bg-sky-400 text-slate-950",
+    "soft": "bg-sky-100 text-sky-800",
+    "text": "text-sky-600",
+    "hero": "from-sky-500/10 via-sky-500/5 to-slate-50",
+    "ring": "shadow-sky-500/20"
+  },
+  "effectiveDate": "September 25, 2026",
+  "status": "coming-soon",
+  "draft": false,
+
+  "promise": "Practice stays on your device. Two things can leave it — the question you ask the AI about, and a question you deliberately share, which a person reviews before anyone else sees it.",
+  "purpose": "an exam practice app that sets mathematics, reading and reasoning questions, marks your answers, and explains where you went wrong",
+  "ratingNote": "Education",
+  "sectionTitles": { "accounts": "Your Anonymous Device Identity" },
+  "dataSummary": "Practice and results stay on your device. A question you ask the AI about is sent to our AI provider, and a question you choose to share is uploaded and reviewed by a person before other children can see it. No name, no email — the app uses an anonymous device identity.",
+
+  "ai": {
+    "mode": "third-party",
+    "title": "How the AI Features Work",
+    "vendor": "a third-party AI service we instruct",
+    "summary": "The app can build a practice scene from a question, explain an answer, and read a question aloud. Those parts run on our servers, which pass the request to an AI provider. Depending on the feature, what we send is the text of the question, the text of your answer, or the photograph itself.",
+    "retention": "We keep no library of your questions or answers. Our providers process one request in order to return an answer, and we do not instruct them to retain your content or to train their models on it.",
+    "guarantee": "There is no name, no email address and no profile in the request. The only thing that identifies the device is an anonymous identifier, which exists so we can apply a fair-use limit and stop one device exhausting the service.",
+    "bullets": [
+      "<strong>What is sent:</strong> the text of the question and your answer, or the photograph of the question when you ask for a feature that works from the picture.",
+      "<strong>Reading a photograph:</strong> getting the words out of a photograph happens on your device, using Apple's text recognition. The photograph itself is sent only when you ask for a feature that needs the picture — for example building a scene from it.",
+      "<strong>Reading aloud:</strong> the text to be narrated is sent to our servers and the audio comes back to your device to play. No microphone is used — the app does not listen to you.",
+      "<strong>Who receives it:</strong> a third-party AI service, acting on our instructions. Which provider handles a request can change over time, and this page stays current.",
+      "<strong>What is never sent:</strong> your name, email address, contact list, advertising identifier, device location, or any other app's data.",
+      "<strong>Fair-use counting:</strong> our servers keep a monthly count of AI requests against the device's anonymous identifier so the limit can be enforced. That record is a number, not your questions."
+    ]
+  },
+
+  "storage": {
+    "summary": "Your progress, question history, bookmarks and results are stored on your device. There is no cloud copy of your study record — nothing about how you are doing is sent to us.",
+    "bullets": [
+      "Progress and statistics live in the app's own on-device database.",
+      "Reading the words out of a photograph happens on your device, and we do not keep the photograph.",
+      "If you back up your device through iCloud Backup or Android system backup, your local Selective Teacher data follows your system backup settings.",
+      "Deleting the Selective Teacher app permanently erases your local progress unless you have exported it first."
+    ]
+  },
+
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "Used to photograph a question from a printed practice paper so the words can be read on your device and added to your practice set.",
+      "optional": true
+    },
+    {
+      "name": "Photos",
+      "why": "You can choose an existing image of a question instead of photographing it. No permission is requested for this - the system picker hands the app only the file you select, so we never get access to your photo library.",
+      "optional": true
+    },
+    {
+      "name": "Face ID",
+      "why": "Used for the parent lock on grown-up actions — sharing a question, changing settings, and purchases. Your face data is handled entirely by iOS and never reaches the app or our servers.",
+      "optional": true
+    }
+  ],
+
+  "accounts": {
+    "intro": "Selective Teacher does not ask for your name, your email address, or a password. There is no sign-up. What it does have is an <strong>anonymous device identity</strong>, and this section explains what that is and why it exists.",
+    "collected": [
+      "<strong>An anonymous identifier</strong> — a random number issued to the app on first launch. It is not your name, not your email address, and not a device serial number, and it is never shown to another user.",
+      "<strong>A monthly AI request count</strong>, kept against that identifier so the fair-use limit can be enforced.",
+      "<strong>Ownership of anything you share</strong> — a shared question is linked to this identifier, which is what allows you to take your own share down again and allows a moderator to act on a repeat offender."
+    ],
+    "notCollected": [
+      "your name, email address, phone number or date of birth — we never ask;",
+      "a login, password or social profile — there is no sign-up;",
+      "your practice results, answers or progress — those stay on your device;",
+      "your contacts, location or microphone;",
+      "your advertising identifier — we do not ask for tracking permission in this app."
+    ],
+    "where": "The identifier is issued by our authentication service and lives with your records on secure servers in our Australian region (Sydney), together with the shared questions and bug reports described on this page.",
+    "security": "There is no password to steal, because there is no password. The app reaches our servers only through authenticated requests that our servers verify, and no record can be read or written without passing through logic that checks who is asking.",
+    "retention": "The identifier and the records attached to it are kept while the app is installed on a device. Clearing the app's data or deleting the app ends the connection; the server record is removed on request, as described under your rights below."
+  },
+
+  "sharing": {
+    "intro": "Selective Teacher lets you share a question you have made so that other children can practise with it. It is the one feature that publishes something of yours, so it is deliberately kept narrow.",
+    "contains": [
+      "the photograph of the question, re-encoded by the app so that its metadata — including where it was taken — is stripped before upload;",
+      "a small thumbnail;",
+      "the generated content you chose to share: the question and its correct answers;",
+      "the anonymous identifier of the device that shared it, so you can take it down and a moderator can act on reports."
+    ],
+    "notContains": [
+      "your name, or any display name or profile — a share carries no author identity;",
+      "your practice results, your answers, or how you have been doing;",
+      "your email address or any contact detail;",
+      "your location: the app removes the photograph's embedded location data before uploading."
+    ],
+    "visibility": "Nothing you share is published straight away. It waits in a queue and a person reviews it before it can appear to anyone. Shared questions are never world-readable — only approved material is listed, the list is filtered on our servers, and the photographs are not served from a public web address.",
+    "control": "You can withdraw a share at any time and it disappears from the feed. Other people can report a question, and enough reports hide it from every child automatically, without waiting for a moderator. If a report is upheld the content is removed, and the share cannot be published again."
+  },
+
+  "bugReports": {
+    "intro": "If something goes wrong you can send us a report from inside the app. It is the only place the app sends us text that you typed, so here is exactly what goes with it.",
+    "contains": [
+      "the title and description you write;",
+      "a screenshot, if you choose to attach one;",
+      "technical detail about what failed, so we can reproduce it: the app version, the device platform, and a diagnostic record of what the screen was doing;",
+      "an email address, <strong>only if you type one in</strong>, so we can reply to you;",
+      "the anonymous device identifier described above."
+    ],
+    "deletion": "You can delete your own report from inside the app, and that removes it and any screenshot attached to it. Reports are used to fix faults and are never used for advertising."
+  },
+
+  "analyticsIntro": "Four measurement services are present, covering product analytics, app analytics, advertising measurement, and conversion measurement. None of them receives your answers, your photographs, the AI output written for you, or the content of a shared question.",
+  "analytics": [
+    {
+      "name": "Product analytics",
+      "desc": "Usage events (app opened, practice set started, question answered, paywall shown, purchase completed) together with device model, operating-system version, app version and locale. No event carries a name or email address."
+    },
+    {
+      "name": "Advertising measurement",
+      "desc": "App install, app launch and in-app purchase events, so we can tell which campaigns bring people to Selective Teacher. The app does not ask for tracking permission, so these events carry no advertising identifier and we receive only aggregated, non-identifying counts."
+    },
+    {
+      "name": "App analytics",
+      "desc": "App opens, sessions and screens viewed, plus purchases, reported through the same platform that runs the app's backend. Our analytics provider receives device model, operating-system version, app version and locale."
+    },
+    {
+      "name": "Conversion measurement",
+      "desc": "Whether an install or a purchase came from an advertising campaign. This runs on your device and does not use your advertising identifier."
+    }
+  ],
+
+  "thirdPartiesIntro": "Here is every kind of outside service the app contacts, and why.",
+  "thirdParties": [
+    {
+      "name": "Our cloud platform",
+      "desc": "issues the anonymous device identity, runs the AI and sharing services from our Australian region, and serves the app's configuration."
+    },
+    {
+      "name": "Our AI providers",
+      "desc": "they turn a question, an answer or a photograph into the practice material, explanation or narration you asked for. We may use more than one, and which one handles a request can change."
+    },
+    {
+      "name": "Our file storage",
+      "desc": "stores the photographs and generated content of questions you choose to share, and any screenshot you attach to a bug report. Neither sits on a public web address."
+    },
+    {
+      "name": "Measurement services",
+      "desc": "the analytics and advertising measurement described above."
+    },
+    {
+      "name": "Apple",
+      "desc": "App Store distribution, in-app purchases, and the text recognition and parent-lock features that run on your device."
+    }
+  ],
+
+  "childrenExtra": "Selective Teacher is a study aid for students, and the grown-up actions — sharing a question, changing settings, and purchases — sit behind a parent lock. There is no sign-up, so we hold no child's name or email address. Because a shared question is the only thing other users can see, nothing is published without a person reviewing it first, and a share carries no author identity.",
+
+  "rights": [
+    "<strong>Withdraw a shared question:</strong> you can take back anything you shared, and it disappears from the feed immediately.",
+    "<strong>Delete a bug report:</strong> your own reports can be deleted inside the app, along with any screenshot attached to them.",
+    "<strong>Reset the device identity:</strong> clearing the app's data or deleting the app ends the link to your records. Email us if you want the server record erased, and we will remove it.",
+    "<strong>Clear your progress:</strong> deleting the app removes your practice history and results from your device.",
+    "<strong>No marketing profile:</strong> we do not build an advertising profile of you, and we do not sell anything about you."
+  ],
+  "rightsTail": "Because there is no name or email address attached to this app, we cannot find you from your details alone. If you contact us about a specific record, we will work with you to identify it."
+}

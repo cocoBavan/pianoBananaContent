@@ -1,0 +1,9 @@
+<p>{{app.bugReports.intro}}</p>
+<ul class="list-disc list-inside space-y-1.5 pl-2 text-slate-600">
+  {{#app.bugReports.contains}}
+  <li>{{this}}</li>
+  {{/app.bugReports.contains}}
+</ul>
+{{#app.bugReports.deletion}}
+<p>{{app.bugReports.deletion}}</p>
+{{/app.bugReports.deletion}}

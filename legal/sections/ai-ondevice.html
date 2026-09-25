@@ -1,0 +1,16 @@
+<p class="font-medium text-slate-800">{{app.ai.summary}}</p>
+<ol class="list-decimal list-inside space-y-2 pl-2">
+  {{#app.ai.bullets}}
+  <li>{{this}}</li>
+  {{/app.ai.bullets}}
+</ol>
+<div class="bg-slate-50 border-l-4 {{accent.border}} p-4 rounded-r-xl my-3">
+  <p class="text-xs sm:text-sm text-slate-700 font-semibold mb-1">
+    What we will not do with what you scan:
+  </p>
+  <p class="text-xs sm:text-sm text-slate-600">{{app.ai.guarantee}}</p>
+</div>
+<p class="text-xs text-slate-500">
+  Reading a page exists to give your notes back to you. What you scan is not
+  used to train machine-learning models, and it is not sold or published.
+</p>

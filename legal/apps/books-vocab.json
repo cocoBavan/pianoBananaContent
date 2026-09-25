@@ -1,0 +1,144 @@
+{
+  "slug": "books-vocab",
+  "name": "Books & Vocab",
+  "tagline": "Reading practice and vocabulary building",
+  "icon": "images/icon_books_256.jpg",
+  "monogram": "BV",
+  "accent": {
+    "chip": "bg-emerald-400 text-slate-950",
+    "soft": "bg-emerald-100 text-emerald-800",
+    "text": "text-emerald-600",
+    "hero": "from-emerald-500/10 via-emerald-500/5 to-slate-50",
+    "ring": "shadow-emerald-500/20"
+  },
+  "effectiveDate": "September 23, 2026",
+  "status": "coming-soon",
+  "draft": false,
+
+  "promise": "Reading progress, scans and word lists stay on your device. Two things leave it: your optional account details, and the passage you ask us to explain.",
+  "purpose": "a reading and vocabulary app that pairs books with levelled word lists, definitions, memory hooks, and review",
+  "ratingNote": "Education",
+  "dataSummary": "Optional account: we store your email address, an internal account identifier, and the books you ask us to add. Reading progress and scanned pages stay on your device. When you ask what a word means, that word and its passage go to our AI providers.",
+
+  "ai": {
+    "mode": "third-party",
+    "title": "Word Meanings, Memory Hooks & Illustrations",
+    "vendor": "a third-party AI service we instruct",
+    "summary": "When you tap to see what a word means, to get a memory hook for it, or to illustrate it, the app asks our servers, which pass that request to an AI provider. The request contains the word and the passage it appears in - never anything about you.",
+    "retention": "We send one request per word and hold no copy of it against your account. Our providers process the request to return an answer, and we do not instruct them to retain the passage or to train their models on it.",
+    "guarantee": "Nothing identifying is in the request: no name, no email address, no account identifier, no device identifier, and none of your reading progress or scanned pages.",
+    "bullets": [
+      "<strong>What is sent:</strong> the word, and the passage from the book that the word appears in. When you ask for a memory hook or an illustration, the definition we already generated for that word is sent alongside it.",
+      "<strong>When it is sent:</strong> only when you tap for a meaning, a memory hook, or an illustration. Simply reading a book sends nothing.",
+      "<strong>Who receives it:</strong> a third-party AI service, acting on our instructions. Which provider handles a request can change over time, and this page stays current.",
+      "<strong>What is never sent:</strong> your name, email address, account identifier, advertising identifier, device location, reading progress, or any page you have scanned.",
+      "<strong>Caching:</strong> the definition, memory hook, or illustration that comes back is saved to our own content store against the <em>book</em>, not against you, so the next reader of the same book does not pay to generate it again. Those saved answers contain the book's words and nothing about you."
+    ]
+  },
+
+  "storage": {
+    "summary": "Reading positions, vocabulary lists, review schedules, and book sessions are stored on your device in the app's own database, not on our servers. An account changes only one thing: it lets your library follow you between devices.",
+    "bullets": [
+      "Your reading progress, saved words, and review history live in the app's own store on your device.",
+      "Scanned pages are read on your device. The photograph is never uploaded, and it is discarded once the words have been taken from it.",
+      "If you do not create an account, nothing about your reading reaches us at all.",
+      "If you back up your device through iCloud Backup or Android system backup, your local Books & Vocab data follows your system backup settings."
+    ]
+  },
+
+  "permissions": [
+    {
+      "name": "Camera",
+      "why": "Used to photograph a page so its words can be read on your device and added to your word list. The photograph is never uploaded.",
+      "optional": true
+    },
+    {
+      "name": "Notifications",
+      "why": "Used to tell you when a book you asked us to add becomes available. You can decline this and still use every reading feature.",
+      "optional": true
+    }
+  ],
+
+  "accounts": {
+    "intro": "Books & Vocab is one of two of our apps that offers an account. This section explains exactly what that involves, and it applies <strong>only if you choose to sign in</strong>. You can use the app without one.",
+    "collected": [
+      "<strong>Your email address</strong> — this is how you sign in, whether you use Sign in with Apple or Google. If you use Apple's private relay, we receive the relay address rather than your real one.",
+      "<strong>An internal account identifier</strong> — a number that links your records together. It is not your email address, and it is not given to advertisers.",
+      "<strong>Your display name</strong>, if your sign-in provider chooses to share one.",
+      "<strong>The books you ask us to add</strong> — the ISBN, the title and author you searched for, the date you asked, and whether we have added it yet. There is a limit of four requests per month.",
+      "<strong>A push notification token</strong>, if you allow notifications, and a subscription to a notification topic for each book you have asked for."
+    ],
+    "notCollected": [
+      "your reading progress, saved words, or review history — those stay on your device;",
+      "the pages you scan, or the text taken from them;",
+      "your contacts, photographs, location, or microphone;",
+      "your payment details — Apple handles purchases and we never see your card;",
+      "your device's advertising identifier, in connection with your account. We do not ask for tracking permission in this app at all."
+    ],
+    "where": "Account data is held on our behalf by our cloud platform: an authentication service for sign-in, a database for the records listed above, and server functions for the book searches and AI features. Our book content, and the text and images generated for it, sit in cloud file storage. All of it is operated for us by our hosting provider.",
+    "security": "Sign-in is handled entirely by our authentication service and the provider you choose — Apple or Google. We never receive or store your password, and traffic between the app and our servers is encrypted in transit.",
+    "retention": "Your account data is kept while your account exists. When you delete your account in the app, we remove it from the live system straight away, and it is purged from encrypted backups within 30 days."
+  },
+
+  "analyticsIntro": "Four measurement services sit in the app, covering app analytics, conversion measurement, product analytics, and advertising measurement. None of them is sent your password, your scans, or the passages sent for AI answers — but one of them can record what is on screen while you use the app, and that recording can include whatever you are reading at the time. Its entry below explains this.",
+  "analytics": [
+    {
+      "name": "App analytics",
+      "desc": "App opens, sessions, screens viewed, and purchase events, together with device model, operating-system version, app version, and locale. This is collected through the same platform that powers sign-in and notifications. Because this app has accounts, these events can be associated with your account identifier."
+    },
+    {
+      "name": "Conversion measurement",
+      "desc": "Whether an app install or a purchase came from an advertising campaign, so we can tell which advertising works. This runs on your device and does not use your advertising identifier, because the app never asks for tracking permission."
+    },
+    {
+      "name": "Product analytics",
+      "desc": "Usage events — app opened, screen viewed, passage started, word saved, paywall shown, purchase completed — with device model, operating-system version, app version, and locale. When you are signed in these are linked to your account identifier, so they are not anonymous. This service is also configured to record the screen while you use the app: text you type is masked, but everything else on screen is not, so a page you are reading — including a scanned page shown on screen — and its illustrations can appear in a recording. Our analytics provider stores this in the United States."
+    },
+    {
+      "name": "Advertising measurement",
+      "desc": "App install, app launch, and in-app purchase events, so we can tell which campaigns bring people to Books & Vocab, plus aggregated campaign reports. The app does not ask for tracking permission, so these events carry no advertising identifier and we receive only aggregated, non-identifying counts."
+    }
+  ],
+
+  "thirdPartiesIntro": "Here is every kind of outside service the app contacts, and why.",
+  "thirdParties": [
+    {
+      "name": "Our cloud platform",
+      "desc": "holds your account, signs you in, runs the word and illustration lookups, and delivers notifications."
+    },
+    {
+      "name": "Our file storage",
+      "desc": "serves the book word lists, and stores the definitions, memory hooks, and illustrations that have been generated for a book."
+    },
+    {
+      "name": "Our AI providers",
+      "desc": "they turn the word and passage you asked about into a definition, a memory hook, or an illustration prompt. We may use more than one, and which one handles a request can change."
+    },
+    {
+      "name": "Public book-metadata services",
+      "desc": "used to look up a book's details when you search for one by title or ISBN."
+    },
+    {
+      "name": "A public cover-image service",
+      "desc": "some book cover images are loaded directly from a public image network, so that request reaches that service."
+    },
+    {
+      "name": "Measurement services",
+      "desc": "the app analytics, conversion, product analytics and advertising measurement described above."
+    },
+    {
+      "name": "Apple",
+      "desc": "App Store distribution and in-app purchases, handled entirely by Apple."
+    }
+  ],
+
+  "childrenExtra": "Books & Vocab is intended for students, and an account should be created by a parent, guardian, or teacher. Because we collect an email address, we do not knowingly let a child under 13 create an account. If you believe one has been created, contact us and we will delete it and everything attached to it.",
+
+  "rights": [
+    "<strong>Delete your account:</strong> open Settings in the app and choose Delete Account. That removes your account, the books you requested, any free-access grant, and this device's notification registration; the Sign in with Apple credential is revoked with Apple as well, and your progress is wiped from the device. The shared book entries stay, because other readers use them. If you can no longer sign in, email us from the address on the account and we will delete it for you.",
+    "<strong>Use it without an account:</strong> you can read and review words entirely on your device with no account, in which case we hold nothing about you.",
+    "<strong>Access and correction:</strong> email us to ask for a copy of what is held against your account, or to correct it.",
+    "<strong>Clear your progress:</strong> deleting a book, or clearing the app's storage, removes your local progress immediately. Uninstalling the app removes all of it."
+  ],
+  "rightsTail": "Depending on where you live you may also have rights under the GDPR or the CCPA — to object to processing, or to receive your data in a portable format. Email us and we will action the request within 30 days."
+}

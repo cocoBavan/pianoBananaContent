@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{head.title}}</title>
+    <meta name="description" content="{{head.description}}" />
+    {{head.robots}}
+    <link rel="canonical" href="{{head.canonical}}" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              piano: {
+                dark: "#121316",
+                surface: "#1d1f24",
+                border: "#2e323b",
+                accent: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .print-only {
+        display: none;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .shadow-card {
+          box-shadow: none !important;
+          border: 1px solid #e2e8f0 !important;
+        }
+      }
+      .highlight-mark {
+        background-color: #fef08a;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900"
+  >
+    <!-- Draft banner: only rendered for apps whose facts are not yet confirmed -->
+    {{draftBanner}}
+
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 no-print transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="{{brand.link}}" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md {{accent.ring}} ring-1 ring-slate-200 shrink-0"
+            >
+              {{brand.iconHtml}}
+            </div>
+            <div>
+              <span
+                class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight"
+                >{{brand.name}}</span
+              >
+              <span
+                class="text-xs font-semibold {{accent.text}} tracking-wider uppercase"
+                >{{brand.kicker}}</span
+              >
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="{{brand.legalHome}}"
+              class="hidden sm:inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors"
+            >
+              All apps
+            </a>
+            <button
+              onclick="window.print()"
+              class="inline-flex items-center gap-2 px-3.5 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg
+                class="w-4 h-4 text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                ></path>
+              </svg>
+              <span class="hidden sm:inline">Print / Save PDF</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold {{accent.chip}} rounded-lg shadow-sm transition-all"
+            >
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section
+      class="bg-gradient-to-b {{accent.hero}} border-b border-slate-200/60 py-10 sm:py-14"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full {{accent.soft}} border border-slate-200 text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            {{hero.badge}}
+          </div>
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4"
+          >
+            {{hero.h1}}
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed">
+            {{hero.lede}}
+          </p>
+        </div>
+        <div
+          class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print"
+        >
+          {{hero.cards}}
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main
+      class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+    >
+      <!-- Interactive Filter/Search Bar -->
+      <div class="mb-8 no-print">
+        <div class="relative max-w-xl">
+          <input
+            type="text"
+            id="policySearch"
+            placeholder="{{hero.searchPlaceholder}}"
+            class="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-sm transition-all text-sm"
+          />
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          id="searchResultsCount"
+          class="text-xs text-slate-500 mt-2 hidden"
+        ></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Sidebar Navigation (Table of Contents) -->
+        <aside class="lg:col-span-4 sticky top-24 no-print hidden lg:block">
+          <div
+            class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3"
+          >
+            <h2
+              class="text-xs font-bold uppercase tracking-wider text-slate-400 px-2"
+            >
+              Table of Contents
+            </h2>
+            <nav class="space-y-1 text-sm font-medium" id="tocNav">{{toc}}</nav>
+            {{tocExtra}}
+          </div>
+        </aside>
+
+        <!-- Main Content Clauses -->
+        <div class="lg:col-span-8 space-y-8" id="policyContent">
+          {{sections}}
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 no-print mt-auto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center sm:flex sm:justify-between sm:items-center">
+          <p class="text-xs text-slate-500">{{footer.copyright}}</p>
+          <div
+            class="mt-4 sm:mt-0 flex justify-center gap-6 text-xs text-slate-500 font-medium"
+          >
+            {{footer.links}}
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-slate-400 text-center sm:text-left">
+          {{footer.note}}
+        </p>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts for TOC Highlighting and Filter Search -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("policySearch");
+        const sections = document.querySelectorAll(".policy-section");
+        const searchResultsCount =
+          document.getElementById("searchResultsCount");
+
+        if (searchInput) {
+          searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            let matchCount = 0;
+
+            if (query === "") {
+              sections.forEach((sec) => (sec.style.display = "block"));
+              searchResultsCount.classList.add("hidden");
+              return;
+            }
+
+            sections.forEach((sec) => {
+              const text = sec.innerText.toLowerCase();
+              if (text.includes(query)) {
+                sec.style.display = "block";
+                matchCount++;
+              } else {
+                sec.style.display = "none";
+              }
+            });
+
+            searchResultsCount.textContent = `Found ${matchCount} section${matchCount === 1 ? "" : "s"} matching "${query}"`;
+            searchResultsCount.classList.remove("hidden");
+          });
+        }
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: 0,
+        };
+        const tocLinks = document.querySelectorAll(".toc-link");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              tocLinks.forEach((link) => {
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.remove("text-slate-600");
+                } else {
+                  link.classList.remove(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.add("text-slate-600");
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
+  </body>
+</html>

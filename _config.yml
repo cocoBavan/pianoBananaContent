@@ -1,0 +1,19 @@
+# GitHub Pages serves this repository's root as the website.
+#
+# Only the site itself should be reachable. `legal/` is the *source* the policies
+# are generated from — the build script, the per-app data files and the internal
+# setup notes — none of which belongs on the public web. (The generated output in
+# `privacy/` and `terms/` is committed separately and stays served.)
+#
+# Before adding anything to this list, check that the apps do not fetch it:
+#   content/, songs.json, premiumRestrictionEnabled.json, images/ and thumbnails/
+#   are downloaded by the apps at runtime, and privacy/, terms/, privacy.html,
+#   terms.html and index.html are the site itself. Excluding any of those breaks
+#   something real.
+
+exclude:
+  - legal
+  - README.md
+  - .github
+  - .gitignore
+  - scripts

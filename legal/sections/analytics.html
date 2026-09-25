@@ -1,0 +1,14 @@
+<p>{{app.analyticsIntro}}</p>
+<div class="space-y-3">
+  {{#app.analytics}}
+  <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+    <h4 class="font-bold text-slate-900 text-sm">{{name}}</h4>
+    <p class="text-xs text-slate-500 mt-1">{{desc}}</p>
+  </div>
+  {{/app.analytics}}
+</div>
+<p class="text-xs text-slate-500">
+  * You can change your tracking choice at any time in iOS Settings ▸ Privacy
+  &amp; Security ▸ Tracking. We do not sell your data, and we never send an
+  advertising partner the content of anything you create in {{app.name}}.
+</p>

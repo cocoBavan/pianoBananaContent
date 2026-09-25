@@ -1,0 +1,23 @@
+<p class="font-medium text-slate-800">{{app.ai.summary}}</p>
+<div class="bg-slate-50 border-l-4 {{accent.border}} p-4 rounded-r-xl my-3">
+  <p class="text-xs sm:text-sm text-slate-700 font-semibold mb-1">
+    How long it is kept:
+  </p>
+  <p class="text-xs sm:text-sm text-slate-600">{{app.ai.retention}}</p>
+</div>
+<ul class="list-disc list-inside space-y-2 pl-2">
+  {{#app.ai.bullets}}
+  <li>{{this}}</li>
+  {{/app.ai.bullets}}
+</ul>
+<div class="bg-white border border-slate-200 p-4 rounded-xl my-3">
+  <p class="text-xs sm:text-sm text-slate-700 font-semibold mb-1">
+    What we never do with it:
+  </p>
+  <p class="text-xs sm:text-sm text-slate-600">{{app.ai.guarantee}}</p>
+</div>
+<p class="text-xs text-slate-500">
+  Because AI feedback is generated for a single request and is not attached to
+  an account, there is no stored history of your requests for us to hold, sell,
+  or disclose.
+</p>

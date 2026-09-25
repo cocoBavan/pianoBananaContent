@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy & Terms — HeyGhoshi</title>
+    <meta name="description" content="Privacy and terms for the apps published by HeyGhoshi." />
+    
+    <link rel="canonical" href="https://heyghoshi.com/privacy/" />
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              piano: {
+                dark: "#121316",
+                surface: "#1d1f24",
+                border: "#2e323b",
+                accent: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .print-only {
+        display: none;
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        .print-only {
+          display: block !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .shadow-card {
+          box-shadow: none !important;
+          border: 1px solid #e2e8f0 !important;
+        }
+      }
+      .highlight-mark {
+        background-color: #fef08a;
+        padding: 0 2px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900"
+  >
+    <!-- Draft banner: only rendered for apps whose facts are not yet confirmed -->
+    
+
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200 no-print transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-xl overflow-hidden shadow-md shadow-slate-500/20 ring-1 ring-slate-200 shrink-0"
+            >
+              
+              <div class="w-full h-full flex items-center justify-center bg-slate-900 text-white font-black text-sm sm:text-base tracking-tight">HG</div>
+            
+            </div>
+            <div>
+              <span
+                class="text-xl sm:text-2xl font-black tracking-tight text-slate-900 block leading-tight"
+                >HeyGhoshi</span
+              >
+              <span
+                class="text-xs font-semibold text-slate-600 tracking-wider uppercase"
+                >Legal</span
+              >
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../privacy/"
+              class="hidden sm:inline-flex items-center text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors"
+            >
+              All apps
+            </a>
+            <button
+              onclick="window.print()"
+              class="inline-flex items-center gap-2 px-3.5 py-2 text-sm font-medium text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-lg transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg
+                class="w-4 h-4 text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                ></path>
+              </svg>
+              <span class="hidden sm:inline">Print / Save PDF</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold bg-slate-900 text-white rounded-lg shadow-sm transition-all"
+            >
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section
+      class="bg-gradient-to-b from-slate-500/10 via-slate-500/5 to-slate-50 border-b border-slate-200/60 py-10 sm:py-14"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl">
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200 text-slate-800 border border-slate-200 text-xs font-bold uppercase tracking-wider mb-4"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+            ></span>
+            Published by HeyGhoshi
+          </div>
+          <h1
+            class="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight mb-4"
+          >
+            Privacy & Terms
+          </h1>
+          <p class="text-lg sm:text-xl text-slate-600 leading-relaxed">
+            HeyGhoshi publishes 3 apps, and each one handles your data differently. Pick your app below.
+          </p>
+        </div>
+        <div
+          class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print"
+        >
+          
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_books_256.jpg" alt="Books & Vocab icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-base leading-tight">Books & Vocab</h3>
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Coming Soon</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-normal mb-4">Reading practice and vocabulary building</p>
+            </div>
+            <div class="flex gap-2 text-xs font-semibold">
+              <a href="../privacy/books-vocab/" class="bg-emerald-400 text-slate-950 px-3 py-1.5 rounded-lg">Privacy</a>
+              <a href="../terms/books-vocab/" class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg">Terms</a>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_banan_256.jpg" alt="Music Banana icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-base leading-tight">Music Banana</h3>
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">On the App Store</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-normal mb-4">Sheet music scanning for piano practice</p>
+            </div>
+            <div class="flex gap-2 text-xs font-semibold">
+              <a href="../privacy/music-banana/" class="bg-amber-400 text-slate-950 px-3 py-1.5 rounded-lg">Privacy</a>
+              <a href="../terms/music-banana/" class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg">Terms</a>
+            </div>
+          </div>
+          <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-3 mb-3">
+                <div class="w-10 h-10 rounded-xl overflow-hidden ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_teacher_256.jpg" alt="Selective Teacher icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-bold text-slate-900 text-base leading-tight">Selective Teacher</h3>
+                  <p class="text-[11px] font-semibold uppercase tracking-wider text-slate-400">Coming Soon</p>
+                </div>
+              </div>
+              <p class="text-xs text-slate-500 leading-normal mb-4">Practice and marking for selective school entry tests</p>
+            </div>
+            <div class="flex gap-2 text-xs font-semibold">
+              <a href="../privacy/selective-teacher/" class="bg-sky-400 text-slate-950 px-3 py-1.5 rounded-lg">Privacy</a>
+              <a href="../terms/selective-teacher/" class="bg-slate-100 text-slate-700 px-3 py-1.5 rounded-lg">Terms</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main
+      class="flex-grow max-w-6xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12"
+    >
+      <!-- Interactive Filter/Search Bar -->
+      <div class="mb-8 no-print">
+        <div class="relative max-w-xl">
+          <input
+            type="text"
+            id="policySearch"
+            placeholder="Search the legal index…"
+            class="w-full pl-10 pr-4 py-3 bg-white border border-slate-300 rounded-xl text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-amber-500 shadow-sm transition-all text-sm"
+          />
+          <div
+            class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+          >
+            <svg
+              class="w-5 h-5 text-slate-400"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+        <div
+          id="searchResultsCount"
+          class="text-xs text-slate-500 mt-2 hidden"
+        ></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+        <!-- Sidebar Navigation (Table of Contents) -->
+        <aside class="lg:col-span-4 sticky top-24 no-print hidden lg:block">
+          <div
+            class="bg-white border border-slate-200 rounded-2xl p-5 shadow-sm space-y-3"
+          >
+            <h2
+              class="text-xs font-bold uppercase tracking-wider text-slate-400 px-2"
+            >
+              Table of Contents
+            </h2>
+            <nav class="space-y-1 text-sm font-medium" id="tocNav">
+              <a href="#which-app" class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">1. One Policy Per App</a>
+              <a href="#at-a-glance" class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">2. At a Glance</a>
+              <a href="#contact" class="toc-link block px-3 py-2 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors">3. Contact & Privacy Inquiries</a></nav>
+            
+          </div>
+        </aside>
+
+        <!-- Main Content Clauses -->
+        <div class="lg:col-span-8 space-y-8" id="policyContent">
+          
+          <!-- Section 1 — which-app -->
+          <section id="which-app" class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-lg bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-sm">1</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">One Policy Per App</h2>
+            </div>
+            <div class="prose prose-slate text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base">
+<p>
+  Every app we publish has its own privacy policy and its own terms of use,
+  because each one handles your information differently. There is no single "our
+  app" that a combined policy could honestly describe — a drawing app that keeps
+  everything on your device cannot share a page with a study app that sends a
+  question to an AI provider, or with an app that stores an account on our
+  servers.
+</p>
+<p>So the rules are:</p>
+<ul class="list-disc list-inside space-y-2 pl-2">
+  <li>
+    <strong>One policy per app.</strong> The policy covers what that app does,
+    and nothing else. It is the URL you can give to Apple, to a school, or to a
+    parent.
+  </li>
+  <li>
+    <strong>One publisher behind all of them.</strong> HeyGhoshi is
+    an independent Australian app studio, and it is the party responsible for every app listed
+    above.
+  </li>
+  <li>
+    <strong>No data selling, anywhere.</strong> None of our apps sell your data,
+    your work, or your content — that holds for every app on this page.
+  </li>
+  <li>
+    <strong>You can see what changed.</strong> Each policy shows its own
+    effective date, so you can tell when an app's practice last changed.
+  </li>
+</ul>
+<p class="text-xs text-slate-500">
+  If an app is marked <em>draft</em> above, its policy is not yet final and
+  carries a <code class="font-mono">noindex</code> tag. Ask us before relying on
+  it.
+</p>
+
+            </div>
+          </section>
+          <!-- Section 2 — at-a-glance -->
+          <section id="at-a-glance" class="policy-section bg-white p-6 sm:p-8 rounded-2xl border border-slate-200/80 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-lg bg-slate-200 text-slate-800 flex items-center justify-center font-bold text-sm">2</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-slate-900">At a Glance</h2>
+            </div>
+            <div class="prose prose-slate text-slate-600 leading-relaxed space-y-4 text-sm sm:text-base">
+<p>Here is the whole picture on one screen. Each row links to the full documents for that app.</p>
+<div class="overflow-x-auto">
+  <table class="w-full text-left border-collapse min-w-[34rem]">
+    <thead>
+      <tr class="border-b border-slate-200">
+        <th class="py-2 pr-4 text-[11px] font-bold uppercase tracking-wider text-slate-400">App</th>
+        <th class="py-2 pr-4 text-[11px] font-bold uppercase tracking-wider text-slate-400">What it keeps, and where</th>
+        <th class="py-2 text-[11px] font-bold uppercase tracking-wider text-slate-400">Documents</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="border-b border-slate-100 last:border-0 align-top">
+          <td class="py-3 pr-4">
+            <div class="font-bold text-slate-900 text-sm">Books & Vocab</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Coming Soon</div>
+          </td>
+          <td class="py-3 pr-4 text-xs text-slate-600 leading-relaxed">Optional account: we store your email address, an internal account identifier, and the books you ask us to add. Reading progress and scanned pages stay on your device. When you ask what a word means, that word and its passage go to our AI providers.</td>
+          <td class="py-3 text-xs font-semibold whitespace-nowrap">
+            <a href="../privacy/books-vocab/" class="text-slate-900 underline decoration-slate-300 hover:decoration-slate-900">Privacy</a>
+            <span class="text-slate-300"> · </span>
+            <a href="../terms/books-vocab/" class="text-slate-500 underline decoration-slate-300 hover:decoration-slate-900">Terms</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-100 last:border-0 align-top">
+          <td class="py-3 pr-4">
+            <div class="font-bold text-slate-900 text-sm">Music Banana</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Available</div>
+          </td>
+          <td class="py-3 pr-4 text-xs text-slate-600 leading-relaxed">No account. Your saved scores and practice history stay in the app; session recordings show the screen and can be switched off in Settings.</td>
+          <td class="py-3 text-xs font-semibold whitespace-nowrap">
+            <a href="../privacy/music-banana/" class="text-slate-900 underline decoration-slate-300 hover:decoration-slate-900">Privacy</a>
+            <span class="text-slate-300"> · </span>
+            <a href="../terms/music-banana/" class="text-slate-500 underline decoration-slate-300 hover:decoration-slate-900">Terms</a>
+          </td>
+        </tr>
+        <tr class="border-b border-slate-100 last:border-0 align-top">
+          <td class="py-3 pr-4">
+            <div class="font-bold text-slate-900 text-sm">Selective Teacher</div>
+            <div class="text-[11px] uppercase tracking-wider text-slate-400 font-semibold">Coming Soon</div>
+          </td>
+          <td class="py-3 pr-4 text-xs text-slate-600 leading-relaxed">Practice and results stay on your device. A question you ask the AI about is sent to our AI provider, and a question you choose to share is uploaded and reviewed by a person before other children can see it. No name, no email — the app uses an anonymous device identity.</td>
+          <td class="py-3 text-xs font-semibold whitespace-nowrap">
+            <a href="../privacy/selective-teacher/" class="text-slate-900 underline decoration-slate-300 hover:decoration-slate-900">Privacy</a>
+            <span class="text-slate-300"> · </span>
+            <a href="../terms/selective-teacher/" class="text-slate-500 underline decoration-slate-300 hover:decoration-slate-900">Terms</a>
+          </td>
+        </tr></tbody>
+  </table>
+</div>
+            </div>
+          </section>
+          <!-- Section 3 — contact -->
+          <section id="contact" class="policy-section bg-gradient-to-br from-slate-900 to-slate-800 text-white p-6 sm:p-8 rounded-2xl shadow-lg">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="w-8 h-8 rounded-lg bg-white/15 text-white flex items-center justify-center font-bold text-sm">3</span>
+              <h2 class="text-xl sm:text-2xl font-bold text-white">Contact & Privacy Inquiries</h2>
+            </div>
+            <div class="prose prose-invert prose-slate text-slate-300 leading-relaxed space-y-4 text-sm sm:text-base">
+<p class="text-slate-300 text-sm sm:text-base mb-6">
+  Questions about any of our apps, or about this page? Email us and say which
+  app you mean.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+    <div class="text-xs uppercase font-semibold text-amber-400 mb-1">
+      Email Support
+    </div>
+    <a
+      href="mailto:human@heyghoshi.com"
+      class="text-base font-bold text-white hover:underline break-all"
+      >human@heyghoshi.com</a
+    >
+  </div>
+  <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+    <div class="text-xs uppercase font-semibold text-amber-400 mb-1">
+      Publisher
+    </div>
+    <div class="text-base font-bold text-white">HeyGhoshi</div>
+    <div class="text-xs text-slate-400">
+      Australia
+    </div>
+  </div>
+</div>
+
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 no-print mt-auto">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center sm:flex sm:justify-between sm:items-center">
+          <p class="text-xs text-slate-500">© 2026 HeyGhoshi. All rights reserved.</p>
+          <div
+            class="mt-4 sm:mt-0 flex justify-center gap-6 text-xs text-slate-500 font-medium"
+          >
+            <a href="../privacy/" class="hover:text-amber-600 transition-colors">Privacy</a><a href="../terms/" class="hover:text-amber-600 transition-colors">Terms</a><a href="../privacy/" class="hover:text-amber-600 transition-colors">All apps</a><a href="mailto:human@heyghoshi.com" class="hover:text-amber-600 transition-colors">Support</a>
+          </div>
+        </div>
+        <p class="mt-6 text-xs text-slate-400 text-center sm:text-left">
+          HeyGhoshi is an independent Australian app studio.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Interactive Scripts for TOC Highlighting and Filter Search -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById("policySearch");
+        const sections = document.querySelectorAll(".policy-section");
+        const searchResultsCount =
+          document.getElementById("searchResultsCount");
+
+        if (searchInput) {
+          searchInput.addEventListener("input", (e) => {
+            const query = e.target.value.toLowerCase().trim();
+            let matchCount = 0;
+
+            if (query === "") {
+              sections.forEach((sec) => (sec.style.display = "block"));
+              searchResultsCount.classList.add("hidden");
+              return;
+            }
+
+            sections.forEach((sec) => {
+              const text = sec.innerText.toLowerCase();
+              if (text.includes(query)) {
+                sec.style.display = "block";
+                matchCount++;
+              } else {
+                sec.style.display = "none";
+              }
+            });
+
+            searchResultsCount.textContent = `Found ${matchCount} section${matchCount === 1 ? "" : "s"} matching "${query}"`;
+            searchResultsCount.classList.remove("hidden");
+          });
+        }
+
+        const observerOptions = {
+          root: null,
+          rootMargin: "-20% 0px -60% 0px",
+          threshold: 0,
+        };
+        const tocLinks = document.querySelectorAll(".toc-link");
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              tocLinks.forEach((link) => {
+                if (link.getAttribute("href") === `#${id}`) {
+                  link.classList.add(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.remove("text-slate-600");
+                } else {
+                  link.classList.remove(
+                    "bg-amber-100",
+                    "text-amber-900",
+                    "font-bold",
+                  );
+                  link.classList.add("text-slate-600");
+                }
+              });
+            }
+          });
+        }, observerOptions);
+
+        sections.forEach((section) => observer.observe(section));
+      });
+    </script>
+  </body>
+</html>

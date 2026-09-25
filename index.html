@@ -1,0 +1,2535 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Flag JS availability early so scroll-reveal never hides content when JS is off. -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+
+    <title>
+      Hey Ghoshi — Learning Apps for Music, Maths, Reading &amp; Art
+    </title>
+    <meta
+      name="description"
+      content="Hi, I'm Ghoshi. I learn, play and create with four iOS apps — Music Banana for piano, Selective Teacher for maths, Books &amp; Vocab for reading and Cute Artist for drawing. I share the whole journey on video."
+    />
+    <meta name="author" content="Ghoshi" />
+    <meta name="theme-color" content="#f8fafc" />
+    <link rel="canonical" href="https://heyghoshi.com/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Hey Ghoshi" />
+    <meta
+      property="og:title"
+      content="Hey Ghoshi — Learning Apps for Music, Maths, Reading &amp; Art"
+    />
+    <meta
+      property="og:description"
+      content="Hi, I'm Ghoshi. Four iOS apps for music, maths, reading and art — the ones I use every day, and share on video."
+    />
+    <meta property="og:url" content="https://heyghoshi.com/" />
+    <meta
+      property="og:image"
+      content="https://heyghoshi.com/images/og_heyghoshi.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ghoshi smiling at the piano" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://heyghoshi.com/images/og_heyghoshi.jpg"
+    />
+    <meta name="twitter:image:alt" content="Ghoshi smiling at the piano" />
+    <meta
+      name="twitter:title"
+      content="Hey Ghoshi — Learning Apps for Music, Maths, Reading &amp; Art"
+    />
+    <meta
+      name="twitter:description"
+      content="Hi, I'm Ghoshi. Four iOS apps for music, maths, reading and art — the ones I use every day."
+    />
+
+    <!-- Inline SVG favicon: gradient squircle brand mark -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='g' x1='0' y1='0' x2='1' y2='1'><stop offset='0' stop-color='%236366f1'/><stop offset='0.55' stop-color='%237c3aed'/><stop offset='1' stop-color='%23db2777'/></linearGradient></defs><rect width='100' height='100' rx='24' fill='url(%23g)'/><text x='50' y='70' font-size='56' font-family='system-ui,sans-serif' font-weight='800' text-anchor='middle' fill='white'>G</text></svg>"
+    />
+
+    <!-- Tailwind CSS (Play CDN — swap for a compiled build if the page grows) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: {
+                DEFAULT: "#0b1120",
+                900: "#0b1120",
+                800: "#131c31",
+                700: "#1e293b",
+              },
+              brand: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                200: "#c7d2fe",
+                300: "#a5b4fc",
+                400: "#818cf8",
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+                800: "#3730a3",
+                900: "#312e81",
+              },
+            },
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: [
+                "Sora",
+                '"Plus Jakarta Sans"',
+                "system-ui",
+                "-apple-system",
+                "sans-serif",
+              ],
+              serif: ['"Instrument Serif"', "Georgia", "Cambria", "serif"],
+            },
+            boxShadow: {
+              soft: "0 1px 2px rgba(15,23,42,0.04), 0 10px 30px -14px rgba(15,23,42,0.12)",
+              card: "0 1px 2px rgba(15,23,42,0.04), 0 20px 44px -20px rgba(15,23,42,0.20)",
+              glow: "0 28px 70px -28px rgba(79,70,229,0.50)",
+            },
+            borderRadius: {
+              "4xl": "2rem",
+              "5xl": "2.5rem",
+            },
+            animation: {
+              float: "float 6s ease-in-out infinite",
+              floatSlow: "float 9s ease-in-out infinite",
+              pingSoft: "pingSoft 2.4s cubic-bezier(0,0,0.2,1) infinite",
+            },
+            keyframes: {
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-8px)" },
+              },
+              pingSoft: {
+                "0%": { transform: "scale(1)", opacity: "0.85" },
+                "70%, 100%": { transform: "scale(2.4)", opacity: "0" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Sora:wght@600;700;800&family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      body {
+        text-rendering: optimizeLegibility;
+      }
+
+      /* Anchor offsets so sticky nav never covers section headings */
+      section[id],
+      footer[id],
+      [id].scroll-anchor {
+        scroll-margin-top: 6rem;
+      }
+
+      ::selection {
+        background-color: #c7d2fe;
+        color: #1e1b4b;
+      }
+
+      /* ---- Scroll reveal (only active when JS is available) ---- */
+      .reveal {
+        transition:
+          opacity 0.75s var(--ease-out-expo),
+          transform 0.75s var(--ease-out-expo);
+        transition-delay: var(--reveal-delay, 0ms);
+      }
+      .js .reveal {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+      .js .reveal.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+
+      /* ---- Utilities ---- */
+      .text-gradient {
+        background-image: linear-gradient(
+          100deg,
+          #4f46e5 0%,
+          #7c3aed 48%,
+          #db2777 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .glass {
+        background-color: rgba(255, 255, 255, 0.72);
+        backdrop-filter: blur(20px) saturate(180%);
+        -webkit-backdrop-filter: blur(20px) saturate(180%);
+        border: 1px solid rgba(255, 255, 255, 0.65);
+      }
+
+      /* Soft dotted canvas, faded out toward the edges */
+      .grid-fade {
+        background-image: radial-gradient(
+          circle at 1px 1px,
+          rgba(15, 23, 42, 0.085) 1px,
+          transparent 0
+        );
+        background-size: 22px 22px;
+        -webkit-mask-image: radial-gradient(
+          ellipse 75% 55% at 50% 8%,
+          #000 15%,
+          transparent 78%
+        );
+        mask-image: radial-gradient(
+          ellipse 75% 55% at 50% 8%,
+          #000 15%,
+          transparent 78%
+        );
+      }
+
+      /* Video poster play affordance */
+      .play-ring::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        border: 2px solid rgba(255, 255, 255, 0.7);
+        opacity: 0;
+        transform: scale(0.85);
+        transition:
+          opacity 0.35s var(--ease-out-expo),
+          transform 0.35s var(--ease-out-expo);
+      }
+      .group\/video:hover .play-ring::after {
+        opacity: 1;
+        transform: scale(1.18);
+      }
+
+      input:invalid:not(:placeholder-shown) {
+        border-color: #fda4af;
+      }
+
+      /* ---- Accessible focus ---- */
+      a:focus-visible,
+      button:focus-visible,
+      input:focus-visible {
+        outline: 2px solid #4f46e5;
+        outline-offset: 3px;
+        border-radius: 0.75rem;
+      }
+
+      /* ---- Motion preferences ---- */
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+        *,
+        *::before,
+        *::after {
+          animation-duration: 0.001ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.001ms !important;
+        }
+        .js .reveal {
+          opacity: 1 !important;
+          transform: none !important;
+        }
+      }
+    </style>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ghoshi",
+        "url": "https://heyghoshi.com/",
+        "description": "Ghoshi learns, plays and creates with four iOS apps — for music, maths, reading and art — and shares the journey across YouTube, TikTok, Instagram, Facebook and Snapchat.",
+        "sameAs": [
+          "https://www.youtube.com/@heyghoshi",
+          "https://www.tiktok.com/@heyghoshi",
+          "https://www.instagram.com/heyghoshi/",
+          "https://www.facebook.com/profile.php?id=61593561659140",
+          "https://www.snapchat.com/add/heyghoshi"
+        ]
+      }
+    </script>
+  </head>
+
+  <body class="min-h-screen bg-slate-50 font-sans text-slate-800 antialiased">
+    <a
+      href="#apps"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-xl focus:bg-slate-950 focus:px-4 focus:py-2.5 focus:text-sm focus:font-semibold focus:text-white"
+      >Skip to the apps</a
+    >
+
+    <!-- ============================== NAVIGATION ============================== -->
+    <header
+      id="siteNav"
+      class="sticky top-0 z-50 border-b border-transparent transition-all duration-300"
+    >
+      <div class="mx-auto max-w-7xl px-5 sm:px-8">
+        <div class="flex h-16 items-center justify-between gap-4 lg:h-[4.5rem]">
+          <!-- Brand -->
+          <a
+            href="#top"
+            class="group flex items-center gap-3"
+            aria-label="Hey Ghoshi — home"
+          >
+            <span
+              class="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-[26%] bg-gradient-to-br from-brand-500 via-violet-600 to-pink-600 shadow-md shadow-brand-600/25 ring-1 ring-slate-900/5"
+            >
+              <span
+                class="font-display text-lg font-extrabold leading-none text-white select-none"
+                >G</span
+              >
+              <span
+                class="absolute -right-1 -top-1 h-4 w-4 rounded-full bg-amber-300/80 blur-[6px]"
+                aria-hidden="true"
+              ></span>
+            </span>
+            <span class="flex flex-col leading-none">
+              <span
+                class="font-display text-[17px] font-extrabold tracking-tight text-slate-950"
+                >Hey <span class="text-gradient">Ghoshi</span></span
+              >
+              <span
+                class="mt-0.5 hidden text-[10px] font-semibold uppercase tracking-[0.16em] text-slate-500 sm:block"
+                >Learning out loud</span
+              >
+            </span>
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden items-center gap-1 lg:flex" aria-label="Main">
+            <a
+              href="#apps"
+              data-nav-link
+              class="rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-900/5 hover:text-slate-950"
+              >Apps</a
+            >
+            <a
+              href="#about"
+              data-nav-link
+              class="rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-900/5 hover:text-slate-950"
+              >About</a
+            >
+            <a
+              href="#videos"
+              data-nav-link
+              class="rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-900/5 hover:text-slate-950"
+              >Videos</a
+            >
+            <a
+              href="#connect"
+              data-nav-link
+              class="rounded-xl px-3.5 py-2 text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-900/5 hover:text-slate-950"
+              >Connect</a
+            >
+          </nav>
+
+          <div class="flex items-center gap-2">
+            <a
+              href="#apps"
+              class="group hidden items-center gap-2 rounded-2xl bg-slate-950 px-5 py-2.5 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-card sm:inline-flex"
+            >
+              Get Apps
+              <svg
+                class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+
+            <!-- Mobile menu toggle -->
+            <button
+              type="button"
+              id="menuToggle"
+              class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white/80 text-slate-700 shadow-sm backdrop-blur transition-colors hover:bg-white lg:hidden"
+              aria-expanded="false"
+              aria-controls="mobileMenu"
+              aria-label="Open navigation menu"
+            >
+              <svg
+                id="menuIconOpen"
+                class="h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M4 7h16M4 12h16M4 17h16" />
+              </svg>
+              <svg
+                id="menuIconClose"
+                class="hidden h-5 w-5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                aria-hidden="true"
+              >
+                <path d="M6 6l12 12M18 6L6 18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile panel -->
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-slate-200/80 bg-white/95 backdrop-blur-xl lg:hidden"
+      >
+        <nav
+          class="mx-auto flex max-w-7xl flex-col gap-1 px-5 py-4 sm:px-8"
+          aria-label="Mobile"
+        >
+          <a
+            href="#apps"
+            class="rounded-2xl px-4 py-3 text-[15px] font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+            >Apps</a
+          >
+          <a
+            href="#about"
+            class="rounded-2xl px-4 py-3 text-[15px] font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+            >About</a
+          >
+          <a
+            href="#videos"
+            class="rounded-2xl px-4 py-3 text-[15px] font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+            >Videos</a
+          >
+          <a
+            href="#connect"
+            class="rounded-2xl px-4 py-3 text-[15px] font-semibold text-slate-700 transition-colors hover:bg-slate-100 hover:text-slate-950"
+            >Connect</a
+          >
+          <a
+            href="#apps"
+            class="mt-2 inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-5 py-3.5 text-sm font-semibold text-white shadow-soft"
+          >
+            Get Apps
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M13 6l6 6-6 6" />
+            </svg>
+          </a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- ============================== HERO ============================== -->
+      <section
+        class="relative overflow-hidden pb-20 pt-12 sm:pb-28 sm:pt-16 lg:pb-32 lg:pt-20"
+      >
+        <!-- Ambient background -->
+        <div
+          class="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+          aria-hidden="true"
+        >
+          <div
+            class="absolute -left-24 -top-40 h-[26rem] w-[26rem] rounded-full bg-brand-300/35 blur-3xl"
+          ></div>
+          <div
+            class="absolute -right-32 -top-24 h-[30rem] w-[30rem] rounded-full bg-violet-300/30 blur-3xl"
+          ></div>
+          <div
+            class="absolute -bottom-48 left-1/4 h-[26rem] w-[26rem] rounded-full bg-amber-200/45 blur-3xl"
+          ></div>
+          <div class="absolute inset-0 grid-fade"></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="grid items-center gap-14 lg:grid-cols-2 lg:gap-16">
+            <!-- Copy -->
+            <div class="reveal">
+              <span
+                class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white/75 px-3.5 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-700 shadow-sm backdrop-blur sm:text-xs"
+              >
+                <span class="relative flex h-2 w-2" aria-hidden="true">
+                  <span
+                    class="absolute inline-flex h-full w-full animate-pingSoft rounded-full bg-emerald-500"
+                  ></span>
+                  <span
+                    class="relative inline-flex h-2 w-2 rounded-full bg-emerald-500"
+                  ></span>
+                </span>
+                Apps I learn, play &amp; create with
+              </span>
+
+              <h1
+                class="mt-6 font-display text-[2.1rem] font-extrabold leading-[1.06] tracking-tight text-slate-950 sm:text-5xl lg:text-[3.4rem]"
+              >
+                Hey, I'm Ghoshi.<br class="hidden sm:block" />
+                I learn, play and create with
+                <span class="text-gradient">four apps</span>
+                <span class="font-serif text-[1.08em] font-normal italic"
+                  >I love.</span
+                >
+              </h1>
+
+              <p
+                class="mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg"
+              >
+                One app each for the things I'm learning — music, maths, reading
+                and art. I practise on them every day, film what happens, and
+                share it all here. They're on the App Store, ready whenever you
+                are.
+              </p>
+
+              <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <a
+                  href="#apps"
+                  class="group inline-flex items-center justify-center gap-2 rounded-2xl bg-slate-950 px-6 py-3.5 text-sm font-semibold text-white shadow-card transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-glow"
+                >
+                  Explore the apps
+                  <svg
+                    class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M5 12h14M13 6l6 6-6 6" />
+                  </svg>
+                </a>
+                <a
+                  href="#videos"
+                  class="group inline-flex items-center justify-center gap-2.5 rounded-2xl border border-slate-200 bg-white/75 px-6 py-3.5 text-sm font-semibold text-slate-800 shadow-soft backdrop-blur transition-all hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white"
+                >
+                  <svg
+                    class="h-4 w-4 text-brand-600"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+                  </svg>
+                  Watch my videos
+                </a>
+              </div>
+
+              <ul
+                class="mt-9 flex flex-wrap items-center gap-x-6 gap-y-2.5 text-xs font-medium text-slate-500"
+                role="list"
+              >
+                <li class="inline-flex items-center gap-1.5">
+                  <svg
+                    class="h-4 w-4 text-slate-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="m8 5 10 7-10 7V5Z" />
+                  </svg>
+                  iPhone &amp; iPad ready
+                </li>
+                <li class="inline-flex items-center gap-1.5">
+                  <svg
+                    class="h-4 w-4 text-slate-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6l7-3Z" />
+                  </svg>
+                  Privacy-first, on-device
+                </li>
+                <li class="inline-flex items-center gap-1.5">
+                  <svg
+                    class="h-4 w-4 text-slate-400"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 3v4M12 17v4M3 12h4M17 12h4M6.3 6.3l2.8 2.8M14.9 14.9l2.8 2.8M17.7 6.3l-2.8 2.8M9.1 14.9l-2.8 2.8"
+                    />
+                  </svg>
+                  New apps in the works
+                </li>
+              </ul>
+            </div>
+
+            <!--
+              FOUNDER MEDIA CARD
+              Real photo of Ghoshi at the piano — `images/Ghoshi_At_Piano.jpeg`,
+              a 4:5 crop of Yamaha.jpeg (so it needs no cropping in CSS).
+            -->
+            <div class="reveal" style="--reveal-delay: 120ms">
+              <div class="relative mx-auto w-full max-w-md lg:max-w-lg">
+                <div
+                  class="pointer-events-none absolute -inset-5 rounded-[3rem] bg-gradient-to-tr from-brand-400/30 via-violet-400/25 to-amber-300/30 blur-3xl"
+                  aria-hidden="true"
+                ></div>
+
+                <div
+                  class="relative rounded-[2.25rem] border border-white/70 bg-white/80 p-2.5 shadow-glow ring-1 ring-slate-900/5 backdrop-blur-xl"
+                >
+                  <div
+                    class="relative aspect-[4/5] overflow-hidden rounded-[1.85rem] bg-gradient-to-br from-indigo-100 via-violet-100 to-amber-100"
+                  >
+                    <img
+                      data-fallback-img
+                      src="images/Ghoshi_At_Piano.jpeg"
+                      alt="Ghoshi smiling at the piano in a yellow dress"
+                      width="1000"
+                      height="1250"
+                      fetchpriority="high"
+                      decoding="async"
+                      class="h-full w-full object-cover"
+                    />
+                    <div
+                      class="absolute inset-0 bg-gradient-to-t from-slate-950/55 via-slate-950/5 to-slate-950/10"
+                      aria-hidden="true"
+                    ></div>
+
+                    <!-- Floating badge: shipping status -->
+                    <div
+                      class="absolute right-3 top-3 animate-float sm:right-4 sm:top-4"
+                    >
+                      <div
+                        class="glass flex items-center gap-2.5 rounded-2xl px-3 py-2.5 shadow-card"
+                      >
+                        <span
+                          class="relative flex h-2.5 w-2.5 shrink-0"
+                          aria-hidden="true"
+                        >
+                          <span
+                            class="absolute inline-flex h-full w-full animate-pingSoft rounded-full bg-emerald-500"
+                          ></span>
+                          <span
+                            class="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-500"
+                          ></span>
+                        </span>
+                        <span
+                          class="text-[11px] font-bold leading-tight text-slate-900"
+                          >Learning every day<br /><span
+                            class="font-medium text-slate-500"
+                            >with my four apps</span
+                          ></span
+                        >
+                      </div>
+                    </div>
+
+                    <!-- Floating badge: featured app -->
+                    <div
+                      class="absolute bottom-3 left-3 animate-floatSlow sm:bottom-4 sm:left-4"
+                    >
+                      <div
+                        class="glass flex items-center gap-2.5 rounded-2xl p-2 pr-3.5 shadow-card"
+                      >
+                        <img
+                          src="images/icon_banan_256.jpg"
+                          alt=""
+                          width="256"
+                          height="256"
+                          loading="lazy"
+                          decoding="async"
+                          class="h-9 w-9 rounded-[24%] object-cover ring-1 ring-black/5"
+                        />
+                        <span class="leading-tight">
+                          <span
+                            class="block text-[11px] font-bold text-slate-900"
+                            >Music Banana</span
+                          >
+                          <span
+                            class="mt-0.5 flex items-center gap-1 text-[9px] font-semibold uppercase tracking-wide text-slate-500"
+                          >
+                            <svg
+                              class="h-2.5 w-2.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                              aria-hidden="true"
+                            >
+                              <path
+                                d="M16.37 1.43c0 1.14-.42 2.2-1.25 3.06-.83.86-1.86 1.35-2.98 1.27-.03-1.1.42-2.19 1.24-3.05.82-.86 1.9-1.34 2.99-1.28ZM20.6 17.2c-.5 1.16-.74 1.68-1.38 2.7-.9 1.43-2.17 3.2-3.74 3.21-1.4.01-1.76-.9-3.66-.89-1.9.01-2.3.91-3.7.9-1.57-.01-2.77-1.6-3.67-3.02-2.05-3.5-2.75-7.2-1.55-9.5.85-1.63 2.2-2.58 3.47-2.58 1.29 0 2.1.9 3.17.9 1.03 0 1.66-.9 3.15-.9 1.12 0 2.31.61 3.16 1.66-2.78 1.52-2.33 5.5.55 6.52Z"
+                              />
+                            </svg>
+                            Featured on App Store
+                          </span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Caption strip -->
+                  <div
+                    class="flex items-center justify-between gap-3 px-3 pb-1 pt-3"
+                  >
+                    <div class="min-w-0">
+                      <p
+                        class="font-display text-sm font-bold tracking-tight text-slate-950"
+                      >
+                        Ghoshi
+                      </p>
+                      <p
+                        class="truncate text-[11px] font-medium text-slate-500"
+                      >
+                        Chief tester &amp; storyteller
+                      </p>
+                    </div>
+                    <span
+                      class="shrink-0 rounded-full bg-slate-900/5 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600"
+                      >4 apps</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== APPS ============================== -->
+      <section
+        id="apps"
+        class="relative border-t border-slate-200/70 bg-white py-20 sm:py-28"
+      >
+        <div class="mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="reveal max-w-2xl">
+            <span
+              class="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700"
+              >The App Suite</span
+            >
+            <h2
+              class="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem]"
+            >
+              Four apps. One goal —
+              <span class="text-gradient">make learning feel like play.</span>
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Four apps, four things I'm getting better at. Each one is built to
+              make the tricky part feel easier — reading music, learning new
+              words, working through maths, or just drawing for a while.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-12 lg:gap-7">
+            <!-- ---------- 1. Music Banana ---------- -->
+            <article
+              class="reveal group flex h-full flex-col overflow-hidden rounded-4xl border border-slate-200/80 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-amber-200 hover:shadow-card lg:col-span-6"
+              style="--reveal-delay: 40ms"
+            >
+              <div class="relative">
+                <div
+                  class="relative aspect-[16/10] overflow-hidden bg-slate-100"
+                >
+                  <img
+                    data-fallback-img
+                    src="images/Mozart.jpeg"
+                    alt="Illustrated cover art from the Music Banana song library"
+                    width="512"
+                    height="512"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+                  <span
+                    class="absolute left-4 top-4 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm backdrop-blur"
+                    >Music &amp; Education</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-0 left-5 translate-y-1/2 overflow-hidden rounded-[24%] shadow-lg ring-4 ring-white sm:left-6"
+                >
+                  <img
+                    src="images/icon_banan_256.jpg"
+                    alt="Music Banana app icon"
+                    width="256"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-14 w-14 object-cover sm:h-16 sm:w-16"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-5 pt-12 sm:p-6 sm:pt-14">
+                <div class="flex items-start justify-between gap-4">
+                  <h3
+                    class="font-display text-xl font-bold tracking-tight text-slate-950"
+                  >
+                    Music Banana
+                  </h3>
+                  <span
+                    class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200/70"
+                    >Live</span
+                  >
+                </div>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  Kids' sheet music and note reading, made fun and intuitive.
+                </p>
+
+                <ul class="mt-5 space-y-2.5" role="list">
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-amber-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Point your camera at printed sheet music — it becomes
+                      playable</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-amber-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Follow along note by note, with real timing and
+                      playback</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-amber-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Everything runs on-device — your music never leaves your
+                      iPhone</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="mt-6 flex-1"></div>
+
+                <!-- TODO: replace with the live App Store product URL -->
+                <div class="mt-6">
+                  <a
+                    href="https://apps.apple.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 rounded-2xl bg-slate-950 px-4 py-2.5 text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-card"
+                  >
+                    <svg
+                      class="h-6 w-6 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M16.37 1.43c0 1.14-.42 2.2-1.25 3.06-.83.86-1.86 1.35-2.98 1.27-.03-1.1.42-2.19 1.24-3.05.82-.86 1.9-1.34 2.99-1.28ZM20.6 17.2c-.5 1.16-.74 1.68-1.38 2.7-.9 1.43-2.17 3.2-3.74 3.21-1.4.01-1.76-.9-3.66-.89-1.9.01-2.3.91-3.7.9-1.57-.01-2.77-1.6-3.67-3.02-2.05-3.5-2.75-7.2-1.55-9.5.85-1.63 2.2-2.58 3.47-2.58 1.29 0 2.1.9 3.17.9 1.03 0 1.66-.9 3.15-.9 1.12 0 2.31.61 3.16 1.66-2.78 1.52-2.33 5.5.55 6.52Z"
+                      />
+                    </svg>
+                    <span class="flex flex-col text-left leading-none">
+                      <span
+                        class="text-[10px] font-medium tracking-wide text-white/70"
+                        >Download on the</span
+                      >
+                      <span
+                        class="mt-0.5 text-[15px] font-semibold tracking-tight"
+                        >App Store</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ---------- 2. Selective Teacher ---------- -->
+            <article
+              class="reveal group flex h-full flex-col overflow-hidden rounded-4xl border border-slate-200/80 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-teal-200 hover:shadow-card lg:col-span-6"
+              style="--reveal-delay: 100ms"
+            >
+              <div class="relative">
+                <div
+                  class="relative aspect-[16/10] overflow-hidden bg-slate-100"
+                >
+                  <img
+                    data-fallback-img
+                    src="https://images.unsplash.com/photo-1584697964358-3e14ca57658b?auto=format&amp;fit=crop&amp;w=900&amp;h=560&amp;q=80"
+                    alt="Arms raised in celebration at a laptop in front of packed bookshelves"
+                    width="900"
+                    height="560"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+                  <span
+                    class="absolute left-4 top-4 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm backdrop-blur"
+                    >Exam Prep</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-0 left-5 translate-y-1/2 overflow-hidden rounded-[24%] shadow-lg ring-4 ring-white sm:left-6"
+                >
+                  <img
+                    src="images/icon_teacher_256.jpg"
+                    alt="Selective Teacher app icon"
+                    width="256"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-14 w-14 object-cover sm:h-16 sm:w-16"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-5 pt-12 sm:p-6 sm:pt-14">
+                <div class="flex items-start justify-between gap-4">
+                  <h3
+                    class="font-display text-xl font-bold tracking-tight text-slate-950"
+                  >
+                    Selective Teacher
+                  </h3>
+                  <span
+                    class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200/70"
+                    >Live</span
+                  >
+                </div>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  A guided step-by-step problem solver for primary school exam
+                  prep.
+                </p>
+
+                <ul class="mt-5 space-y-2.5" role="list">
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-teal-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span>Shows the working, not just the answer</span>
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-teal-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Written around the Australian primary curriculum</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-teal-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span>Practice sets that adapt to what to try next</span>
+                  </li>
+                </ul>
+
+                <div class="mt-6 flex-1"></div>
+
+                <!-- TODO: replace with the live App Store product URL -->
+                <div class="mt-6">
+                  <a
+                    href="https://apps.apple.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 rounded-2xl bg-slate-950 px-4 py-2.5 text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-card"
+                  >
+                    <svg
+                      class="h-6 w-6 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M16.37 1.43c0 1.14-.42 2.2-1.25 3.06-.83.86-1.86 1.35-2.98 1.27-.03-1.1.42-2.19 1.24-3.05.82-.86 1.9-1.34 2.99-1.28ZM20.6 17.2c-.5 1.16-.74 1.68-1.38 2.7-.9 1.43-2.17 3.2-3.74 3.21-1.4.01-1.76-.9-3.66-.89-1.9.01-2.3.91-3.7.9-1.57-.01-2.77-1.6-3.67-3.02-2.05-3.5-2.75-7.2-1.55-9.5.85-1.63 2.2-2.58 3.47-2.58 1.29 0 2.1.9 3.17.9 1.03 0 1.66-.9 3.15-.9 1.12 0 2.31.61 3.16 1.66-2.78 1.52-2.33 5.5.55 6.52Z"
+                      />
+                    </svg>
+                    <span class="flex flex-col text-left leading-none">
+                      <span
+                        class="text-[10px] font-medium tracking-wide text-white/70"
+                        >Download on the</span
+                      >
+                      <span
+                        class="mt-0.5 text-[15px] font-semibold tracking-tight"
+                        >App Store</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ---------- 3. Books & Vocab ---------- -->
+            <article
+              class="reveal group flex h-full flex-col overflow-hidden rounded-4xl border border-slate-200/80 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-indigo-200 hover:shadow-card lg:col-span-6"
+              style="--reveal-delay: 40ms"
+            >
+              <div class="relative">
+                <div
+                  class="relative aspect-[16/10] overflow-hidden bg-slate-100"
+                >
+                  <img
+                    data-fallback-img
+                    src="images/Books_And_Vocab_Covers.jpeg"
+                    alt="Covers from a library of children's books, arranged in a grid"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+                  <span
+                    class="absolute left-4 top-4 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm backdrop-blur"
+                    >Reading</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-0 left-5 translate-y-1/2 overflow-hidden rounded-[24%] shadow-lg ring-4 ring-white sm:left-6"
+                >
+                  <img
+                    src="images/icon_books_256.jpg"
+                    alt="Books &amp; Vocab app icon"
+                    width="256"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-14 w-14 object-cover sm:h-16 sm:w-16"
+                  />
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-5 pt-12 sm:p-6 sm:pt-14">
+                <div class="flex items-start justify-between gap-4">
+                  <h3
+                    class="font-display text-xl font-bold tracking-tight text-slate-950"
+                  >
+                    Books &amp; Vocab
+                  </h3>
+                  <span
+                    class="shrink-0 rounded-full bg-emerald-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200/70"
+                    >Live</span
+                  >
+                </div>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  A seamless vocabulary builder that grows your words while you
+                  read.
+                </p>
+
+                <ul class="mt-5 space-y-2.5" role="list">
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Tap any word for an instant, in-context definition</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Flashcards that build themselves from your reading</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-brand-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Gentle reviews and streaks that make words stick</span
+                    >
+                  </li>
+                </ul>
+
+                <div class="mt-6 flex-1"></div>
+
+                <!-- TODO: replace with the live App Store product URL -->
+                <div class="mt-6">
+                  <a
+                    href="https://apps.apple.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-3 rounded-2xl bg-slate-950 px-4 py-2.5 text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-card"
+                  >
+                    <svg
+                      class="h-6 w-6 shrink-0"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M16.37 1.43c0 1.14-.42 2.2-1.25 3.06-.83.86-1.86 1.35-2.98 1.27-.03-1.1.42-2.19 1.24-3.05.82-.86 1.9-1.34 2.99-1.28ZM20.6 17.2c-.5 1.16-.74 1.68-1.38 2.7-.9 1.43-2.17 3.2-3.74 3.21-1.4.01-1.76-.9-3.66-.89-1.9.01-2.3.91-3.7.9-1.57-.01-2.77-1.6-3.67-3.02-2.05-3.5-2.75-7.2-1.55-9.5.85-1.63 2.2-2.58 3.47-2.58 1.29 0 2.1.9 3.17.9 1.03 0 1.66-.9 3.15-.9 1.12 0 2.31.61 3.16 1.66-2.78 1.52-2.33 5.5.55 6.52Z"
+                      />
+                    </svg>
+                    <span class="flex flex-col text-left leading-none">
+                      <span
+                        class="text-[10px] font-medium tracking-wide text-white/70"
+                        >Download on the</span
+                      >
+                      <span
+                        class="mt-0.5 text-[15px] font-semibold tracking-tight"
+                        >App Store</span
+                      >
+                    </span>
+                  </a>
+                </div>
+              </div>
+            </article>
+
+            <!-- ---------- 4. Cute Artist (Coming Soon) ---------- -->
+            <article
+              class="reveal group flex h-full flex-col overflow-hidden rounded-4xl border border-slate-200/80 bg-white shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-rose-200 hover:shadow-card lg:col-span-6"
+              style="--reveal-delay: 100ms"
+            >
+              <div class="relative">
+                <div
+                  class="relative aspect-[16/10] overflow-hidden bg-slate-100"
+                >
+                  <img
+                    data-fallback-img
+                    src="https://images.unsplash.com/photo-1596464716127-f2a82984de30?auto=format&amp;fit=crop&amp;w=1000&amp;h=625&amp;q=80"
+                    alt="A young artist painting and colouring at a table"
+                    width="1000"
+                    height="625"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-white via-white/10 to-transparent"
+                    aria-hidden="true"
+                  ></div>
+                  <span
+                    class="absolute left-4 top-4 rounded-full bg-white/85 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-slate-600 shadow-sm backdrop-blur"
+                    >Art &amp; Creativity</span
+                  >
+                </div>
+                <div
+                  class="absolute bottom-0 left-5 flex h-14 w-14 translate-y-1/2 items-center justify-center rounded-[24%] bg-gradient-to-br from-rose-400 to-pink-600 shadow-lg ring-4 ring-white sm:left-6 sm:h-16 sm:w-16"
+                >
+                  <svg
+                    class="h-7 w-7 text-white sm:h-8 sm:w-8"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 21.25a9.25 9.25 0 1 1 0-18.5c5.1 0 9.25 3.68 9.25 8.22 0 2.27-1.84 4.11-4.11 4.11h-1.54a2.57 2.57 0 0 0 0 5.14H12Z"
+                    />
+                    <circle
+                      cx="7.7"
+                      cy="11.6"
+                      r="1.15"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                    <circle
+                      cx="11.2"
+                      cy="7.6"
+                      r="1.15"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                    <circle
+                      cx="15.8"
+                      cy="8.8"
+                      r="1.15"
+                      fill="currentColor"
+                      stroke="none"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div class="flex flex-1 flex-col p-5 pt-12 sm:p-6 sm:pt-14">
+                <div class="flex items-start justify-between gap-4">
+                  <h3
+                    class="font-display text-xl font-bold tracking-tight text-slate-950"
+                  >
+                    Cute Artist
+                  </h3>
+                  <span
+                    class="shrink-0 rounded-full bg-rose-50 px-2.5 py-1 text-[10px] font-bold uppercase tracking-wide text-rose-700 ring-1 ring-rose-200/70"
+                    >Coming Soon</span
+                  >
+                </div>
+                <p class="mt-2 text-sm leading-relaxed text-slate-600">
+                  A joyful digital colouring and canvas app for budding artists.
+                </p>
+
+                <ul class="mt-5 space-y-2.5" role="list">
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span>Playful brushes, stamps and colour palettes</span>
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >A calm, kid-friendly canvas with no ads and no
+                      clutter</span
+                    >
+                  </li>
+                  <li
+                    class="flex gap-2.5 text-sm leading-relaxed text-slate-700"
+                  >
+                    <svg
+                      class="mt-0.5 h-4 w-4 shrink-0 text-rose-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="3"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4.5 12.75l6 6 9-13.5" />
+                    </svg>
+                    <span
+                      >Save finished artwork straight to the Photos app</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+
+          <p
+            class="reveal mt-10 text-center text-xs font-medium text-slate-500"
+          >
+            Each of these four apps is built for iPhone and iPad, and is
+            designed to work without an account, without ads and without
+            third-party tracking.
+          </p>
+
+          <!--
+            ZenMunch — a family project, deliberately kept outside the four-app
+            grid so the "four learning apps" story stays true. Copy is Ghoshi's
+            voice; the origin story is hers (she forgot to chew while watching
+            her shows).
+
+            The left panel is `images/zenmunch_panel.jpg`: the supplied photo
+            cropped from x=700 to the right edge, which keeps the child, the bowl
+            and the bookcase while excluding the television — the screen showed
+            a real, recognisable cartoon (Bluey), which must not appear on the
+            site. If a version with a blank or generic screen is regenerated, the
+            full 16:9 frame could be used instead.
+          -->
+          <div
+            class="reveal mt-8 overflow-hidden rounded-4xl border border-slate-200/80 bg-white shadow-soft"
+            style="--reveal-delay: 160ms"
+          >
+            <div class="grid lg:grid-cols-12">
+              <div class="relative lg:col-span-5">
+                <div
+                  class="h-56 w-full sm:h-72 lg:absolute lg:inset-0 lg:h-auto"
+                >
+                  <img
+                    data-fallback-img
+                    src="images/zenmunch_panel.jpg"
+                    alt="A child mid-meal on the sofa at home, eyes on the television off-camera"
+                    width="676"
+                    height="676"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover"
+                  />
+                </div>
+              </div>
+
+              <div
+                class="flex flex-col justify-center p-5 sm:p-7 lg:col-span-7 lg:p-9"
+              >
+                <div class="flex items-center gap-4">
+                  <img
+                    src="images/icon_zenmunch_256.jpg"
+                    alt="ZenMunch app icon"
+                    width="256"
+                    height="256"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-14 w-14 shrink-0 rounded-[24%] object-cover shadow-sm ring-1 ring-slate-900/10 sm:h-16 sm:w-16"
+                  />
+                  <div class="min-w-0">
+                    <span
+                      class="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+                      >Also from our family</span
+                    >
+                    <h3
+                      class="mt-1 font-display text-xl font-bold tracking-tight text-slate-950 sm:text-2xl"
+                    >
+                      ZenMunch
+                      <span class="font-semibold text-slate-500"
+                        >— The Chew Counter</span
+                      >
+                    </h3>
+                  </div>
+                </div>
+
+                <p
+                  class="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base"
+                >
+                  ZenMunch isn't one of my learning apps. It began because I kept
+                  forgetting to chew while I was watching my shows — it counts
+                  your chews and nudges you when you slow down, so a meal gets
+                  the time it deserves. It has grown a lot since then.
+                </p>
+
+                <p
+                  class="mt-4 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-400"
+                >
+                  iPhone · Android · Web
+                </p>
+
+                <div class="mt-6 flex flex-wrap items-center gap-2.5">
+                  <a
+                    href="https://www.zenmunch.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950"
+                  >
+                    zenmunch.com
+                    <svg
+                      class="h-3.5 w-3.5 shrink-0 text-slate-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://apps.apple.com/au/app/zenmunch-the-chew-counter/id6753739367"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950"
+                  >
+                    App Store
+                    <svg
+                      class="h-3.5 w-3.5 shrink-0 text-slate-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </a>
+                  <a
+                    href="https://play.google.com/store/apps/details?id=com.bltech.zenmunch"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-1.5 rounded-2xl border border-slate-200 bg-slate-50 px-3.5 py-2 text-sm font-semibold text-slate-700 transition-all duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:bg-white hover:text-slate-950"
+                  >
+                    Google Play
+                    <svg
+                      class="h-3.5 w-3.5 shrink-0 text-slate-400"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M7 17 17 7M9 7h8v8" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== ABOUT ============================== -->
+      <section
+        id="about"
+        class="relative overflow-hidden border-y border-slate-200/70 bg-slate-50 py-20 sm:py-28"
+      >
+        <div
+          class="pointer-events-none absolute inset-0 z-0"
+          aria-hidden="true"
+        >
+          <div
+            class="absolute -right-40 top-10 h-[24rem] w-[24rem] rounded-full bg-brand-200/40 blur-3xl"
+          ></div>
+          <div
+            class="absolute -left-40 bottom-0 h-[22rem] w-[22rem] rounded-full bg-amber-200/40 blur-3xl"
+          ></div>
+        </div>
+
+        <div class="relative z-10 mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="grid gap-14 lg:grid-cols-12 lg:gap-16">
+            <!-- Story -->
+            <div class="reveal lg:col-span-7">
+              <span
+                class="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600"
+                >Meet Ghoshi</span
+              >
+              <h2
+                class="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem]"
+              >
+                I'm learning something new
+                <span class="font-serif text-[1.08em] font-normal italic"
+                  >every single day.</span
+                >
+              </h2>
+
+              <div
+                class="mt-6 space-y-5 text-base leading-relaxed text-slate-600"
+              >
+                <p>
+                  I'm Ghoshi — the one in the videos, and the reason there are
+                  four apps instead of none. I test everything, film everything,
+                  and tell you honestly whether it works. These are the apps I
+                  use for the things I actually want to get better at: reading
+                  tricky words, working through maths problems, playing pieces I
+                  love, and drawing when my brain needs a break.
+                </p>
+                <p>
+                  Most days you'll find me practising, filming a quick video, or
+                  talking a friend into trying one of the apps with me. I share
+                  the wins and the frustrating bits, because the honest version
+                  is more useful.
+                </p>
+              </div>
+
+              <!-- Things Ghoshi is into -->
+              <div class="mt-8">
+                <p
+                  class="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+                >
+                  Things I love
+                </p>
+                <ul class="mt-3 flex flex-wrap gap-2" role="list">
+                  <li
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    Piano
+                  </li>
+                  <li
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    Reading
+                  </li>
+                  <li
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    Maths
+                  </li>
+                  <li
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    Drawing
+                  </li>
+                  <li
+                    class="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm"
+                  >
+                    Making videos
+                  </li>
+                </ul>
+              </div>
+
+              <a
+                href="#videos"
+                class="group mt-9 inline-flex items-center gap-2 text-sm font-semibold text-brand-700 transition-colors hover:text-brand-800"
+              >
+                Watch my videos
+                <svg
+                  class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.4"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M5 12h14M13 6l6 6-6 6" />
+                </svg>
+              </a>
+
+              <p class="mt-6 text-xs text-slate-500">
+                Built with AI, with help from Dad.
+              </p>
+            </div>
+
+            <!-- Stats + quote -->
+            <div class="reveal lg:col-span-5" style="--reveal-delay: 120ms">
+              <dl class="grid grid-cols-2 gap-4">
+                <div
+                  class="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft"
+                >
+                  <dt class="sr-only">Apps Ghoshi uses daily</dt>
+                  <dd>
+                    <span
+                      class="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl"
+                      data-count-to="4"
+                      >0</span
+                    >
+                    <span
+                      class="mt-1.5 block text-xs font-semibold leading-snug text-slate-500"
+                      >Apps I use every day</span
+                    >
+                  </dd>
+                </div>
+                <div
+                  class="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft"
+                >
+                  <dt class="sr-only">Kid and parent friendly</dt>
+                  <dd>
+                    <span
+                      class="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl"
+                      data-count-to="100"
+                      data-suffix="%"
+                      >0%</span
+                    >
+                    <span
+                      class="mt-1.5 block text-xs font-semibold leading-snug text-slate-500"
+                      >Kid &amp; parent friendly</span
+                    >
+                  </dd>
+                </div>
+                <div
+                  class="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft"
+                >
+                  <dt class="sr-only">Third-party trackers</dt>
+                  <dd>
+                    <span
+                      class="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl"
+                      data-count-to="0"
+                      >0</span
+                    >
+                    <span
+                      class="mt-1.5 block text-xs font-semibold leading-snug text-slate-500"
+                      >Third-party trackers in my apps</span
+                    >
+                  </dd>
+                </div>
+                <div
+                  class="rounded-3xl border border-slate-200 bg-white p-5 shadow-soft"
+                >
+                  <dt class="sr-only">Pieces in the Music Banana library</dt>
+                  <dd>
+                    <span
+                      class="font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl"
+                      data-count-to="18"
+                      >0</span
+                    >
+                    <span
+                      class="mt-1.5 block text-xs font-semibold leading-snug text-slate-500"
+                      >Pieces in the Music Banana library</span
+                    >
+                  </dd>
+                </div>
+              </dl>
+
+              <figure
+                class="mt-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-soft"
+              >
+                <svg
+                  class="h-6 w-6 text-brand-300"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M9.5 5C6.5 6.6 4.8 9.4 4.8 12.9c0 3 1.8 5.1 4.3 5.1 2.1 0 3.7-1.5 3.7-3.5 0-1.9-1.3-3.3-3.1-3.3-.3 0-.7 0-1 .2.3-1.6 1.6-3.1 3.3-4.1L9.5 5Zm9 0c-3 1.6-4.7 4.4-4.7 7.9 0 3 1.8 5.1 4.3 5.1 2.1 0 3.7-1.5 3.7-3.5 0-1.9-1.3-3.3-3.1-3.3-.3 0-.7 0-1 .2.3-1.6 1.6-3.1 3.3-4.1L18.5 5Z"
+                  />
+                </svg>
+                <blockquote
+                  class="mt-4 font-display text-lg font-semibold leading-snug tracking-tight text-slate-900"
+                >
+                  "If I can learn it, I'll film it — then you can learn it with
+                  me."
+                </blockquote>
+                <figcaption class="mt-3 text-xs font-semibold text-slate-500">
+                  — Ghoshi
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============================== MEDIA & SOCIAL ============================== -->
+      <section id="videos" class="bg-white py-20 sm:py-28">
+        <div class="mx-auto max-w-7xl px-5 sm:px-8">
+          <div class="reveal max-w-2xl">
+            <span
+              class="inline-flex items-center rounded-full border border-brand-200 bg-brand-50 px-3 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-brand-700"
+              >Media &amp; Social</span
+            >
+            <h2
+              class="mt-5 font-display text-3xl font-extrabold tracking-tight text-slate-950 sm:text-4xl lg:text-[2.6rem]"
+            >
+              My life and my learning —
+              <span class="text-gradient">one video at a time.</span>
+            </h2>
+            <p class="mt-4 text-base leading-relaxed text-slate-600 sm:text-lg">
+              Homework routines, the songs I'm practising, the books I can't put
+              down and the drawings I'm proud of — filmed as they happen, on
+              every platform I post to.
+            </p>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-12">
+            <!-- Featured video -->
+            <div class="reveal lg:col-span-7">
+              <!-- TODO: swap the poster + href for the real featured vlog -->
+              <a
+                href="https://www.youtube.com/@heyghoshi"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="group/video relative block overflow-hidden rounded-4xl border border-slate-200 bg-slate-900 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:shadow-card"
+              >
+                <div class="relative aspect-video overflow-hidden">
+                  <img
+                    data-fallback-img
+                    src="https://images.unsplash.com/photo-1610484826967-09c5720778c7?auto=format&amp;fit=crop&amp;w=1200&amp;h=675&amp;q=80"
+                    alt="Ghoshi in headphones, filming one of her videos at a computer"
+                    width="1200"
+                    height="675"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-full w-full object-cover transition-transform duration-700 group-hover/video:scale-[1.03]"
+                  />
+                  <div
+                    class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/35 to-slate-950/15"
+                    aria-hidden="true"
+                  ></div>
+
+                  <!-- Play button -->
+                  <span
+                    class="absolute inset-0 flex items-center justify-center"
+                  >
+                    <span
+                      class="play-ring relative flex h-16 w-16 items-center justify-center rounded-full bg-white/95 shadow-xl transition-transform duration-300 group-hover/video:scale-110 sm:h-20 sm:w-20"
+                    >
+                      <svg
+                        class="ml-1 h-6 w-6 text-slate-900 sm:h-7 sm:w-7"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path d="M8 5.5v13l11-6.5-11-6.5Z" />
+                      </svg>
+                    </span>
+                  </span>
+
+                  <span
+                    class="absolute right-4 top-4 rounded-full bg-slate-950/70 px-2.5 py-1 text-[11px] font-semibold text-white backdrop-blur"
+                    >Episode 01 · 12:48</span
+                  >
+                </div>
+
+                <div class="p-5 sm:p-6">
+                  <span
+                    class="text-[11px] font-bold uppercase tracking-[0.14em] text-white/60"
+                    >Latest from the channel</span
+                  >
+                  <h3
+                    class="mt-2 font-display text-lg font-bold leading-snug tracking-tight text-white sm:text-xl"
+                  >
+                    A week of learning with all four apps
+                  </h3>
+                  <p class="mt-2 text-sm leading-relaxed text-white/70">
+                    What an ordinary week actually looks like: piano practice, a
+                    maths topic that finally clicked, a book I couldn't put
+                    down, and the drawings in between.
+                  </p>
+                  <span
+                    class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-white"
+                  >
+                    Watch on YouTube
+                    <svg
+                      class="h-4 w-4 transition-transform duration-300 group-hover/video:translate-x-0.5"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.4"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M5 12h14M13 6l6 6-6 6" />
+                    </svg>
+                  </span>
+                </div>
+              </a>
+            </div>
+
+            <!-- Social links -->
+            <div class="reveal lg:col-span-5" style="--reveal-delay: 120ms">
+              <div
+                class="flex h-full flex-col rounded-4xl border border-slate-200 bg-white p-3 shadow-soft sm:p-4"
+              >
+                <p
+                  class="px-2 py-2 text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+                >
+                  Find me everywhere
+                </p>
+
+                <ul class="flex flex-1 flex-col justify-between" role="list">
+                  <!-- YouTube -->
+                  <li>
+                    <a
+                      href="https://www.youtube.com/@heyghoshi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-red-500 to-red-600 text-white shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      >
+                        <svg
+                          class="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.9"
+                          aria-hidden="true"
+                        >
+                          <rect x="2.5" y="5.5" width="19" height="13" rx="4" />
+                          <path
+                            d="M10.4 9.4v5.2l4.4-2.6-4.4-2.6Z"
+                            fill="currentColor"
+                            stroke="none"
+                          />
+                        </svg>
+                      </span>
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-900"
+                          >YouTube</span
+                        >
+                        <span class="block truncate text-xs text-slate-500"
+                          >My life &amp; what I'm learning</span
+                        >
+                      </span>
+                      <span
+                        class="hidden text-xs font-medium text-slate-400 sm:block"
+                        >@heyghoshi</span
+                      >
+                      <svg
+                        class="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-600"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7M9 7h8v8" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-- TikTok -->
+                  <li>
+                    <a
+                      href="https://www.tiktok.com/@heyghoshi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-slate-800 to-slate-950 text-white shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      >
+                        <svg
+                          class="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.9"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path d="M14.8 3.6v9.6a3.3 3.3 0 1 1-2.7-3.24" />
+                          <path d="M14.8 3.6c.3 2.2 1.8 3.7 4.1 3.95" />
+                        </svg>
+                      </span>
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-900"
+                          >TikTok</span
+                        >
+                        <span class="block truncate text-xs text-slate-500"
+                          >Study clips &amp; quick tips</span
+                        >
+                      </span>
+                      <span
+                        class="hidden text-xs font-medium text-slate-400 sm:block"
+                        >@heyghoshi</span
+                      >
+                      <svg
+                        class="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-600"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7M9 7h8v8" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-- Instagram -->
+                  <li>
+                    <a
+                      href="https://www.instagram.com/heyghoshi/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-400 via-rose-500 to-purple-600 text-white shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      >
+                        <svg
+                          class="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="1.9"
+                          aria-hidden="true"
+                        >
+                          <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+                          <circle cx="12" cy="12" r="4" />
+                          <circle
+                            cx="17.1"
+                            cy="6.9"
+                            r="1.1"
+                            fill="currentColor"
+                            stroke="none"
+                          />
+                        </svg>
+                      </span>
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-900"
+                          >Instagram</span
+                        >
+                        <span class="block truncate text-xs text-slate-500"
+                          >Art, music &amp; everyday bits</span
+                        >
+                      </span>
+                      <span
+                        class="hidden text-xs font-medium text-slate-400 sm:block"
+                        >@heyghoshi</span
+                      >
+                      <svg
+                        class="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-600"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7M9 7h8v8" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-- Facebook -->
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=61593561659140"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 text-white shadow-sm transition-transform duration-300 group-hover:scale-105"
+                      >
+                        <svg
+                          class="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M13.6 21.4v-7.3h2.5l.4-2.9h-2.9V9.3c0-.85.24-1.42 1.45-1.42h1.55V5.28c-.27-.04-1.19-.11-2.26-.11-2.24 0-3.77 1.36-3.77 3.87v2.16H8v2.9h2.52v7.3h3.08Z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-900"
+                          >Facebook</span
+                        >
+                        <span class="block truncate text-xs text-slate-500"
+                          >Updates &amp; community</span
+                        >
+                      </span>
+                      <span
+                        class="hidden text-xs font-medium text-slate-400 sm:block"
+                        >Hey Ghoshi</span
+                      >
+                      <svg
+                        class="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-600"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7M9 7h8v8" />
+                      </svg>
+                    </a>
+                  </li>
+
+                  <!-- Snapchat -->
+                  <li>
+                    <a
+                      href="https://www.snapchat.com/add/heyghoshi"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="group flex items-center gap-3 rounded-2xl px-2 py-2.5 transition-colors hover:bg-slate-50"
+                    >
+                      <span
+                        class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#FFFC00] text-slate-900 shadow-sm ring-1 ring-slate-900/5 transition-transform duration-300 group-hover:scale-105"
+                      >
+                        <svg
+                          class="h-5 w-5"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M12 2.6c2.6 0 4.4 1.95 4.5 4.5.02.72.02 1.4.1 2 .1.4.5.6 1 .6s1-.2 1.4-.3c.1-.02.2 0 .3.05.05.6-.85 1.1-1.5 1.35-.3.1-.5.4-.45.7.2 1.05.7 1.9 1.5 2.5.6.5 1.4.85 2.1 1.05l.2.4c-.35.7-1.6 1.1-2.6 1.3-.3.05-.45.3-.5.7-.05.4-.15.8-.45.9-.4.12-.9-.1-1.5-.1-.7 0-1.2.2-1.8.6-.6.4-1.2.8-2.4.8s-1.8-.4-2.4-.8c-.6-.4-1.1-.6-1.8-.6-.6 0-1.1.22-1.5.1-.3-.1-.4-.5-.45-.9-.05-.4-.2-.65-.5-.7-1-.2-2.25-.6-2.6-1.3l.2-.4c.7-.2 1.5-.55 2.1-1.05.8-.6 1.3-1.45 1.5-2.5.05-.3-.15-.6-.45-.7-.65-.25-1.55-.75-1.5-1.35.1-.05.2-.07.3-.05.4.1.9.3 1.4.3s.9-.2 1-.6c.08-.6.08-1.28.1-2C7.6 4.55 9.4 2.6 12 2.6Z"
+                          />
+                        </svg>
+                      </span>
+                      <span class="min-w-0 flex-1">
+                        <span class="block text-sm font-semibold text-slate-900"
+                          >Snapchat</span
+                        >
+                        <span class="block truncate text-xs text-slate-500"
+                          >Day-in-the-life snaps</span
+                        >
+                      </span>
+                      <span
+                        class="hidden text-xs font-medium text-slate-400 sm:block"
+                        >Add me</span
+                      >
+                      <svg
+                        class="h-4 w-4 shrink-0 text-slate-300 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-slate-600"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M7 17 17 7M9 7h8v8" />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+
+                <p
+                  class="mt-3 rounded-2xl bg-slate-50 px-3.5 py-3 text-[11px] font-medium leading-relaxed text-slate-500"
+                >
+                  New videos land most weeks — subscribe on whichever platform
+                  you already live in.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================== FOOTER ============================== -->
+    <footer id="connect" class="border-t border-slate-200 bg-slate-50">
+      <div class="mx-auto max-w-7xl px-5 py-14 sm:px-8 sm:py-16">
+        <div class="grid gap-10 lg:grid-cols-12 lg:gap-8">
+          <!-- Brand -->
+          <div class="lg:col-span-5">
+            <a
+              href="#top"
+              class="inline-flex items-center gap-3"
+              aria-label="Hey Ghoshi — back to top"
+            >
+              <span
+                class="flex h-10 w-10 items-center justify-center rounded-[26%] bg-gradient-to-br from-brand-500 via-violet-600 to-pink-600 shadow-md shadow-brand-600/25"
+              >
+                <span
+                  class="font-display text-lg font-extrabold leading-none text-white select-none"
+                  >G</span
+                >
+              </span>
+              <span
+                class="font-display text-[17px] font-extrabold tracking-tight text-slate-950"
+                >Hey <span class="text-gradient">Ghoshi</span></span
+              >
+            </a>
+            <p class="mt-4 max-w-sm text-sm leading-relaxed text-slate-600">
+              I'm Ghoshi. I learn, play and create with four apps — for music,
+              maths, reading and art — and I share the whole journey right here.
+            </p>
+            <a
+              href="#apps"
+              class="group mt-5 inline-flex items-center gap-2 rounded-2xl bg-slate-950 px-5 py-3 text-sm font-semibold text-white shadow-soft transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-card"
+            >
+              Get the apps
+              <svg
+                class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Explore -->
+          <nav class="lg:col-span-2" aria-label="Footer — explore">
+            <h2
+              class="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+            >
+              Explore
+            </h2>
+            <ul class="mt-4 space-y-2.5 text-sm" role="list">
+              <li>
+                <a
+                  href="#apps"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Apps</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#videos"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Videos</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#top"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Back to top</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Apps -->
+          <nav class="lg:col-span-2" aria-label="Footer — apps">
+            <h2
+              class="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+            >
+              Apps
+            </h2>
+            <ul class="mt-4 space-y-2.5 text-sm" role="list">
+              <li>
+                <!-- TODO: replace with the live App Store product URL -->
+                <a
+                  href="https://apps.apple.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Music Banana</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://apps.apple.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Selective Teacher</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://apps.apple.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Books &amp; Vocab</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#apps"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Cute Artist
+                  <span class="text-xs font-semibold text-rose-600"
+                    >Soon</span
+                  ></a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Support & legal -->
+          <div class="lg:col-span-3">
+            <h2
+              class="text-[11px] font-bold uppercase tracking-[0.14em] text-slate-500"
+            >
+              Support
+            </h2>
+            <ul class="mt-4 space-y-2.5 text-sm" role="list">
+              <li>
+                <a
+                  href="mailto:human@heyghoshi.com?subject=Hey%20Ghoshi%20support"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Get in touch</a
+                >
+              </li>
+              <li>
+                <a
+                  href="privacy/"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Privacy Policies</a
+                >
+              </li>
+              <li>
+                <a
+                  href="terms/"
+                  class="font-medium text-slate-600 transition-colors hover:text-slate-950"
+                  >Terms of Use</a
+                >
+              </li>
+            </ul>
+            <p class="mt-5 text-xs leading-relaxed text-slate-500">
+              Need help with an app or a purchase? Email
+              <a
+                href="mailto:human@heyghoshi.com"
+                class="font-semibold text-slate-700 underline decoration-slate-300 underline-offset-2 hover:text-slate-950"
+                >human@heyghoshi.com</a
+              >
+              and you'll get a reply from a real person.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="border-t border-slate-200">
+        <div
+          class="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-8"
+        >
+          <p>
+            &copy; <span id="currentYear">2026</span> Hey Ghoshi. All rights
+            reserved.
+          </p>
+          <p class="sm:text-right">
+            Apple, the Apple logo and App Store are trademarks of Apple Inc.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================== SCRIPTS ============================== -->
+    <script>
+      (function () {
+        "use strict";
+
+        var reduceMotion = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+
+        /* ---------------- Mobile navigation ---------------- */
+        var toggle = document.getElementById("menuToggle");
+        var menu = document.getElementById("mobileMenu");
+        var iconOpen = document.getElementById("menuIconOpen");
+        var iconClose = document.getElementById("menuIconClose");
+
+        function setMenu(open) {
+          if (!toggle || !menu) return;
+          menu.classList.toggle("hidden", !open);
+          toggle.setAttribute("aria-expanded", String(open));
+          toggle.setAttribute(
+            "aria-label",
+            open ? "Close navigation menu" : "Open navigation menu",
+          );
+          if (iconOpen) iconOpen.classList.toggle("hidden", open);
+          if (iconClose) iconClose.classList.toggle("hidden", !open);
+        }
+
+        if (toggle && menu) {
+          toggle.addEventListener("click", function () {
+            setMenu(menu.classList.contains("hidden"));
+          });
+
+          menu.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", function () {
+              setMenu(false);
+            });
+          });
+
+          document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") setMenu(false);
+          });
+
+          window
+            .matchMedia("(min-width: 1024px)")
+            .addEventListener("change", function (event) {
+              if (event.matches) setMenu(false);
+            });
+        }
+
+        /* ---------------- Nav elevation on scroll ---------------- */
+        var nav = document.getElementById("siteNav");
+
+        function syncNav() {
+          if (!nav) return;
+          var scrolled = window.scrollY > 8;
+          nav.classList.toggle("border-slate-200/80", scrolled);
+          nav.classList.toggle("bg-white/80", scrolled);
+          nav.classList.toggle("shadow-sm", scrolled);
+          nav.classList.toggle("backdrop-blur-xl", scrolled);
+          nav.classList.toggle("border-transparent", !scrolled);
+        }
+
+        syncNav();
+        window.addEventListener("scroll", syncNav, { passive: true });
+
+        /* ---------------- Scroll reveal ---------------- */
+        var revealables = Array.prototype.slice.call(
+          document.querySelectorAll(".reveal"),
+        );
+
+        if (!("IntersectionObserver" in window) || reduceMotion) {
+          revealables.forEach(function (el) {
+            el.classList.add("is-visible");
+          });
+        } else {
+          var revealObserver = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  revealObserver.unobserve(entry.target);
+                }
+              });
+            },
+            { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
+          );
+          revealables.forEach(function (el) {
+            revealObserver.observe(el);
+          });
+        }
+
+        /* ---------------- Stat counters ---------------- */
+        var counters = Array.prototype.slice.call(
+          document.querySelectorAll("[data-count-to]"),
+        );
+
+        function runCounter(el) {
+          var target = parseFloat(el.getAttribute("data-count-to")) || 0;
+          var suffix = el.getAttribute("data-suffix") || "";
+
+          if (reduceMotion) {
+            el.textContent = target + suffix;
+            return;
+          }
+
+          var duration = 1400;
+          var start = null;
+
+          function step(timestamp) {
+            if (start === null) start = timestamp;
+            var progress = Math.min((timestamp - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - progress, 4);
+            el.textContent = Math.round(target * eased) + suffix;
+            if (progress < 1) requestAnimationFrame(step);
+            else el.textContent = target + suffix;
+          }
+
+          requestAnimationFrame(step);
+        }
+
+        if (counters.length) {
+          if (!("IntersectionObserver" in window)) {
+            counters.forEach(runCounter);
+          } else {
+            var counterObserver = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (entry.isIntersecting) {
+                    runCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
+                  }
+                });
+              },
+              { threshold: 0.5 },
+            );
+            counters.forEach(function (el) {
+              counterObserver.observe(el);
+            });
+          }
+        }
+
+        /* ---------------- Scroll spy for the nav ---------------- */
+        var navLinks = Array.prototype.slice.call(
+          document.querySelectorAll("[data-nav-link]"),
+        );
+
+        if (navLinks.length && "IntersectionObserver" in window) {
+          var spyTargets = navLinks
+            .map(function (link) {
+              var id = link.getAttribute("href").slice(1);
+              return document.getElementById(id);
+            })
+            .filter(Boolean);
+
+          var spy = new IntersectionObserver(
+            function (entries) {
+              entries.forEach(function (entry) {
+                if (!entry.isIntersecting) return;
+                navLinks.forEach(function (link) {
+                  var isCurrent =
+                    link.getAttribute("href") === "#" + entry.target.id;
+                  link.classList.toggle("text-slate-950", isCurrent);
+                  link.classList.toggle("text-slate-600", !isCurrent);
+                  if (isCurrent) link.setAttribute("aria-current", "true");
+                  else link.removeAttribute("aria-current");
+                });
+              });
+            },
+            { rootMargin: "-45% 0px -50% 0px", threshold: 0 },
+          );
+
+          spyTargets.forEach(function (section) {
+            spy.observe(section);
+          });
+        }
+
+        /* ---------------- Dynamic copyright year ---------------- */
+        var yearEl = document.getElementById("currentYear");
+        if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+
+        /* ---------------- Image fallbacks ----------------
+           If an external placeholder fails to load, drop it so the
+           tinted container behind shows instead of a broken image. */
+        document
+          .querySelectorAll("[data-fallback-img]")
+          .forEach(function (img) {
+            function hide() {
+              img.style.display = "none";
+            }
+            // A fast failure can fire `error` before this script runs.
+            if (img.complete && img.naturalWidth === 0) hide();
+            else img.addEventListener("error", hide);
+          });
+      })();
+    </script>
+  </body>
+</html>

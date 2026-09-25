@@ -1,0 +1,23 @@
+<p class="text-slate-300 text-sm sm:text-base mb-6">
+  Have a question about how {{app.name}} handles your information, or need
+  assistance with the app? We are happy to help.
+</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+  <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+    <div class="text-xs uppercase font-semibold {{accent.text}} mb-1">
+      Email Support
+    </div>
+    <a
+      href="mailto:{{c.contactEmail}}"
+      class="text-base font-bold text-white hover:underline break-all"
+      >{{c.contactEmail}}</a
+    >
+  </div>
+  <div class="bg-white/10 p-4 rounded-xl border border-white/10">
+    <div class="text-xs uppercase font-semibold {{accent.text}} mb-1">
+      Publisher
+    </div>
+    <div class="text-base font-bold text-white">{{c.publisher}}</div>
+    <div class="text-xs text-slate-400">{{c.jurisdiction}}</div>
+  </div>
+</div>
