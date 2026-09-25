@@ -40,9 +40,11 @@ jobs:
           rsync -a \
             --exclude '.git/' \
             --exclude '.github/' \
+            --exclude '.githooks/' \
             --exclude 'legal/' \
             --exclude 'scripts/' \
             --exclude 'README.md' \
+            --exclude 'AGENTS.md' \
             --exclude '.gitignore' \
             --exclude '_config.yml' \
             ./ "$RUNNER_TEMP/site/"

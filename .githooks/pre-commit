@@ -1,0 +1,70 @@
+#!/bin/sh
+# Pre-commit guard for a PUBLIC repository whose root is also the live website.
+#
+# Scans the staged contents of every file about to be committed and refuses the commit
+# if it finds a known-bad string: vendor or service names, infrastructure identifiers,
+# internal-note keys, the old corporate entity name, or personal data.
+#
+# See AGENTS.md. Enable once per clone with:  git config core.hooksPath .githooks
+#
+# This is a net, not a substitute for judgement. It cannot tell you that a paragraph
+# *describes* internal architecture using words that are not on the list.
+#
+# Deliberate limitation: a few files legitimately contain the internal-note key names
+# (the tooling that reads them, and this file, which lists the patterns). Those are
+# allow-listed below. Everything else is scanned.
+
+set -e
+
+RULES='gemini|deepseek|firebase|firestore|cloud functions|app check|remote config|cloud (fire)?storage|cloud messaging|posthog|meta platforms|meta \(facebook\)|google analytics|google ads|skadnetwork|open library|itunes search|amazon image|australia-southeast1|primary-teacher|booksandvocabulary|firebasestorage|storage_bucket|payloadcrypto|is_free_user|freeusers|bl tech|bltechconsult|bavanpalan|_todos|_decisions'
+
+# Allow-listed: contain the note key names by necessity, never their contents.
+is_allowed() {
+  case "$1" in
+    legal/build_legal.py|legal/README.md|AGENTS.md|.githooks/pre-commit) return 0 ;;
+    *) return 1 ;;
+  esac
+}
+
+files=$(git diff --cached --name-only --diff-filter=ACMR)
+[ -z "$files" ] && exit 0
+
+fail=0
+found=0
+for f in $files; do
+  # Skip binaries and large assets - nothing textual to read.
+  case "$f" in
+    *.png|*.jpg|*.jpeg|*.gif|*.pdf|*.zip|*.gz|*.bundle|*.banana|*.musicxml) continue ;;
+  esac
+
+  if is_allowed "$f"; then
+    continue
+  fi
+
+  hits=$(git show ":$f" 2>/dev/null | grep -n -i -E "$RULES" || true)
+  if [ -n "$hits" ]; then
+    found=1
+    printf '\n  BLOCKED  %s\n' "$f"
+    printf '%s\n' "$hits" | head -5 | sed 's/^/           /'
+  fi
+done
+
+if [ "$found" = 1 ]; then
+  cat <<'MSG'
+
+  ---------------------------------------------------------------------------
+  Commit refused: the staged changes contain text this PUBLIC repository must
+  not carry. It would be visible on GitHub immediately, and on heyghoshi.com
+  unless also excluded from the Pages build.
+
+  Internal notes belong in legal/notes/ (gitignored).
+  Outside services are described by ROLE, never by product name.
+  See AGENTS.md for the rules.
+
+  To commit anyway (think hard first):  git commit --no-verify
+  ---------------------------------------------------------------------------
+MSG
+  exit 1
+fi
+
+exit 0
