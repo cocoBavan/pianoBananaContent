@@ -1,14 +1,5 @@
 [
   {
-    "title": "Für Elise",
-    "artist": "Ludwig van Beethoven",
-    "content": "content/fur_elise.banana",
-    "thumbnail": "",
-    "image": "images/Playing_Für_Elisejpeg.jpeg",
-    "difficulty": "hard",
-    "isFree": false
-  },
-  {
     "title": "Für Elise (Easy)",
     "artist": "Ludwig van Beethoven",
     "content": "content/fur_elise_easy.banana",
@@ -36,15 +27,6 @@
     "isFree": false
   },
   {
-    "title": "Canon in D",
-    "artist": "Johann Pachelbel",
-    "content": "content/canon_in_d.banana",
-    "thumbnail": "",
-    "image": "images/Canon_in_Djpeg.jpeg",
-    "difficulty": "veryhard",
-    "isFree": false
-  },
-  {
     "title": "Canon in D (Easy)",
     "artist": "Johann Pachelbel",
     "content": "content/canon_in_d_easy.banana",
@@ -54,39 +36,12 @@
     "isFree": false
   },
   {
-    "title": "Gymnopédie No. 1",
-    "artist": "Erik Satie",
-    "content": "content/gymnopedie_no_1.banana",
-    "thumbnail": "",
-    "image": "images/Gymnopédie_No_1.jpeg",
-    "difficulty": "hard",
-    "isFree": false
-  },
-  {
     "title": "Moonlight Sonata (1st Movement)",
     "artist": "Ludwig van Beethoven",
     "content": "content/moonlight_sonata_1st_movement_easy.banana",
     "thumbnail": "",
     "image": "images/Moonlight_Sonata.jpeg",
     "difficulty": "easy",
-    "isFree": false
-  },
-  {
-    "title": "The Four Seasons: Spring",
-    "artist": "Antonio Vivaldi",
-    "content": "content/the_four_seasons_spring.banana",
-    "thumbnail": "",
-    "image": "images/Vivaldi_Spring.jpeg",
-    "difficulty": "veryhard",
-    "isFree": false
-  },
-  {
-    "title": "The Four Seasons: Spring (Piano)",
-    "artist": "Antonio Vivaldi",
-    "content": "content/the_four_seasons_spring_piano.banana",
-    "thumbnail": "",
-    "image": "images/Vivaldi_Spring.jpeg",
-    "difficulty": "hard",
     "isFree": false
   },
   {
@@ -135,40 +90,50 @@
     "isFree": false
   },
   {
-    "title": "Eine kleine Nachtmusik",
+    "title": "Tie",
+    "artist": "Ghoshi",
+    "difficulty": "easy",
+    "content": "content/tie.banana",
+    "thumbnail": "",
+    "image": "images/tie.png",
+    "isLearning": true,
+    "isFree": true
+  },
+  {
+    "title": "Für Elise",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/fur_elise.banana",
+    "thumbnail": "",
+    "image": "images/Playing_Für_Elisejpeg.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Gymnopédie No. 1",
+    "artist": "Erik Satie",
+    "content": "content/gymnopedie_no_1.banana",
+    "thumbnail": "",
+    "image": "images/Gymnopédie_No_1.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "The Four Seasons: Spring (Piano)",
+    "artist": "Antonio Vivaldi",
+    "content": "content/the_four_seasons_spring_piano.banana",
+    "thumbnail": "",
+    "image": "images/Vivaldi_Spring.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Eine kleine Nachtmusik (Violin)",
     "artist": "W.A. Mozart",
     "content": "content/eine_kleine_nachtmusik.banana",
     "thumbnail": "",
     "image": "images/Mozart.jpeg",
     "difficulty": "hard",
     "isFree": false
-  },
-  {
-    "title": "Eine kleine Nachtmusik (Piano)",
-    "artist": "W.A. Mozart",
-    "content": "content/eine_kleine_nachtmusik_piano.banana",
-    "thumbnail": "",
-    "image": "images/Mozart.jpeg",
-    "difficulty": "hard",
-    "isFree": false
-  },
-  {
-    "title": "Jurassic Park",
-    "artist": "John Williams",
-    "content": "content/jurrasic.banana",
-    "thumbnail": "",
-    "image": "images/jurrasic.jpeg",
-    "difficulty": "veryhard",
-    "isFree": false
-  },
-  {
-    "title": "Love Story",
-    "artist": "Indila",
-    "content": "content/love_story.banana",
-    "thumbnail": "",
-    "image": "images/love_story.jpeg",
-    "difficulty": "veryhard",
-    "isFree": true
   },
   {
     "title": "Arpeggio",
@@ -191,13 +156,48 @@
     "isFree": true
   },
   {
-    "title": "Tie",
-    "artist": "Ghoshi",
-    "difficulty": "easy",
-    "content": "content/tie.banana",
+    "title": "Canon in D",
+    "artist": "Johann Pachelbel",
+    "content": "content/canon_in_d.banana",
     "thumbnail": "",
-    "image": "images/tie.png",
-    "isLearning": true,
+    "image": "images/Canon_in_Djpeg.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "The Four Seasons: Spring",
+    "artist": "Antonio Vivaldi",
+    "content": "content/the_four_seasons_spring.banana",
+    "thumbnail": "",
+    "image": "images/Vivaldi_Spring.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Eine kleine Nachtmusik",
+    "artist": "W.A. Mozart",
+    "content": "content/eine_kleine_nachtmusik_piano.banana",
+    "thumbnail": "",
+    "image": "images/Mozart.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Jurassic Park",
+    "artist": "John Williams",
+    "content": "content/jurrasic.banana",
+    "thumbnail": "",
+    "image": "images/jurrasic.jpeg",
+    "difficulty": "veryhard",
+    "isFree": false
+  },
+  {
+    "title": "Love Story",
+    "artist": "Indila",
+    "content": "content/love_story.banana",
+    "thumbnail": "",
+    "image": "images/love_story.jpeg",
+    "difficulty": "veryhard",
     "isFree": true
   }
 ]
