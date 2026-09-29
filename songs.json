@@ -65,10 +65,10 @@
   {
     "title": "Moonlight Sonata (1st Movement)",
     "artist": "Ludwig van Beethoven",
-    "content": "content/moonlight_sonata_1st_movement.banana",
+    "content": "content/moonlight_sonata_1st_movement_easy.banana",
     "thumbnail": "",
     "image": "images/Moonlight_Sonata.jpeg",
-    "difficulty": "hard",
+    "difficulty": "easy",
     "isFree": false
   },
   {
