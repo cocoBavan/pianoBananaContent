@@ -81,6 +81,15 @@
     "isFree": false
   },
   {
+    "title": "The Four Seasons: Spring (Piano)",
+    "artist": "Antonio Vivaldi",
+    "content": "content/the_four_seasons_spring_piano.banana",
+    "thumbnail": "",
+    "image": "images/Vivaldi_Spring.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
     "title": "Minuet in G major",
     "artist": "Christian Petzold",
     "content": "content/minuet_in_g_major.banana",
@@ -129,6 +138,15 @@
     "title": "Eine kleine Nachtmusik",
     "artist": "W.A. Mozart",
     "content": "content/eine_kleine_nachtmusik.banana",
+    "thumbnail": "",
+    "image": "images/Mozart.jpeg",
+    "difficulty": "hard",
+    "isFree": false
+  },
+  {
+    "title": "Eine kleine Nachtmusik (Piano)",
+    "artist": "W.A. Mozart",
+    "content": "content/eine_kleine_nachtmusik_piano.banana",
     "thumbnail": "",
     "image": "images/Mozart.jpeg",
     "difficulty": "hard",
