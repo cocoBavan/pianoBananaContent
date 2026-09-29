@@ -29,10 +29,10 @@
   {
     "title": "Clair de Lune",
     "artist": "Claude Debussy",
-    "content": "content/clair_de_lune.banana",
+    "content": "content/clair_de_lune_easy.banana",
     "thumbnail": "",
     "image": "images/Clair_de_Lune.jpeg",
-    "difficulty": "hard",
+    "difficulty": "easy",
     "isFree": false
   },
   {
