@@ -45,6 +45,15 @@
     "isFree": false
   },
   {
+    "title": "Canon in D (Easy)",
+    "artist": "Johann Pachelbel",
+    "content": "content/canon_in_d_easy.banana",
+    "thumbnail": "",
+    "image": "images/Canon_in_Djpeg.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
     "title": "Gymnopédie No. 1",
     "artist": "Erik Satie",
     "content": "content/gymnopedie_no_1.banana",
