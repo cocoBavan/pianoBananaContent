@@ -9,6 +9,15 @@
     "isFree": false
   },
   {
+    "title": "Für Elise (Easy)",
+    "artist": "Ludwig van Beethoven",
+    "content": "content/fur_elise_easy.banana",
+    "thumbnail": "",
+    "image": "images/Playing_Für_Elisejpeg.jpeg",
+    "difficulty": "easy",
+    "isFree": false
+  },
+  {
     "title": "Ode to Joy",
     "artist": "Ludwig van Beethoven",
     "content": "content/ode_to_joy.banana",
