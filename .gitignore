@@ -8,6 +8,7 @@
 .vscode/
 .idea/
 love_story.mscz
+**/.mscbackup/
 
 # Internal legal setup notes and review output - never committed, never deployed
 legal/notes/
@@ -15,3 +16,7 @@ legal/notes/
 # Repository documentation - kept local only. The repo is public and this file is
 # not part of the published site, and it holds a personal account note.
 /README.md
+flyer-a4.html
+artist_bg.jpg
+dino_bg.jpg
+icon_artist.jpeg

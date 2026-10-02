@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Support &amp; User Guides — HeyGhoshi</title>
+    <meta
+      name="description"
+      content="Support, user guides, troubleshooting, and contact information for HeyGhoshi iOS applications, including Music Banana."
+    />
+    <link rel="canonical" href="https://heyghoshi.com/support/" />
+    <meta name="theme-color" content="#f8fafc" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HeyGhoshi" />
+    <meta property="og:title" content="App Support &amp; User Guides — HeyGhoshi" />
+    <meta
+      property="og:description"
+      content="Official app support, user guides, and FAQs for HeyGhoshi iOS learning apps."
+    />
+    <meta property="og:url" content="https://heyghoshi.com/support/" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+            },
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: [
+                "Sora",
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg.chevron {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 no-print transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white font-extrabold text-xl shadow-md ring-1 ring-slate-200 shrink-0 group-hover:scale-105 transition-transform">
+              G
+            </div>
+            <div>
+              <span class="text-lg sm:text-xl font-display font-extrabold tracking-tight text-slate-900 block leading-tight">HeyGhoshi</span>
+              <span class="text-[11px] font-bold text-slate-500 tracking-wider uppercase">App Support &amp; Help Center</span>
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../privacy/"
+              class="hidden sm:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              Privacy
+            </a>
+            <a
+              href="../terms/"
+              class="hidden sm:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              Terms
+            </a>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-slate-900 hover:bg-slate-800 text-white rounded-xl shadow-sm transition-all"
+            >
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="flex-1">
+      <!-- Hero Banner -->
+      <section class="bg-gradient-to-b from-indigo-500/10 via-purple-500/5 to-slate-50 border-b border-slate-200/60 py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-200/80 text-slate-800 border border-slate-300 text-xs font-bold uppercase tracking-wider mb-4">
+              Help Center &amp; Documentation
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+              App Support &amp; User Guides
+            </h1>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              Find detailed guides, troubleshooting steps, and direct contact options for all HeyGhoshi iOS learning applications.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Apps Directory Grid -->
+      <section class="py-12 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="mb-8">
+          <h2 class="text-2xl font-display font-extrabold text-slate-900 tracking-tight">Select an App</h2>
+          <p class="text-sm text-slate-600">Choose your application to access specific user manuals, FAQs, or contact channels.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- 1. Music Banana Card -->
+          <div class="bg-white rounded-3xl border-2 border-amber-300 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-all relative overflow-hidden group">
+            <div class="absolute top-0 right-0 bg-amber-400 text-slate-950 text-[10px] font-extrabold uppercase px-3 py-1 rounded-bl-xl tracking-wider">
+              Comprehensive Guide Available
+            </div>
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-md ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_banan_256.jpg" alt="Music Banana app icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-slate-950 text-lg leading-tight">Music Banana</h3>
+                  <span class="inline-block mt-0.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full ring-1 ring-emerald-200/70">
+                    On App Store
+                  </span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Turn sheet music into interactive piano playback with AI. Step-by-step scanner guides, note editor instructions, visual piano keys, and MIDI export.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-4 border-t border-slate-100">
+              <a
+                href="music-banana/"
+                class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-xs sm:text-sm shadow-2xs transition-all"
+              >
+                <span>Open User Guide &amp; Support</span>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </a>
+              <div class="flex gap-2 text-xs font-semibold">
+                <a href="../privacy/music-banana/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">Privacy</a>
+                <a href="../terms/music-banana/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-700 hover:text-white text-slate-700 transition-colors">Terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Books & Vocab Card -->
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-md ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_books_256.jpg" alt="Books &amp; Vocab icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-slate-950 text-lg leading-tight">Books &amp; Vocab</h3>
+                  <span class="inline-block mt-0.5 text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full ring-1 ring-emerald-200/70">
+                    On App Store
+                  </span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Interactive book tracking, vocabulary flashcards, and reading comprehension for young readers and students.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-4 border-t border-slate-100">
+              <a
+                href="mailto:human@heyghoshi.com?subject=Books%20%26%20Vocab%20Support"
+                class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm transition-colors"
+              >
+                <span>Email Support</span>
+              </a>
+              <div class="flex gap-2 text-xs font-semibold">
+                <a href="../privacy/books-vocab/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">Privacy</a>
+                <a href="../terms/books-vocab/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-700 hover:text-white text-slate-700 transition-colors">Terms</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. Selective Teacher Card -->
+          <div class="bg-white rounded-3xl border border-slate-200 shadow-sm p-6 flex flex-col justify-between hover:shadow-md transition-all">
+            <div>
+              <div class="flex items-center gap-3.5 mb-4">
+                <div class="w-14 h-14 rounded-2xl overflow-hidden shadow-md ring-1 ring-slate-200 shrink-0">
+                  <img src="../images/icon_teacher_256.jpg" alt="Selective Teacher icon" class="w-full h-full object-cover" />
+                </div>
+                <div>
+                  <h3 class="font-display font-bold text-slate-950 text-lg leading-tight">Selective Teacher</h3>
+                  <span class="inline-block mt-0.5 text-xs font-semibold text-sky-700 bg-sky-50 px-2 py-0.5 rounded-full ring-1 ring-sky-200/70">
+                    Coming Soon
+                  </span>
+                </div>
+              </div>
+              <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-6">
+                Practice and marking for selective school entry tests and scholarship exam preparation.
+              </p>
+            </div>
+
+            <div class="space-y-2 pt-4 border-t border-slate-100">
+              <a
+                href="mailto:human@heyghoshi.com?subject=Selective%20Teacher%20Inquiry"
+                class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs sm:text-sm transition-colors"
+              >
+                <span>Email Inquiries</span>
+              </a>
+              <div class="flex gap-2 text-xs font-semibold">
+                <a href="../privacy/selective-teacher/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 transition-colors">Privacy</a>
+                <a href="../terms/selective-teacher/" class="flex-1 text-center py-1.5 rounded-lg bg-slate-100 hover:bg-slate-700 hover:text-white text-slate-700 transition-colors">Terms</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Common Support Inquiries & FAQ -->
+      <section class="py-12 bg-white border-t border-b border-slate-200/80">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+          <div class="text-center max-w-2xl mx-auto mb-8">
+            <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-slate-900 tracking-tight">General App Store &amp; Subscription FAQ</h2>
+            <p class="mt-2 text-slate-600 text-sm">Common questions across all HeyGhoshi applications.</p>
+          </div>
+
+          <div class="space-y-4">
+            <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-600 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I restore purchases across devices?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
+                All purchases are linked to your Apple ID. Open the app, go to <strong>Settings</strong>, and tap <strong>Restore Purchases</strong> while signed in with the same Apple ID used to make the purchase.
+              </div>
+            </details>
+
+            <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-600 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I manage or cancel an active subscription?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
+                Subscriptions are managed through Apple: Open your iOS device's <strong>Settings</strong> app &gt; tap your <strong>Apple ID name</strong> &gt; tap <strong>Subscriptions</strong> &gt; choose the app and tap <strong>Cancel Subscription</strong>.
+              </div>
+            </details>
+
+            <details class="group bg-slate-50 rounded-2xl border border-slate-200/80 overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-600 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">What are the system requirements?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 text-sm text-slate-600 leading-relaxed border-t border-slate-200/60 pt-3">
+                Our apps are designed for iOS 17.0 and iPadOS 17.0 or later, supporting iPhone and iPad models.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Global Contact Box -->
+      <section id="contact" class="py-12 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-slate-900 text-white rounded-3xl p-8 sm:p-10 shadow-xl border border-slate-800 text-center space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white">Direct Developer Support</h2>
+          <p class="text-slate-300 text-sm sm:text-base max-w-xl mx-auto leading-relaxed">
+            Have questions, feedback, or need help with any HeyGhoshi application? Reach out directly and you'll receive a personal response.
+          </p>
+          <div class="pt-2">
+            <a
+              href="mailto:human@heyghoshi.com"
+              class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
+            >
+              <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>human@heyghoshi.com</span>
+            </a>
+          </div>
+          <p class="text-xs text-slate-400 pt-2">Typical response time: 24–48 hours</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-slate-200/80 bg-white py-10 no-print">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex items-center gap-3">
+            <a href="../" class="font-bold text-slate-800 hover:text-amber-600 transition-colors">HeyGhoshi</a>
+            <span>•</span>
+            <span>&copy; 2026 HeyGhoshi. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="music-banana/" class="hover:text-amber-600 transition-colors font-medium">Music Banana Guide</a>
+            <a href="../privacy/" class="hover:text-amber-600 transition-colors font-medium">Privacy</a>
+            <a href="../terms/" class="hover:text-amber-600 transition-colors font-medium">Terms</a>
+            <a href="mailto:human@heyghoshi.com" class="hover:text-amber-600 transition-colors font-medium">Email Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

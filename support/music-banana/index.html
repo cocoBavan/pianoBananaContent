@@ -1,0 +1,821 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music Banana Support &amp; User Guide — HeyGhoshi</title>
+    <meta
+      name="description"
+      content="Comprehensive user guide, troubleshooting, and support for Music Banana iOS app. Learn how to scan sheet music, practice with visual piano guides, edit notes, and export MIDI."
+    />
+    <link rel="canonical" href="https://heyghoshi.com/support/music-banana/" />
+    <meta name="theme-color" content="#f59e0b" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HeyGhoshi" />
+    <meta
+      property="og:title"
+      content="Music Banana Support &amp; User Guide"
+    />
+    <meta
+      property="og:description"
+      content="Turn printed sheet music into interactive piano playback with AI. Step-by-step guide, FAQ, and support contact."
+    />
+    <meta property="og:url" content="https://heyghoshi.com/support/music-banana/" />
+    <meta
+      property="og:image"
+      content="https://heyghoshi.com/images/icon_banan_256.jpg"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              banana: {
+                50: "#fffbeb",
+                100: "#fef3c7",
+                200: "#fde68a",
+                300: "#fcd34d",
+                400: "#fbbf24",
+                500: "#f59e0b",
+                600: "#d97706",
+                700: "#b45309",
+                800: "#92400e",
+                900: "#78350f",
+              },
+              piano: {
+                dark: "#0f172a",
+                surface: "#1e293b",
+                border: "#334155",
+                accent: "#f59e0b",
+              },
+            },
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: [
+                "Sora",
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg.chevron {
+        transform: rotate(180deg);
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .print-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-amber-200 selection:text-amber-900">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 no-print transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../../" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl overflow-hidden shadow-md shadow-amber-500/20 ring-1 ring-slate-200 shrink-0 group-hover:scale-105 transition-transform">
+              <img src="../../images/icon_banan_256.jpg" alt="Music Banana icon" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-lg sm:text-xl font-display font-extrabold tracking-tight text-slate-900 block leading-tight">Music Banana</span>
+              <span class="text-[11px] font-bold text-amber-600 tracking-wider uppercase">Support &amp; User Guide</span>
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../"
+              class="hidden md:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              All App Guides
+            </a>
+            <button
+              onclick="window.print()"
+              class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+              </svg>
+              <span>Print Guide</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-amber-400 hover:bg-amber-300 text-slate-950 rounded-xl shadow-sm transition-all"
+            >
+              <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Navigation Anchor Bar -->
+    <div class="sticky top-16 sm:top-20 z-30 bg-slate-100/90 backdrop-blur-md border-b border-slate-200/80 no-print overflow-x-auto py-2.5 px-4">
+      <div class="max-w-6xl mx-auto flex items-center gap-2 sm:gap-3 text-xs font-semibold whitespace-nowrap">
+        <span class="text-slate-400 uppercase tracking-wider text-[10px] hidden sm:inline mr-1">Jump to:</span>
+        <a href="#overview" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">Overview</a>
+        <a href="#step-1" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">1. Scan &amp; Import</a>
+        <a href="#step-2" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">2. Practice &amp; Keys</a>
+        <a href="#step-3" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">3. Sheet Editor</a>
+        <a href="#step-4" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">4. Multi-Page &amp; MIDI</a>
+        <a href="#step-5" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-amber-700 hover:bg-amber-50 border border-slate-200 shadow-2xs transition-colors">5. Catalog &amp; Chords</a>
+        <a href="#faq" class="px-3 py-1 rounded-full bg-amber-100/80 text-amber-900 hover:bg-amber-200 border border-amber-200/60 shadow-2xs transition-colors">FAQ</a>
+        <a href="#contact" class="px-3 py-1 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-2xs transition-colors">Support Info</a>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-1">
+      <!-- 1. Hero & Overview Section -->
+      <section id="overview" class="bg-gradient-to-b from-amber-500/10 via-amber-500/5 to-slate-50 border-b border-slate-200/60 py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-100 text-amber-900 border border-amber-200 text-xs font-bold uppercase tracking-wider mb-4">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Official iOS User Guide &amp; App Support
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+              Music Banana Support &amp; User Guide
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-amber-700 leading-snug mb-4">
+              Turn sheet music into interactive piano playback with AI.
+            </p>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <strong>Music Banana</strong> helps pianists, music students, and teachers scan sheet music with their iPhone or iPad camera, immediately listen to accurate audio playback, isolate left and right hands, follow synchronized visual piano keys, and practice challenging bars at their own tempo.
+            </p>
+          </div>
+
+          <!-- Feature Quick-Glance Cards -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-amber-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Instant Sheet Scanner</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Point your camera or pick a score image. Advanced AI turns printed bars into notes on-device.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-amber-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Dual-Color Guides</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Parrot Green LEDs for Right Hand and Pink LEDs for Left Hand with Do-Re-Mi or C-D-E pitch names.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-amber-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">In-App Sheet Editor</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Fix misread notes, edit durations, add accidentals with our innovative circular tool palette.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-amber-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2v-2"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Multi-Page &amp; MIDI</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Combine pages by dragging cards in your library and export standard format-1 MIDI files directly to DAWs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Quick-Start Guide Section -->
+      <section class="py-12 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-3 py-1 rounded-full">Step-by-Step Walkthrough</span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">How to Use Music Banana</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">Master sheet scanning, interactive practice, note corrections, and music library features.</p>
+          </div>
+
+          <!-- Step 1: Scan or Import Sheet Music -->
+          <article id="step-1" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 font-display font-extrabold flex items-center justify-center text-lg shadow-sm">1</span>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Scan or Import Sheet Music</h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Get your physical sheet music into the app in seconds using your iPhone or iPad camera or by choosing an existing score from your photo library.
+                </p>
+
+                <ol class="space-y-3 text-sm text-slate-700">
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <span>Open the app to the <strong>Home</strong> tab.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <span>Tap <strong>Camera</strong> to photograph your sheet music, or tap <strong>Gallery</strong> to select an existing saved image or scan.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <span>In the review screen, tap <strong>Edit</strong> to crop margins or rotate the score if necessary, then tap <strong>Process</strong>.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <span>Our AI analyzes the staves, clefs, notes, rests, and meter, saving the sheet directly to your library.</span>
+                  </li>
+                </ol>
+
+                <!-- Best Results Pro-Tips Box -->
+                <div class="rounded-2xl bg-amber-50/70 border border-amber-200/80 p-5 space-y-2.5">
+                  <div class="flex items-center gap-2 text-amber-900 font-bold text-sm">
+                    <svg class="w-5 h-5 text-amber-600 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Pro-Tips for the Best Scan Recognition:</span>
+                  </div>
+                  <ul class="text-xs sm:text-sm text-amber-950/80 space-y-1.5 list-disc list-inside">
+                    <li><strong>Even, bright lighting:</strong> Place your sheet music flat under natural daylight or bright, uniform overhead light.</li>
+                    <li><strong>Avoid glare &amp; shadows:</strong> Ensure your phone does not cast a dark shadow across the musical staves.</li>
+                    <li><strong>Straight alignment:</strong> Hold your phone parallel to the paper so the horizontal staff lines are straight and unwarped.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Visual Representation Graphic -->
+              <div class="w-full lg:w-72 bg-slate-900 text-white rounded-2xl p-5 shadow-inner flex flex-col justify-between shrink-0 space-y-4">
+                <div class="text-xs uppercase font-bold tracking-wider text-amber-400">Scanner Checklist</div>
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Sheet flat &amp; uncreased</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Clefs &amp; key signature visible</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Zero page rotation or tilt</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>High contrast (black on white)</span>
+                  </div>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  Runs directly on your device with high-accuracy Optical Music Recognition.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2: Interactive Playback & Practice -->
+          <article id="step-2" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 font-display font-extrabold flex items-center justify-center text-lg shadow-sm">2</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Interactive Playback &amp; Practice</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Once processing finishes, the interactive Player opens instantly. Hear the score, follow along visually note by note, isolate hands, and slow down challenging passages.
+              </p>
+
+              <!-- Interactive Features Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+                <!-- Transport Controls -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold">Play &amp; Sync</span>
+                    <span>Transport &amp; Playhead</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Play / Stop:</strong> Tap the green Play pill on the bottom transport bar to start or pause.</li>
+                    <li>• <strong>Synchronized Playhead:</strong> A vertical playhead line glides across the score in real time.</li>
+                    <li>• <strong>Note Highlights:</strong> Active sounding notes are highlighted right on your original score.</li>
+                  </ul>
+                </div>
+
+                <!-- Tempo & Metronome -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold">Tempo</span>
+                    <span>BPM &amp; Metronome</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Adjust Speed:</strong> Tap BPM Up / Down arrows to alter tempo in increments of 5 BPM.</li>
+                    <li>• <strong>Metronome &amp; Count-in:</strong> Toggle the Metronome icon on or off, with an optional count-in lead-in.</li>
+                    <li>• <strong>Continuous Loop:</strong> Tap the Loop icon to replay the entire piece continuously.</li>
+                  </ul>
+                </div>
+
+                <!-- Practice Loops & Start Anywhere -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-orange-100 text-orange-800 text-xs font-extrabold">Looping</span>
+                    <span>Targeted Practice Boundaries</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Start Anywhere:</strong> Tap any note on the sheet to instantly jump playback to that bar.</li>
+                    <li>• <strong>Practice Boundaries:</strong> Tap any bar line to set an orange bracket; playback automatically stops or loops at that exact measure.</li>
+                  </ul>
+                </div>
+
+                <!-- Hand Isolation -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-rose-100 text-rose-800 text-xs font-extrabold">Hands</span>
+                    <span>Isolate Left &amp; Right Hands</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Mute Staves:</strong> Tap the checkbox beside any staff system to mute or unmute specific staves.</li>
+                    <li>• <strong>Play Along:</strong> Mute the Right Hand (treble) while the app accompanies your Left Hand on acoustic piano.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Keyboard Visualizer Diagram / Explanation -->
+              <div class="rounded-2xl bg-slate-950 text-white p-6 sm:p-8 space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                  <div>
+                    <h4 class="font-display font-bold text-lg text-white">Dual-Color Keyboard Guides</h4>
+                    <p class="text-xs text-slate-400">Synchronized visual keys indicate which hand plays which note in real time.</p>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">Parrot Green = Right Hand (Treble)</span>
+                    <span class="px-2.5 py-1 rounded-md bg-pink-500/20 text-pink-400 font-bold border border-pink-500/30">Pink = Left Hand (Bass)</span>
+                  </div>
+                </div>
+
+                <!-- Simulated Mini Keyboard Strip -->
+                <div class="space-y-2">
+                  <div class="text-[11px] font-semibold text-slate-400 uppercase tracking-wider flex justify-between">
+                    <span>Interactive Keyboard Preview</span>
+                    <span>Supports Do-Re-Mi &amp; C-D-E pitch naming</span>
+                  </div>
+                  <div class="relative bg-slate-900 p-3 rounded-xl border border-slate-800 overflow-x-auto">
+                    <div class="flex gap-1 justify-center min-w-[320px]">
+                      <!-- White and Black keys stylized representation -->
+                      <div class="w-9 h-28 bg-white rounded-b-md text-slate-900 flex flex-col justify-end items-center pb-2 text-[10px] font-bold shadow">
+                        <span class="text-slate-400 text-[9px]">C</span>
+                      </div>
+                      <div class="w-9 h-28 bg-white rounded-b-md text-slate-900 flex flex-col justify-end items-center pb-2 text-[10px] font-bold shadow relative">
+                        <span class="text-slate-400 text-[9px]">D</span>
+                      </div>
+                      <div class="w-9 h-28 bg-pink-500 text-white rounded-b-md flex flex-col justify-end items-center pb-2 text-[10px] font-extrabold shadow ring-2 ring-pink-300">
+                        <span class="text-[9px] uppercase">Mi / E</span>
+                        <span class="text-[8px] opacity-80">LH</span>
+                      </div>
+                      <div class="w-9 h-28 bg-white rounded-b-md text-slate-900 flex flex-col justify-end items-center pb-2 text-[10px] font-bold shadow">
+                        <span class="text-slate-400 text-[9px]">F</span>
+                      </div>
+                      <div class="w-9 h-28 bg-emerald-500 text-slate-950 rounded-b-md flex flex-col justify-end items-center pb-2 text-[10px] font-extrabold shadow ring-2 ring-emerald-300">
+                        <span class="text-[9px] uppercase">Sol / G</span>
+                        <span class="text-[8px] opacity-80">RH</span>
+                      </div>
+                      <div class="w-9 h-28 bg-white rounded-b-md text-slate-900 flex flex-col justify-end items-center pb-2 text-[10px] font-bold shadow">
+                        <span class="text-slate-400 text-[9px]">A</span>
+                      </div>
+                      <div class="w-9 h-28 bg-white rounded-b-md text-slate-900 flex flex-col justify-end items-center pb-2 text-[10px] font-bold shadow">
+                        <span class="text-slate-400 text-[9px]">B</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-300 pt-2">
+                  <div class="flex items-start gap-2">
+                    <span class="text-amber-400 font-bold">🔍</span>
+                    <span><strong>Pinch-to-Zoom:</strong> Use two fingers to enlarge complex or dense sheet measures.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-amber-400 font-bold">↕️</span>
+                    <span><strong>Show/Hide Keyboard:</strong> Flick downward on the transport bar to tuck away the keyboard for maximum score view; flick upward to restore it.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3: Edit & Fix Notes -->
+          <article id="step-3" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 font-display font-extrabold flex items-center justify-center text-lg shadow-sm">3</span>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Edit &amp; Fix Notes (In-App Sheet Editor)</h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Sheet music print can be faint, hand-annotated, or worn. Music Banana includes a complete, intuitive notation editor so you can perfect any measure with just a tap.
+                </p>
+
+                <div class="space-y-4 text-sm text-slate-700">
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong>Enter Edit Mode:</strong> Tap the <strong>✏️ Pencil (Edit)</strong> button in the top navigation bar of the player.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong>The Circular Tool Palette:</strong> Tap any note, chord, or rest to summon the palette:
+                      <ul class="mt-2 space-y-1.5 pl-4 list-disc text-xs sm:text-sm text-slate-600">
+                        <li><strong>Inner Ring (Rhythm &amp; Delete):</strong> Switch note durations (quarter, eighth, sixteenth, half, whole), convert notes into rests, or delete unwanted symbols.</li>
+                        <li><strong>Outer Ring (Pitch &amp; Articulation):</strong> Shift pitch (Do-Re-Mi), insert accidentals (♯ sharp, ♭ flat, ♮ natural), toggle augmentation dots, tuplets, ties, and shift octaves.</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong>Measure Beat Check Diagnostics:</strong> Measures whose total beat count doesn't match the time signature are outlined with an intuitive <strong>red warning box</strong>, pinpointing missing rests or mismatched note durations instantly.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong>Save &amp; Rebuild Audio:</strong> Tap <strong>Done</strong>. Music Banana recalculates and re-synthesizes the playback audio on the fly with your edits.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Circular Tool Palette Graphic Box -->
+              <div class="w-full lg:w-80 bg-slate-900 text-white rounded-3xl p-6 shadow-md border border-slate-800 flex flex-col justify-between shrink-0 space-y-4">
+                <div class="text-xs uppercase font-bold tracking-wider text-amber-400">Circular Tool Palette</div>
+                
+                <div class="relative w-48 h-48 mx-auto my-2 flex items-center justify-center">
+                  <!-- Outer ring representation -->
+                  <div class="absolute inset-0 rounded-full border-2 border-dashed border-amber-400/60 flex items-center justify-center">
+                    <span class="absolute top-1 text-[10px] text-amber-300 font-bold">♯ ♭ ♮</span>
+                    <span class="absolute bottom-1 text-[10px] text-amber-300 font-bold">Ties / Dots</span>
+                    <span class="absolute left-1 text-[10px] text-amber-300 font-bold">Pitch</span>
+                    <span class="absolute right-1 text-[10px] text-amber-300 font-bold">8va</span>
+                  </div>
+                  <!-- Inner ring representation -->
+                  <div class="w-28 h-28 rounded-full bg-slate-800 border-2 border-emerald-400 flex flex-col items-center justify-center text-center p-2 shadow-inner">
+                    <span class="text-[9px] text-emerald-400 font-extrabold uppercase">Inner Ring</span>
+                    <span class="text-xs font-bold text-white mt-0.5">𝅘𝅥 𝅘𝅥𝅮 𝅘𝅥𝅯 𝅗𝅥</span>
+                    <span class="text-[9px] text-rose-400 font-semibold">Delete / Rest</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-red-500/30 border border-red-500 inline-block shrink-0"></span>
+                    <span class="text-slate-300"><strong>Red Box:</strong> Warns of beat-count mismatch</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/30 border border-emerald-500 inline-block shrink-0"></span>
+                    <span class="text-slate-300"><strong>Done:</strong> Re-synthesizes audio instantly</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4: Library, Multi-Page Songs & MIDI Export -->
+          <article id="step-4" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 font-display font-extrabold flex items-center justify-center text-lg shadow-sm">4</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Library, Multi-Page Songs &amp; MIDI Export</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Manage single or multi-movement scores easily in your Saved Library, and share your music files with external notation software and digital audio workstations.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Multi-Page Card Merging -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center font-bold text-base">
+                    📄+📄
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Drag-to-Merge Multi-Page Songs</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    In the <strong>Saved</strong> library tab, simply drag one song card on top of another to merge them into a single, seamless multi-page piece.
+                  </p>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    During playback, the app smoothly transitions across page turns while preserving your tempo, hand balance, and instrument settings.
+                  </p>
+                </div>
+
+                <!-- MIDI Export -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-base">
+                    🎹📤
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Standard MIDI (<code class="text-purple-700 bg-purple-50 px-1 py-0.5 rounded">.mid</code>) File Export</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Tap the <strong>Export / Share</strong> icon on any saved song card to generate a standard format-1 MIDI file.
+                  </p>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Open your exported scores directly in professional notation programs (<strong>MuseScore, Sibelius, Dorico</strong>) or DAWs (<strong>GarageBand, Logic Pro, Ableton</strong>).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5: Built-in Catalog & Chord Reference -->
+          <article id="step-5" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-950 font-display font-extrabold flex items-center justify-center text-lg shadow-sm">5</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Built-in Catalog &amp; Chord Reference</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Discover pieces right inside the app, and analyze harmonic structures with our built-in music theory tools.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Curated Catalog -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-800 flex items-center justify-center font-bold text-base">
+                    📚
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Curated Classical &amp; Practice Pieces</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Visit the <strong>Songs</strong> tab to explore a rich collection of beloved classical piano pieces and progressive learning tracks arranged for players of varying skill levels.
+                  </p>
+                </div>
+
+                <!-- Chord Reference -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-base">
+                    🎼
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Chord Reference Guide</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Tap the <strong>Gear</strong> icon in the player header during playback to open the Chord Reference Guide. View a measure-by-measure harmonic breakdown of all chords and notes assigned to each hand.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Frequently Asked Questions (FAQ) -->
+        <section id="faq" class="pt-8">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-amber-600 bg-amber-100 px-3 py-1 rounded-full">Help &amp; Troubleshooting</span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">Find answers to common questions about scanning, instruments, and subscriptions.</p>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">Why did the scanner miss a note or misread a measure?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Optical Music Recognition (OMR) works best with clean, evenly-lit scans. If a sheet has faint print, angled photography, shadows, or pencil annotations, some symbols may be misdetected. You can quickly fix any misread notes by tapping the <strong>Edit (Pencil)</strong> icon in the player and using the circular tool palette to adjust pitch or duration.
+              </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I practice with only one hand?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                On the player screen, look for the small green checkboxes located to the left of each staff line. Tap the checkbox to mute that staff so you can play that part live on your acoustic piano or keyboard while the app plays the other hand.
+              </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I change between "Do-Re-Mi" and "C-D-E"?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Navigate to the <strong>Settings</strong> tab in the app, locate the <strong>Notes Naming</strong> section, and select your preferred format between <strong>Do Re Mi</strong> (solfège) and <strong>C D E</strong> (standard pitch letter names). Your choice updates key guides and sheet markers immediately.
+              </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">What instruments are available?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Tap the musical note icon on the player transport bar to choose from over 10 realistic soundfont instruments (including Acoustic Grand Piano, Strings, Woodwinds, Brass, and Guitars/Basses) and fine-tune the volume balance between hands.
+              </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">What is the difference between Free and Premium?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                <ul class="space-y-2">
+                  <li>• <strong>Free Plan:</strong> Includes 5 sheet music scans, access to starter catalog songs, and standard piano audio.</li>
+                  <li>• <strong>Premium Plan:</strong> Unlocks unlimited sheet music scans, full catalog access, 10+ soundfont instruments, and standard MIDI (<code class="bg-slate-100 px-1 py-0.5 rounded text-xs">.mid</code>) file export.</li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I restore my purchase?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                If you reinstall Music Banana or switch to a new iPhone or iPad, go to the <strong>Settings</strong> tab, tap <strong>Restore Purchases</strong>, and sign in with the Apple ID used to make the original purchase.
+              </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-amber-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I manage or cancel my subscription?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-amber-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Subscriptions are managed directly by Apple through your Apple ID:
+                <ol class="mt-2 space-y-1 list-decimal list-inside pl-1 text-slate-700">
+                  <li>Open your iOS device's <strong>Settings</strong> app.</li>
+                  <li>Tap your <strong>Apple ID name</strong> at the very top.</li>
+                  <li>Tap <strong>Subscriptions</strong>.</li>
+                  <li>Select <strong>Music Banana</strong> and choose <strong>Cancel Subscription</strong>.</li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 4. Contact & Support Information Box (App Store Compliant) -->
+        <section id="contact" class="pt-8 print-break">
+          <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800">
+            <div class="max-w-3xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-400/20 text-amber-300 border border-amber-400/30 text-xs font-bold uppercase tracking-wider">
+                App Store Support &amp; Contact
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white">Need Additional Help?</h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Whether you encounter a tricky sheet recognition issue, have a feature suggestion, or need billing assistance, we are here to support you.
+              </p>
+
+              <!-- App Store Metadata Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs sm:text-sm">
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Application Name</div>
+                  <div class="font-bold text-white">Music Banana</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Publisher / Studio</div>
+                  <div class="font-bold text-white">HeyGhoshi</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Support Email</div>
+                  <div>
+                    <a href="mailto:human@heyghoshi.com?subject=Music%20Banana%20Support" class="font-bold text-amber-400 hover:underline">
+                      human@heyghoshi.com
+                    </a>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Typical Response Time</div>
+                  <div class="font-bold text-emerald-400">Within 24–48 hours</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">System Compatibility</div>
+                  <div class="text-slate-200">Requires iOS 17.0 or iPadOS 17.0 or later (iPhone &amp; iPad)</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">In-App Bug Reports</div>
+                  <div class="text-slate-200">Settings &gt; Report Bug (or in-player bug report button)</div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-6 flex flex-wrap gap-4 items-center">
+                <a
+                  href="mailto:human@heyghoshi.com?subject=Music%20Banana%20Support"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
+                >
+                  <svg class="w-5 h-5 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  <span>Email Support Directly</span>
+                </a>
+                <a
+                  href="../../privacy/music-banana/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Privacy Policy</span>
+                </a>
+                <a
+                  href="../../terms/music-banana/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Terms of Use</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-slate-200/80 bg-white py-10 no-print">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex items-center gap-3">
+            <a href="../../" class="font-bold text-slate-800 hover:text-amber-600 transition-colors">HeyGhoshi</a>
+            <span>•</span>
+            <span>&copy; 2026 HeyGhoshi. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="../" class="hover:text-amber-600 transition-colors font-medium">All App Guides</a>
+            <a href="../../privacy/music-banana/" class="hover:text-amber-600 transition-colors font-medium">Privacy</a>
+            <a href="../../terms/music-banana/" class="hover:text-amber-600 transition-colors font-medium">Terms</a>
+            <a href="mailto:human@heyghoshi.com" class="hover:text-amber-600 transition-colors font-medium">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
