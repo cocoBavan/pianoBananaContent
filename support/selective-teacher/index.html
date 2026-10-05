@@ -1,0 +1,1575 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selective Teacher Support &amp; User Guide — HeyGhoshi</title>
+    <meta
+      name="description"
+      content="Comprehensive user guide, troubleshooting, and support for the Selective Teacher iOS app. Learn how to snap homework problems, follow animated step-by-step visual solutions, practice adaptive question variations, and prepare for selective school & scholarship exams."
+    />
+    <link
+      rel="canonical"
+      href="https://heyghoshi.com/support/selective-teacher/"
+    />
+    <meta name="theme-color" content="#4f46e5" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HeyGhoshi" />
+    <meta
+      property="og:title"
+      content="Selective Teacher Support &amp; User Guide"
+    />
+    <meta
+      property="og:description"
+      content="Step-by-step visual problem solver and AI tutor for primary school exam prep. Complete user guide, FAQ, and support contact."
+    />
+    <meta
+      property="og:url"
+      content="https://heyghoshi.com/support/selective-teacher/"
+    />
+    <meta
+      property="og:image"
+      content="https://heyghoshi.com/images/icon_teacher_256.jpg"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              teacher: {
+                50: "#eef2ff",
+                100: "#e0e7ff",
+                200: "#c7d2fe",
+                300: "#a5b4fc",
+                400: "#818cf8",
+                500: "#6366f1",
+                600: "#4f46e5",
+                700: "#4338ca",
+                800: "#3730a3",
+                900: "#312e81",
+              },
+              tutor: {
+                math: "#6366f1",
+                english: "#ea580c",
+                thinking: "#0d9488",
+              },
+            },
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: ["Sora", '"Plus Jakarta Sans"', "Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg.chevron {
+        transform: rotate(180deg);
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .print-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body
+    class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-indigo-200 selection:text-indigo-900"
+  >
+    <!-- Header / Navbar -->
+    <header
+      class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 no-print transition-all"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../../" class="flex items-center gap-3 group">
+            <div
+              class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl overflow-hidden shadow-md shadow-indigo-500/20 ring-1 ring-slate-200 shrink-0 group-hover:scale-105 transition-transform"
+            >
+              <img
+                src="../../images/icon_teacher_256.jpg"
+                alt="Selective Teacher icon"
+                class="w-full h-full object-cover"
+              />
+            </div>
+            <div>
+              <span
+                class="text-lg sm:text-xl font-display font-extrabold tracking-tight text-slate-900 block leading-tight"
+                >Selective Teacher</span
+              >
+              <span
+                class="text-[11px] font-bold text-indigo-600 tracking-wider uppercase"
+                >Support &amp; User Guide</span
+              >
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../"
+              class="hidden md:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              All App Guides
+            </a>
+            <button
+              onclick="window.print()"
+              class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg
+                class="w-4 h-4 text-slate-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"
+                ></path>
+              </svg>
+              <span>Print Guide</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl shadow-sm transition-all"
+            >
+              <svg
+                class="w-4 h-4 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                ></path>
+              </svg>
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Navigation Anchor Bar -->
+    <div
+      class="sticky top-16 sm:top-20 z-30 bg-slate-100/90 backdrop-blur-md border-b border-slate-200/80 no-print overflow-x-auto py-2.5 px-4"
+    >
+      <div
+        class="max-w-6xl mx-auto flex items-center gap-2 sm:gap-3 text-xs font-semibold whitespace-nowrap"
+      >
+        <span
+          class="text-slate-400 uppercase tracking-wider text-[10px] hidden sm:inline mr-1"
+          >Jump to:</span
+        >
+        <a
+          href="#overview"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >Overview</a
+        >
+        <a
+          href="#step-1"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >1. Snap &amp; Crop</a
+        >
+        <a
+          href="#step-2"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >2. Choose Tutor</a
+        >
+        <a
+          href="#step-3"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >3. Visual Working</a
+        >
+        <a
+          href="#step-4"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >4. Adaptive Practice</a
+        >
+        <a
+          href="#step-5"
+          class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-indigo-700 hover:bg-indigo-50 border border-slate-200 shadow-2xs transition-colors"
+          >5. Quiz Diagnostic &amp; Settings</a
+        >
+        <a
+          href="#faq"
+          class="px-3 py-1 rounded-full bg-indigo-100/80 text-indigo-900 hover:bg-indigo-200 border border-indigo-200/60 shadow-2xs transition-colors"
+          >FAQ</a
+        >
+        <a
+          href="#contact"
+          class="px-3 py-1 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-2xs transition-colors"
+          >Support Info</a
+        >
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-1">
+      <!-- 1. Hero & Overview Section -->
+      <section
+        id="overview"
+        class="bg-gradient-to-b from-indigo-500/10 via-indigo-500/5 to-slate-50 border-b border-slate-200/60 py-12 sm:py-16"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-100 text-indigo-900 border border-indigo-200 text-xs font-bold uppercase tracking-wider mb-4"
+            >
+              <span
+                class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"
+              ></span>
+              Official iOS User Guide &amp; App Support
+            </div>
+            <h1
+              class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-4"
+            >
+              Selective Teacher Support &amp; User Guide
+            </h1>
+            <p
+              class="text-xl sm:text-2xl font-semibold text-indigo-700 leading-snug mb-4"
+            >
+              Shows the working, not just the answer. Visual AI tutoring for
+              primary school exam prep.
+            </p>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <strong>Selective Teacher</strong> helps primary school students,
+              parents, and educators master challenging questions in
+              <strong>Mathematics</strong>, <strong>English</strong>, and
+              <strong>Thinking Skills</strong>. Designed around primary school
+              curricula and competitive scholarship exams (such as Selective
+              High School placement tests, Opportunity Class tests, and 11+
+              exams), the app turns tricky problems into step-by-step visual
+              lessons with voiceover narration and unlimited adaptive practice.
+            </p>
+          </div>
+
+          <!-- Feature Quick-Glance Cards -->
+          <div
+            class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print"
+          >
+            <div
+              class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                  ></path>
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">
+                Snap &amp; Crop OCR
+              </h2>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Photograph worksheets, textbooks, or handwritten problems.
+                Intelligent OCR captures the exact question.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">
+                Visual Working
+              </h2>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Dynamic diagrams, bar models, and animated walkthroughs
+                illustrate the underlying logic clearly.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">
+                Adaptive Practice
+              </h2>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Generates unlimited variations of the exact question style until
+                full conceptual confidence is achieved.
+              </p>
+            </div>
+
+            <div
+              class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-indigo-300 transition-all"
+            >
+              <div
+                class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center mb-3"
+              >
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                  ></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">
+                PIN &amp; Region Controls
+              </h2>
+              <p class="text-xs text-slate-600 leading-relaxed">
+                Parent PIN lock protects subscriptions. Curricula adapt across
+                Australia, UK, US, India, Canada &amp; NZ.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Step-by-Step Walkthrough Section -->
+      <section
+        class="py-12 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16"
+      >
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-100 px-3 py-1 rounded-full"
+              >Step-by-Step Walkthrough</span
+            >
+            <h2
+              class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight"
+            >
+              How to Use Selective Teacher
+            </h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">
+              Master problem scanning, interactive visual lessons, adaptive
+              practice quizzes, and error diagnostics.
+            </p>
+          </div>
+
+          <!-- Step 1: Snap or Type Any Homework Problem -->
+          <article
+            id="step-1"
+            class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md"
+          >
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm"
+                    >1</span
+                  >
+                  <h3
+                    class="text-xl sm:text-2xl font-display font-bold text-slate-900"
+                  >
+                    Snap, Select, or Type Any Problem
+                  </h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Input any homework or exam question in seconds using your
+                  iPhone or iPad camera, choosing a saved image from your photo
+                  library, or typing text directly into the problem field.
+                </p>
+
+                <ol class="space-y-3 text-sm text-slate-700">
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >1</span
+                    >
+                    <span
+                      >Open the app and tap the <strong>Camera</strong> icon to
+                      photograph your worksheet, or tap
+                      <strong>Photo Library</strong> for an existing scan or
+                      screenshot.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >2</span
+                    >
+                    <span
+                      >Use the interactive <strong>Crop Frame</strong> to
+                      isolate just the specific question your child is stuck on,
+                      removing surrounding questions and distracting
+                      margins.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >3</span
+                    >
+                    <span
+                      >Our optical recognition parses the text, numbers,
+                      formulas, and diagrams automatically, allowing quick text
+                      edits before generating the explanation.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >4</span
+                    >
+                    <span
+                      >Alternatively, tap the <strong>Text Input</strong> bar to
+                      type or paste word problems directly.</span
+                    >
+                  </li>
+                </ol>
+
+                <!-- Best Results Pro-Tips Box -->
+                <div
+                  class="rounded-2xl bg-indigo-50/70 border border-indigo-200/80 p-5 space-y-2.5"
+                >
+                  <div
+                    class="flex items-center gap-2 text-indigo-900 font-bold text-sm"
+                  >
+                    <svg
+                      class="w-5 h-5 text-indigo-600 shrink-0"
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      aria-hidden="true"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
+                        clip-rule="evenodd"
+                      ></path>
+                    </svg>
+                    <span>Pro-Tips for Crisp Recognition:</span>
+                  </div>
+                  <ul
+                    class="text-xs sm:text-sm text-indigo-950/80 space-y-1.5 list-disc list-inside"
+                  >
+                    <li>
+                      <strong>Crop tightly:</strong> Focus on one problem at a
+                      time so the tutor provides targeted, uncluttered
+                      solutions.
+                    </li>
+                    <li>
+                      <strong>Direct lighting:</strong> Avoid casting dark phone
+                      shadows across formulas or diagrams.
+                    </li>
+                    <li>
+                      <strong>Handwritten notes:</strong> Ensure handwriting is
+                      legible; printed textbook pages work with near 100%
+                      accuracy.
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Scanner Checklist Box -->
+              <div
+                class="w-full lg:w-72 bg-slate-900 text-white rounded-2xl p-5 shadow-inner flex flex-col justify-between shrink-0 space-y-4"
+              >
+                <div
+                  class="text-xs uppercase font-bold tracking-wider text-indigo-400"
+                >
+                  Capture Checklist
+                </div>
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold"
+                      >✓</span
+                    >
+                    <span>Question text &amp; options clearly visible</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold"
+                      >✓</span
+                    >
+                    <span>Accompanying table/diagram included</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold"
+                      >✓</span
+                    >
+                    <span>No harsh glare or bent paper creases</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold"
+                      >✓</span
+                    >
+                    <span>Surrounding unrelated questions cropped out</span>
+                  </div>
+                </div>
+                <div
+                  class="pt-3 border-t border-slate-800 text-[11px] text-slate-400"
+                >
+                  Runs with fast OCR processing and privacy-first document
+                  analysis.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2: Choose Your Subject Tutor & Tap Explain -->
+          <article
+            id="step-2"
+            class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm"
+                  >2</span
+                >
+                <h3
+                  class="text-xl sm:text-2xl font-display font-bold text-slate-900"
+                >
+                  Choose Your Tutor &amp; Tap Explain
+                </h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Each subject demands a distinct pedagogical approach. Select the
+                specialized tutor for your subject before tapping
+                <strong>Explain</strong>:
+              </p>
+
+              <!-- The 3 Tutors Cards -->
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-5 text-sm">
+                <!-- Mathematics -->
+                <div
+                  class="p-6 rounded-2xl bg-indigo-50/50 border border-indigo-200/80 space-y-3"
+                >
+                  <div
+                    class="flex items-center gap-2.5 font-bold text-slate-900"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-xl bg-indigo-600 text-white flex items-center justify-center text-sm font-black"
+                      >∑</span
+                    >
+                    <span class="text-base text-indigo-950 font-display"
+                      >Math Tutor</span
+                    >
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Breaks multi-step arithmetic, fractions, ratios, geometry,
+                    money, and algebraic word problems into progressive visual
+                    calculations.
+                  </p>
+                  <div
+                    class="text-[11px] font-bold text-indigo-700 bg-indigo-100/70 px-2.5 py-1 rounded-lg inline-block"
+                  >
+                    Focus: Working out &amp; number models
+                  </div>
+                </div>
+
+                <!-- English -->
+                <div
+                  class="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/80 space-y-3"
+                >
+                  <div
+                    class="flex items-center gap-2.5 font-bold text-slate-900"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-xl bg-amber-600 text-white flex items-center justify-center text-sm font-black"
+                      >Abc</span
+                    >
+                    <span class="text-base text-amber-950 font-display"
+                      >English Tutor</span
+                    >
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Unpacks reading comprehension, context clues, syntax, cloze
+                    passages, poetry nuance, vocabulary in context, and
+                    inference deductions.
+                  </p>
+                  <div
+                    class="text-[11px] font-bold text-amber-800 bg-amber-100/70 px-2.5 py-1 rounded-lg inline-block"
+                  >
+                    Focus: Evidence from text &amp; vocabulary
+                  </div>
+                </div>
+
+                <!-- Thinking Skills -->
+                <div
+                  class="p-6 rounded-2xl bg-teal-50/50 border border-teal-200/80 space-y-3"
+                >
+                  <div
+                    class="flex items-center gap-2.5 font-bold text-slate-900"
+                  >
+                    <span
+                      class="w-8 h-8 rounded-xl bg-teal-600 text-white flex items-center justify-center text-sm font-black"
+                      >💡</span
+                    >
+                    <span class="text-base text-teal-950 font-display"
+                      >Thinking Skills</span
+                    >
+                  </div>
+                  <p class="text-xs text-slate-600 leading-relaxed">
+                    Deconstructs logic puzzles, spatial relations, syllogisms,
+                    pattern analysis, truth-teller riddles, and critical
+                    deduction.
+                  </p>
+                  <div
+                    class="text-[11px] font-bold text-teal-800 bg-teal-100/70 px-2.5 py-1 rounded-lg inline-block"
+                  >
+                    Focus: Selective &amp; scholarship exam logic
+                  </div>
+                </div>
+              </div>
+
+              <!-- Wait Mode vs Background Processing Note -->
+              <div class="rounded-2xl bg-slate-900 text-white p-6 space-y-3">
+                <div class="flex items-center justify-between">
+                  <span
+                    class="text-xs font-bold uppercase tracking-wider text-indigo-400"
+                    >Generation Options</span
+                  >
+                  <span class="text-xs text-slate-400"
+                    >Settings &gt; Behavior &gt; Wait Mode</span
+                  >
+                </div>
+                <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                  While our AI generates the custom visuals and voiceover:
+                </p>
+                <div
+                  class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-300 pt-1"
+                >
+                  <div
+                    class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60"
+                  >
+                    <strong class="text-white block mb-1"
+                      >Interactive Mini-Game (Wait Mode ON):</strong
+                    >
+                    A playful mini-game keeps your child engaged while waiting
+                    for the solution to finish rendering.
+                  </div>
+                  <div
+                    class="p-3 rounded-xl bg-slate-800/80 border border-slate-700/60"
+                  >
+                    <strong class="text-white block mb-1"
+                      >Background Queue Mode (Default):</strong
+                    >
+                    Continue browsing previous questions or practice sets; a
+                    notification banner alerts you the second the lesson is
+                    ready.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3: Interactive Visual Learning & Voiceover Narration -->
+          <article
+            id="step-3"
+            class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md"
+          >
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm"
+                    >3</span
+                  >
+                  <h3
+                    class="text-xl sm:text-2xl font-display font-bold text-slate-900"
+                  >
+                    Visual Step-by-Step Learning &amp; Audio
+                  </h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Abstract formulas cause anxiety when students can't visualize
+                  them. Selective Teacher transforms each problem into an
+                  animated, interactive story with clear verbal explanations.
+                </p>
+
+                <div class="space-y-4 text-sm text-slate-700">
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >1</span
+                    >
+                    <div>
+                      <strong>Interactive Stage Progression:</strong> Tap
+                      <strong>Next Step</strong> or swipe through the scene.
+                      Watch numbers convert into visual bar models, pie slices,
+                      tables, or highlighted text excerpts.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >2</span
+                    >
+                    <div>
+                      <strong>Synchronized Voiceover Narration:</strong> Every
+                      explanation features friendly, natural voiceover
+                      explaining the reasoning in conversational, child-friendly
+                      terms.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >3</span
+                    >
+                    <div>
+                      <strong>Playback Speed Controls:</strong> Tailor audio
+                      pacing in <strong>Settings &gt; Behavior</strong> between
+                      1.0x, 1.2x, and 1.4x speed, or toggle the "Slower
+                      narration" mode for extra clarity.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span
+                      class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5"
+                      >4</span
+                    >
+                    <div>
+                      <strong>In-App Issue Flagging:</strong> Spot an ambiguous
+                      question wording? Tap the <strong>Report Bug</strong> flag
+                      icon inside the scene to submit a screenshot and scene
+                      snapshot directly to our engineering team.
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Visualizer Box -->
+              <div
+                class="w-full lg:w-80 bg-slate-900 text-white rounded-3xl p-6 shadow-md border border-slate-800 flex flex-col justify-between shrink-0 space-y-4"
+              >
+                <div
+                  class="text-xs uppercase font-bold tracking-wider text-indigo-400"
+                >
+                  Visual Teaching Engine
+                </div>
+
+                <div
+                  class="p-4 rounded-2xl bg-slate-800/80 border border-slate-700/80 space-y-3 text-xs"
+                >
+                  <div
+                    class="flex items-center justify-between border-b border-slate-700 pb-2"
+                  >
+                    <span class="text-indigo-300 font-bold">Bar Modeling</span>
+                    <span class="text-[10px] text-emerald-400 font-semibold"
+                      >Step 2 of 4</span
+                    >
+                  </div>
+                  <div class="space-y-1.5 pt-1">
+                    <div
+                      class="h-4 bg-indigo-500 rounded text-[9px] flex items-center px-2 font-bold text-white"
+                    >
+                      Known Amount: $24
+                    </div>
+                    <div
+                      class="h-4 bg-amber-500 rounded text-[9px] flex items-center px-2 font-bold text-white w-2/3"
+                    >
+                      Unknown Ratio (2x)
+                    </div>
+                    <p class="text-[11px] text-slate-300 pt-1">
+                      "Notice how cutting the unknown unit in half matches the
+                      remaining balance..."
+                    </p>
+                  </div>
+                </div>
+
+                <div
+                  class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-3"
+                >
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-3 h-3 rounded-full bg-indigo-400/40 border border-indigo-400 inline-block shrink-0"
+                    ></span>
+                    <span>Supports House &amp; System fonts</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span
+                      class="w-3 h-3 rounded-full bg-emerald-400/40 border border-emerald-400 inline-block shrink-0"
+                    ></span>
+                    <span>Optional ambient background music</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4: Practice with Variations & Adaptive Mastery -->
+          <article
+            id="step-4"
+            class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm"
+                  >4</span
+                >
+                <h3
+                  class="text-xl sm:text-2xl font-display font-bold text-slate-900"
+                >
+                  Practice with Adaptive Variations
+                </h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Understanding one solution is good; being able to solve that
+                problem when the numbers or wording change is mastery.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Unlimited Similar Questions -->
+                <div
+                  class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center font-bold text-base"
+                  >
+                    🎯
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">
+                    "Practice More Like This"
+                  </h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    At the conclusion of any explanation, tap
+                    <strong>Practice More</strong>. The app generates brand-new
+                    question variations preserving the core logic pattern.
+                  </p>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    This prevents rote memorization of specific numbers and
+                    tests genuine comprehension under simulated exam conditions.
+                  </p>
+                </div>
+
+                <!-- Instant Hints & Retries -->
+                <div
+                  class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-base"
+                  >
+                    🔄
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">
+                    Adaptive Feedback &amp; Hints
+                  </h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    If your child gets a practice question wrong, the app
+                    doesn't just reveal the answer. It highlights where the
+                    misstep occurred and offers immediate visual hints.
+                  </p>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Students can generate unlimited variation quizzes until they
+                    achieve a 100% mastery score.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5: Quiz Performance Diagnostics & Region Settings -->
+          <article
+            id="step-5"
+            class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 transition-all hover:shadow-md"
+          >
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span
+                  class="w-10 h-10 rounded-2xl bg-indigo-600 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm"
+                  >5</span
+                >
+                <h3
+                  class="text-xl sm:text-2xl font-display font-bold text-slate-900"
+                >
+                  Quiz Diagnostic Analysis &amp; Region Settings
+                </h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Go beyond basic test percentages with intelligent root-cause
+                diagnosis, localized curriculum standards, and parental
+                controls.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Understanding Gap vs Carelessness -->
+                <div
+                  class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-teal-100 text-teal-800 flex items-center justify-center font-bold text-base"
+                  >
+                    🔬
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">
+                    Carelessness vs. Concept Gaps
+                  </h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    After completing a quiz, tap
+                    <strong>Analyze My Performance</strong>. Our AI categorizes
+                    errors into:
+                  </p>
+                  <ul
+                    class="text-xs text-slate-600 space-y-1 list-disc list-inside"
+                  >
+                    <li>
+                      <strong>Careless Mistakes:</strong> Misread signs or
+                      arithmetic slips (flagged for review without repetitive
+                      retraining).
+                    </li>
+                    <li>
+                      <strong>Understanding Gaps:</strong> Missing core
+                      concepts, providing a 1-tap button to launch a dedicated
+                      visual teaching scene.
+                    </li>
+                  </ul>
+                </div>
+
+                <!-- Region & Currency Customization -->
+                <div
+                  class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3"
+                >
+                  <div
+                    class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-base"
+                  >
+                    🌏
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">
+                    6 Curriculum Regions &amp; Multi-Language
+                  </h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    In <strong>Settings &gt; Region</strong>, choose between
+                    <strong>Australia 🇦🇺</strong>,
+                    <strong>United States 🇺🇸</strong>,
+                    <strong>United Kingdom 🇬🇧</strong>,
+                    <strong>India 🇮🇳</strong>, <strong>Canada 🇨🇦</strong>, and
+                    <strong>New Zealand 🇳🇿</strong>.
+                  </p>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Currency symbols ($, £, ₹), metric/imperial units, and
+                    spelling conventions update automatically. In addition,
+                    <strong>Lesson Language</strong> supports 13+ languages.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Frequently Asked Questions (FAQ) -->
+        <section id="faq" class="pt-8">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span
+              class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-100 px-3 py-1 rounded-full"
+              >Help &amp; Troubleshooting</span
+            >
+            <h2
+              class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight"
+            >
+              Frequently Asked Questions
+            </h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">
+              Find answers to common questions about problem scanning, subjects,
+              subscriptions, and parent controls.
+            </p>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ 1 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >What exam formats and year levels does Selective Teacher
+                  support?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                Selective Teacher is primarily tailored for primary school
+                students in Years 3 to 6 preparing for competitive entrance
+                tests—including the NSW Selective High School Placement Test,
+                Opportunity Class (OC) placement, Victorian Select Entry,
+                Queensland Academic Select Entry, ACER &amp; Edutest scholarship
+                exams, UK 11+ Grammar exams, and general primary school homework
+                across Math, English, and Thinking Skills.
+              </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >Can the scanner read handwritten questions as well as printed
+                  worksheets?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                Yes. Our OCR model handles both printed textbook typography and
+                legible student handwriting. For optimal accuracy, crop out any
+                scribbles, ensure good lighting without dark shadows, and review
+                the recognized text preview before submitting. You can make
+                manual corrections directly in the text field if any symbol is
+                misread.
+              </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >What are Thinking Skills and how does the app teach
+                  them?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                Thinking Skills (which replaced General Ability in many
+                competitive exams) covers critical thinking, syllogistic
+                reasoning, pattern deduction, and spatial relationships. Rather
+                than offering abstract text explanations, our Thinking Skills
+                tutor renders visual Venn diagrams, truth tables, and
+                step-by-step logic matrices that make abstract deduction
+                immediately intuitive.
+              </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >How do I change currency, measurement units, or curriculum
+                  spelling?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                Go to <strong>Settings &gt; Region</strong>. You can choose
+                between Australia, the United States, the United Kingdom, India,
+                Canada, and New Zealand. All newly generated practice questions,
+                currency word problems (e.g. $, £, or ₹), and measurement units
+                (metric vs. imperial) will conform to your chosen country.
+              </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >How does Parent PIN Protection work?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                To prevent young children from modifying subscription settings
+                or triggering unnecessary generations, navigate to
+                <strong>Settings &gt; PIN &amp; Security</strong> and create a
+                4-digit security PIN. Once enabled, parents can lock settings
+                and access administrative controls securely.
+              </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >What is the difference between the Free plan and Pro
+                  (Premium)?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                <ul class="space-y-2">
+                  <li>
+                    • <strong>Free Plan:</strong> Includes starter question
+                    scans, access to sample explanations across all subjects,
+                    and standard text explanations.
+                  </li>
+                  <li>
+                    • <strong>Pro Plan:</strong> Unlocks unlimited question
+                    generations, full access to animated visual diagrams across
+                    Math, English, and Thinking Skills, unlimited adaptive
+                    practice quiz sets, full audio narration, and deep
+                    diagnostic error analysis. Both Monthly and Annual billing
+                    options include a free introductory trial.
+                  </li>
+                </ul>
+              </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >How do I restore my purchase on a new device?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                If you upgrade your iPhone or iPad, open Selective Teacher, go
+                to <strong>Settings &gt; Premium</strong>, and tap
+                <strong>Restore Purchases</strong>. StoreKit 2 will
+                automatically synchronize your active subscription with the
+                Apple ID signed in on your device.
+              </div>
+            </details>
+
+            <!-- FAQ 8 -->
+            <details
+              class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all"
+            >
+              <summary
+                class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-indigo-700 transition-colors list-none select-none"
+              >
+                <span class="text-sm sm:text-base"
+                  >How do I manage or cancel my subscription?</span
+                >
+                <svg
+                  class="chevron w-5 h-5 text-slate-400 group-hover:text-indigo-600 transition-transform duration-200 shrink-0 ml-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 9l-7 7-7-7"
+                  ></path>
+                </svg>
+              </summary>
+              <div
+                class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3"
+              >
+                All subscriptions and free trials are managed safely and
+                securely by Apple:
+                <ol
+                  class="mt-2 space-y-1 list-decimal list-inside pl-1 text-slate-700"
+                >
+                  <li>
+                    Open the iOS <strong>Settings</strong> app on your device.
+                  </li>
+                  <li>
+                    Tap your <strong>Name / Apple ID</strong> banner at the top.
+                  </li>
+                  <li>Select <strong>Subscriptions</strong>.</li>
+                  <li>
+                    Tap <strong>Selective Teacher</strong> and choose
+                    <strong>Cancel Subscription</strong>. You retain full Pro
+                    access until the end of the current billing cycle or trial
+                    period.
+                  </li>
+                </ol>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 4. Contact & Support Information Box (App Store Compliant) -->
+        <section id="contact" class="pt-8 print-break">
+          <div
+            class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800"
+          >
+            <div class="max-w-3xl space-y-6">
+              <div
+                class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-400/20 text-indigo-300 border border-indigo-400/30 text-xs font-bold uppercase tracking-wider"
+              >
+                App Store Support &amp; Contact
+              </div>
+              <h2
+                class="text-2xl sm:text-3xl font-display font-extrabold text-white"
+              >
+                Need Additional Help?
+              </h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Whether you encounter an ambiguous question interpretation, have
+                feedback on our visual animations, or need subscription
+                guidance, we are here to support your child's learning journey.
+              </p>
+
+              <!-- App Store Metadata Grid -->
+              <div
+                class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs sm:text-sm"
+              >
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    Application Name
+                  </div>
+                  <div class="font-bold text-white">Selective Teacher</div>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    Publisher / Studio
+                  </div>
+                  <div class="font-bold text-white">HeyGhoshi</div>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    Support Email
+                  </div>
+                  <div>
+                    <a
+                      href="mailto:human@heyghoshi.com?subject=Selective%20Teacher%20Support"
+                      class="font-bold text-indigo-400 hover:underline"
+                    >
+                      human@heyghoshi.com
+                    </a>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    Typical Response Time
+                  </div>
+                  <div class="font-bold text-emerald-400">
+                    Within 24–48 hours
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    System Compatibility
+                  </div>
+                  <div class="text-slate-200">
+                    Requires iOS 17.0 or iPadOS 17.0 or later (iPhone &amp;
+                    iPad)
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div
+                    class="text-slate-400 text-xs font-medium uppercase tracking-wider"
+                  >
+                    In-App Bug Reports
+                  </div>
+                  <div class="text-slate-200">
+                    Tap the flag icon on any solution scene, or Settings &gt;
+                    Report Bug
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-6 flex flex-wrap gap-4 items-center">
+                <a
+                  href="mailto:human@heyghoshi.com?subject=Selective%20Teacher%20Support"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-indigo-600 hover:bg-indigo-500 text-white font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
+                >
+                  <svg
+                    class="w-5 h-5 text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                  <span>Email Support Directly</span>
+                </a>
+                <a
+                  href="../../privacy/selective-teacher/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Privacy Policy</span>
+                </a>
+                <a
+                  href="../../terms/selective-teacher/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Terms of Use</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="mt-auto border-t border-slate-200/80 bg-white py-10 no-print"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div
+          class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500"
+        >
+          <div class="flex items-center gap-3">
+            <a
+              href="../../"
+              class="font-bold text-slate-800 hover:text-indigo-600 transition-colors"
+              >HeyGhoshi</a
+            >
+            <span>•</span>
+            <span>&copy; 2026 HeyGhoshi. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a
+              href="../"
+              class="hover:text-indigo-600 transition-colors font-medium"
+              >All App Guides</a
+            >
+            <a
+              href="../../privacy/selective-teacher/"
+              class="hover:text-indigo-600 transition-colors font-medium"
+              >Privacy</a
+            >
+            <a
+              href="../../terms/selective-teacher/"
+              class="hover:text-indigo-600 transition-colors font-medium"
+              >Terms</a
+            >
+            <a
+              href="mailto:human@heyghoshi.com"
+              class="hover:text-indigo-600 transition-colors font-medium"
+              >Support</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
