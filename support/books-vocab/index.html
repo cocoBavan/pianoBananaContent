@@ -1,0 +1,863 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Books &amp; Vocab Support &amp; User Guide — HeyGhoshi</title>
+    <meta
+      name="description"
+      content="Comprehensive user guide, troubleshooting, and support for Books &amp; Vocab iOS app. Learn how to master book vocabulary before reading, scan pages with your camera, use visual memory hooks, and request new books."
+    />
+    <link rel="canonical" href="https://heyghoshi.com/support/books-vocab/" />
+    <meta name="theme-color" content="#10b981" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HeyGhoshi" />
+    <meta
+      property="og:title"
+      content="Books &amp; Vocab Support &amp; User Guide"
+    />
+    <meta
+      property="og:description"
+      content="Master words before you read. Stop pausing every page. Step-by-step guide, FAQ, camera scanning tips, and support contact."
+    />
+    <meta property="og:url" content="https://heyghoshi.com/support/books-vocab/" />
+    <meta
+      property="og:image"
+      content="https://heyghoshi.com/images/icon_books_vocab_256.jpg"
+    />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              emerald: {
+                50: "#ecfdf5",
+                100: "#d1fae5",
+                200: "#a7f3d0",
+                300: "#6ee7b7",
+                400: "#34d399",
+                500: "#10b981",
+                600: "#059669",
+                700: "#047857",
+                800: "#065f46",
+                900: "#064e3b",
+              },
+              book: {
+                dark: "#0f172a",
+                surface: "#1e293b",
+                border: "#334155",
+                accent: "#10b981",
+              },
+            },
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: [
+                "Sora",
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg.chevron {
+        transform: rotate(180deg);
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .print-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-emerald-200 selection:text-emerald-900">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 no-print transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../../" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-700 flex items-center justify-center shadow-md shadow-emerald-500/20 ring-1 ring-slate-200 shrink-0 group-hover:scale-105 transition-transform overflow-hidden">
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+            <div>
+              <span class="text-lg sm:text-xl font-display font-extrabold tracking-tight text-slate-900 block leading-tight">Books &amp; Vocab</span>
+              <span class="text-[11px] font-bold text-emerald-600 tracking-wider uppercase">Support &amp; User Guide</span>
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../"
+              class="hidden md:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              All App Guides
+            </a>
+            <button
+              onclick="window.print()"
+              class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+              </svg>
+              <span>Print Guide</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-emerald-500 hover:bg-emerald-400 text-white rounded-xl shadow-sm transition-all"
+            >
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Navigation Anchor Bar -->
+    <div class="sticky top-16 sm:top-20 z-30 bg-slate-100/90 backdrop-blur-md border-b border-slate-200/80 no-print overflow-x-auto py-2.5 px-4">
+      <div class="max-w-6xl mx-auto flex items-center gap-2 sm:gap-3 text-xs font-semibold whitespace-nowrap">
+        <span class="text-slate-400 uppercase tracking-wider text-[10px] hidden sm:inline mr-1">Jump to:</span>
+        <a href="#overview" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">Overview</a>
+        <a href="#step-1" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">1. Discover &amp; Request</a>
+        <a href="#step-2" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">2. Flashcards &amp; Memory</a>
+        <a href="#step-3" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">3. Page Scanner</a>
+        <a href="#step-4" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">4. Study Modes &amp; Filters</a>
+        <a href="#step-5" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-emerald-700 hover:bg-emerald-50 border border-slate-200 shadow-2xs transition-colors">5. Account &amp; Premium</a>
+        <a href="#faq" class="px-3 py-1 rounded-full bg-emerald-100/80 text-emerald-900 hover:bg-emerald-200 border border-emerald-200/60 shadow-2xs transition-colors">FAQ</a>
+        <a href="#contact" class="px-3 py-1 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-2xs transition-colors">Support Info</a>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-1">
+      <!-- 1. Hero & Overview Section -->
+      <section id="overview" class="bg-gradient-to-b from-emerald-500/10 via-emerald-500/5 to-slate-50 border-b border-slate-200/60 py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-100 text-emerald-900 border border-emerald-200 text-xs font-bold uppercase tracking-wider mb-4">
+              <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+              Official iOS User Guide &amp; App Support
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+              Books &amp; Vocab Support &amp; User Guide
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-emerald-700 leading-snug mb-4">
+              Stop pausing every page. Master words before you read.
+            </p>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <strong>Books &amp; Vocab</strong> helps readers, students, and book club enthusiasts enjoy books without breaking flow. By extracting the rarest and most challenging vocabulary in exact chronological reading order, the app pairs each word with vivid setting-anchored illustrations, real book excerpts, mnemonic hooks, and instant camera scanning so you can read with pure immersion.
+            </p>
+          </div>
+
+          <!-- Feature Quick-Glance Cards -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-emerald-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Chronological Decks</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Words are sequenced in the exact order they appear in the book. Master the first 50 words in 10 minutes before turning page one.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-emerald-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-indigo-100 text-indigo-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Visuals &amp; Mnemonics</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Dry definitions don't stick. Every word features a setting-inspired artwork, pronunciation audio, and memorable hooks.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-emerald-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Instant Page Scanner</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Point your iPhone camera at any printed book page. On-device OCR finds unfamiliar words and jumps straight to their cards.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-emerald-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Request Any Book</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Search millions of published titles, or submit custom requests with ISBN. Our system creates your custom vocabulary deck.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Step-by-Step Walkthrough Section -->
+      <section class="py-12 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Step-by-Step Walkthrough</span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">How to Use Books &amp; Vocab</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">Master pre-reading decks, camera page recognition, custom requests, and smart retention tools.</p>
+          </div>
+
+          <!-- Step 1: Discover & Request Books -->
+          <article id="step-1" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm">1</span>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Discover or Request Any Book</h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Whether you're starting a classic like <em>Pride and Prejudice</em>, a sprawling fantasy epic, or the latest bestseller, Books &amp; Vocab gives you instant access to curated titles and lets you request any book in the world.
+                </p>
+
+                <ol class="space-y-3 text-sm text-slate-700">
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <span><strong>Browse Curated &amp; Free Classics:</strong> On the Home tab, explore pre-built vocabulary decks ready to study immediately.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <span><strong>Search the Global Catalog:</strong> Tap the <strong>+ (Add Book)</strong> button in the navigation bar. Type any book title or author to search through millions of published editions.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <span><strong>One-Tap Add:</strong> When your edition appears in search results, tap <strong>Add Book</strong> to link its vocabulary deck to your personal reading shelf.</span>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <span><strong>Manual Request with ISBN:</strong> If a specific translation or obscure edition is not in the instant library, tap <strong>Request Manually</strong>. Enter the Title, Author, and ISBN. Our automated system analyzes the full text and prepares your custom vocabulary deck.</span>
+                  </li>
+                </ol>
+
+                <!-- Best Results Pro-Tips Box -->
+                <div class="rounded-2xl bg-emerald-50/70 border border-emerald-200/80 p-5 space-y-2.5">
+                  <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                    <svg class="w-5 h-5 text-emerald-600 shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path>
+                    </svg>
+                    <span>Pro-Tips for Book Requests:</span>
+                  </div>
+                  <ul class="text-xs sm:text-sm text-emerald-950/80 space-y-1.5 list-disc list-inside">
+                    <li><strong>Include the 10- or 13-digit ISBN:</strong> The ISBN printed on the back cover or copyright page ensures we match your exact translation, edition, and pagination.</li>
+                    <li><strong>Monthly Request Quota:</strong> Books &amp; Vocab Pro subscribers receive up to <strong>4 new custom book requests every month</strong>.</li>
+                    <li><strong>Status Badges:</strong> Check your bookshelf for status indicators: <em>Available</em>, <em>Processing Request</em>, or <em>Ready to Read</em>.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Graphic / Checklist Card -->
+              <div class="w-full lg:w-72 bg-slate-900 text-white rounded-2xl p-5 shadow-inner flex flex-col justify-between shrink-0 space-y-4">
+                <div class="text-xs uppercase font-bold tracking-wider text-emerald-400">Book Deck Checklist</div>
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Ranked by rarity &amp; challenge</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Chronological chapter sequence</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Setting-anchored artwork</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-4 h-4 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold">✓</span>
+                    <span>Original in-book usage quotes</span>
+                  </div>
+                </div>
+                <div class="pt-3 border-t border-slate-800 text-[11px] text-slate-400">
+                  Pre-reading 50 words takes under 10 minutes and prevents 90% of reading interruptions.
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 2: Interactive Flashcards & Visual Memory -->
+          <article id="step-2" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm">2</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Pre-Reading Flashcards &amp; Visual Memory</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Dictionary definitions are easy to forget. Books &amp; Vocab uses multisensory retention cards: vivid visuals, phonetic audio, real sentences from your book, and memorable mnemonics.
+              </p>
+
+              <!-- Interactive Features Grid -->
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-5 text-sm">
+                <!-- Front Face & Pronunciation -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-800 text-xs font-extrabold">Audio &amp; Flip</span>
+                    <span>Pronunciation &amp; Front Face</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Speaker Button:</strong> Tap the audio speaker icon to hear crystal-clear on-device pronunciation.</li>
+                    <li>• <strong>Tap to Flip:</strong> Tap anywhere on the card to smoothly flip between the word face and the detailed definition face.</li>
+                    <li>• <strong>Repetition Counter:</strong> Tap count indicators track how many times you've reviewed each card during your session.</li>
+                  </ul>
+                </div>
+
+                <!-- Setting Visuals & Artwork -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-indigo-100 text-indigo-800 text-xs font-extrabold">Visuals</span>
+                    <span>Setting-Anchored Illustrations</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Book Atmosphere:</strong> Illustrations are styled around the mood and time period of the story.</li>
+                    <li>• <strong>Generate Visuals:</strong> If a rare word doesn't have an artwork yet, tap <em>Generate Image</em> to create one instantly with AI.</li>
+                    <li>• <strong>Full-Screen Artwork:</strong> Double-tap or expand images for high-definition visual memory cues.</li>
+                  </ul>
+                </div>
+
+                <!-- Context Quotes -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 text-xs font-extrabold">Context</span>
+                    <span>Authentic In-Book Usage</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Original Excerpts:</strong> View the exact sentence from the author showing the word in natural narrative context.</li>
+                    <li>• <strong>Expand Context:</strong> Tap to toggle full paragraph context when understanding requires broader narrative framing.</li>
+                  </ul>
+                </div>
+
+                <!-- Mnemonics & Hooks -->
+                <div class="p-5 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center gap-2.5 font-bold text-slate-900">
+                    <span class="px-2 py-0.5 rounded-full bg-purple-100 text-purple-800 text-xs font-extrabold">Retention</span>
+                    <span>Clever Memory Hooks (Mnemonics)</span>
+                  </div>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li>• <strong>Memory Associations:</strong> Witty wordplay and associative connections make hard definitions lock into memory.</li>
+                    <li>• <strong>On-Demand Generation:</strong> Tap <em>Generate Mnemonic</em> for any tricky word to create a personalized memory hook.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Interactive Card Visual Representation -->
+              <div class="rounded-2xl bg-slate-950 text-white p-6 sm:p-8 space-y-5">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800 pb-4">
+                  <div>
+                    <h4 class="font-display font-bold text-lg text-white">Anatomy of a Vocabulary Flashcard</h4>
+                    <p class="text-xs text-slate-400">Everything you need to master words in seconds without breaking immersion.</p>
+                  </div>
+                  <div class="flex items-center gap-2 text-xs">
+                    <span class="px-2.5 py-1 rounded-md bg-emerald-500/20 text-emerald-400 font-bold border border-emerald-500/30">Tap Card = Flip</span>
+                    <span class="px-2.5 py-1 rounded-md bg-indigo-500/20 text-indigo-400 font-bold border border-indigo-500/30">Swipe Left/Right = Next Word</span>
+                  </div>
+                </div>
+
+                <!-- Simulated Card Mockup -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <!-- Front Face Preview -->
+                  <div class="bg-slate-900 rounded-xl p-5 border border-slate-800 flex flex-col justify-between min-h-[220px]">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                      <span class="px-2 py-0.5 rounded bg-slate-800 text-emerald-400 font-mono font-bold">Word #14 / 85</span>
+                      <span class="text-slate-400">Card Front</span>
+                    </div>
+                    <div class="my-4 text-center">
+                      <div class="text-2xl font-display font-extrabold text-white tracking-wide">petrichor</div>
+                      <div class="text-xs text-slate-400 italic mt-1">/ˈpɛtrɪkɔːr/ • noun</div>
+                      <div class="mt-3 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800 text-emerald-300 text-xs">
+                        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072M12 6v12m0-12L7.5 10.5H4a1 1 0 00-1 1v2.5a1 1 0 001 1h3.5L12 18"></path></svg>
+                        <span>Tap to listen</span>
+                      </div>
+                    </div>
+                    <div class="text-[11px] text-slate-500 text-center">
+                      Tap card to reveal artwork, definition &amp; context
+                    </div>
+                  </div>
+
+                  <!-- Back Face Preview -->
+                  <div class="bg-slate-900 rounded-xl p-5 border border-slate-800 flex flex-col justify-between min-h-[220px]">
+                    <div class="flex items-center justify-between text-xs text-slate-400">
+                      <span class="text-emerald-400 font-bold">Definition &amp; Excerpt</span>
+                      <span class="text-slate-400">Card Back</span>
+                    </div>
+                    <div class="my-3 space-y-2 text-xs">
+                      <p class="text-slate-200"><strong>Meaning:</strong> A pleasant, earthy smell that frequently accompanies the first rain after a long period of warm, dry weather.</p>
+                      <p class="text-emerald-300 italic border-l-2 border-emerald-500 pl-2">"The morning air smelled faintly of dust and petrichor as the carriage rolled past..."</p>
+                      <p class="text-amber-200/90 text-[11px]"><strong>💡 Mnemonic:</strong> Think of <em>petrified</em> earth greeting a <em>shower</em> of rain.</p>
+                    </div>
+                    <div class="flex justify-between items-center pt-2 border-t border-slate-800 text-[11px]">
+                      <span class="text-emerald-400 font-semibold">✓ Mark Mastered</span>
+                      <span class="text-rose-400 font-semibold">♥ Favourite</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-300 pt-2">
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400 font-bold">↔️</span>
+                    <span><strong>Seamless Navigation:</strong> Use the top chevron buttons or arrow controls to move quickly through the chapter's vocabulary.</span>
+                  </div>
+                  <div class="flex items-start gap-2">
+                    <span class="text-emerald-400 font-bold">🔁</span>
+                    <span><strong>Reverse Sort:</strong> Tap the counter pill (e.g. 1/85) to reverse progression order instantly.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 3: Instant Page Camera Scanner (OCR) -->
+          <article id="step-3" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="flex flex-col lg:flex-row gap-8 items-start">
+              <div class="flex-1 space-y-5">
+                <div class="flex items-center gap-3">
+                  <span class="w-10 h-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm">3</span>
+                  <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Instant Page Camera Scanner (On-Device OCR)</h3>
+                </div>
+                <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                  Reading a physical paperback or hardcover book? When you encounter an unfamiliar word on the printed page, you don't even have to type it. Point your iPhone or iPad camera at the page to scan and identify vocabulary instantly.
+                </p>
+
+                <div class="space-y-4 text-sm text-slate-700">
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">1</span>
+                    <div>
+                      <strong>Tap the Camera Icon:</strong> Inside any book's vocabulary deck, tap the <strong>📷 Camera</strong> button in the top toolbar.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">2</span>
+                    <div>
+                      <strong>Snap or Scan the Page:</strong> Align your device with the printed page. The built-in on-device document scanner captures the text instantly.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">3</span>
+                    <div>
+                      <strong>Instant Vocabulary Match:</strong> The app cross-references the scanned text against the book's curated vocabulary list and displays every matched word immediately.
+                    </div>
+                  </div>
+
+                  <div class="flex items-start gap-3">
+                    <span class="w-6 h-6 rounded-full bg-slate-100 text-slate-700 font-bold text-xs flex items-center justify-center shrink-0 mt-0.5">4</span>
+                    <div>
+                      <strong>Jump Straight to Flashcard:</strong> Tap <strong>Go to the page</strong> to automatically jump your deck to the exact word match, or tap individual words in the result list to review their meanings.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="rounded-2xl bg-emerald-50/70 border border-emerald-200/80 p-5 space-y-2">
+                  <div class="flex items-center gap-2 text-emerald-900 font-bold text-sm">
+                    <svg class="w-5 h-5 text-emerald-600" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>
+                    <span>100% Private On-Device Processing</span>
+                  </div>
+                  <p class="text-xs sm:text-sm text-emerald-950/80">
+                    Page text recognition runs directly on your device. Your captured book images are processed locally and are never uploaded or stored.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Scanner Graphic Box -->
+              <div class="w-full lg:w-80 bg-slate-900 text-white rounded-3xl p-6 shadow-md border border-slate-800 flex flex-col justify-between shrink-0 space-y-4">
+                <div class="text-xs uppercase font-bold tracking-wider text-emerald-400">Scanner Pro-Tips</div>
+                
+                <div class="space-y-3 text-xs">
+                  <div class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center shrink-0">1</span>
+                    <span><strong>Flat Placement:</strong> Keep the book spine flat or gently hold the margins to minimize page curvature.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center shrink-0">2</span>
+                    <span><strong>Even Lighting:</strong> Avoid heavy shadows cast by overhead lights or your phone. Natural daylight works best.</span>
+                  </div>
+                  <div class="flex items-start gap-2.5">
+                    <span class="w-5 h-5 rounded bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center shrink-0">3</span>
+                    <span><strong>Parallel Angle:</strong> Hold your phone directly above the page rather than tilted from the side.</span>
+                  </div>
+                </div>
+
+                <div class="space-y-2 text-xs text-slate-300 border-t border-slate-800 pt-3">
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/30 border border-emerald-500 inline-block shrink-0"></span>
+                    <span class="text-slate-300"><strong>Auto-Crop:</strong> Automatically snips page borders</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500/30 border border-emerald-500 inline-block shrink-0"></span>
+                    <span class="text-slate-300"><strong>Instant Jump:</strong> Synchronizes with current deck</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 4: Smart Study Modes, Word Filtering & Sorting -->
+          <article id="step-4" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 mb-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm">4</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Smart Study Modes, Word Filtering &amp; Sorting</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Tailor your learning session to your preferred reading pace. Filter by starting letters, sort by narrative order or frequency, and isolate challenging words.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Sorting Options -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center font-bold text-base">
+                    🔀
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Four Powerful Sorting Modes</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Tap the <strong>☰ Menu</strong> button in the deck header to switch sorting instantly:
+                  </p>
+                  <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 list-disc list-inside">
+                    <li><strong>Book Order:</strong> Follows the author's chronological story progression.</li>
+                    <li><strong>A → Z:</strong> Alphabetical order for rapid reference lookups.</li>
+                    <li><strong>Frequency:</strong> Prioritizes words that appear most often throughout the book.</li>
+                    <li><strong>Shuffle:</strong> Randomizes card order for rigorous retention quizzes.</li>
+                  </ul>
+                </div>
+
+                <!-- Letter Filter & Favourites -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="w-10 h-10 rounded-xl bg-purple-100 text-purple-800 flex items-center justify-center font-bold text-base">
+                    🎯
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Letter Filter Bar &amp; Focus Modes</h4>
+                  <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                    Narrow down your study deck with dedicated filters:
+                  </p>
+                  <ul class="space-y-1.5 text-xs sm:text-sm text-slate-600 list-disc list-inside">
+                    <li><strong>A–Z Letter Strip:</strong> Tap any letter pill to instantly focus on words starting with that letter, or tap <em>All</em> to view the whole deck.</li>
+                    <li><strong>Hide Mastered Words:</strong> Toggle on to focus exclusively on words you have not yet memorized.</li>
+                    <li><strong>Favourites Only:</strong> Star tricky words with the heart icon and review them together before reading.</li>
+                    <li><strong>Show Meaning on Front:</strong> Toggle to view definitions directly on the front face for quick skimming.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Step 5: Subscriptions, Free vs Pro & Account Management -->
+          <article id="step-5" class="bg-white rounded-3xl border border-slate-200/90 shadow-sm p-6 sm:p-10 transition-all hover:shadow-md">
+            <div class="space-y-6">
+              <div class="flex items-center gap-3">
+                <span class="w-10 h-10 rounded-2xl bg-emerald-500 text-white font-display font-extrabold flex items-center justify-center text-lg shadow-sm">5</span>
+                <h3 class="text-xl sm:text-2xl font-display font-bold text-slate-900">Subscriptions, Free vs Pro &amp; Account Management</h3>
+              </div>
+              <p class="text-slate-600 leading-relaxed text-sm sm:text-base">
+                Enjoy essential vocabulary decks for free, or unlock the complete library and custom book requests with Books &amp; Vocab Pro.
+              </p>
+
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                <!-- Free Plan -->
+                <div class="p-6 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-3">
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-slate-200 text-slate-800 font-bold text-xs uppercase tracking-wider">Free Starter</span>
+                    <span class="font-display font-extrabold text-slate-900 text-lg">$0</span>
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Free Reading Experience</h4>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-600">
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Full access to free public domain classics</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> On-device camera scanning for supported books</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Audio pronunciations and basic definitions</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Mastered and Favourite progress tracking</li>
+                  </ul>
+                </div>
+
+                <!-- Pro Plan -->
+                <div class="p-6 rounded-2xl bg-gradient-to-br from-emerald-500/10 via-white to-teal-500/10 border-2 border-emerald-500/30 space-y-3 relative overflow-hidden">
+                  <div class="flex items-center justify-between">
+                    <span class="px-3 py-1 rounded-full bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider shadow-xs">Pro Membership</span>
+                    <span class="font-display font-extrabold text-emerald-800 text-lg">Monthly / Annual</span>
+                  </div>
+                  <h4 class="font-display font-bold text-slate-900 text-base">Unlimited Access &amp; Custom Decks</h4>
+                  <ul class="space-y-2 text-xs sm:text-sm text-slate-700">
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>Unlimited access</strong> to all library books &amp; flashcards</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>Up to 4 new book requests</strong> per month</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> <strong>100% Ad-free experience</strong> with zero distractions</li>
+                    <li class="flex items-center gap-2"><span class="text-emerald-600 font-bold">✓</span> Priority processing for custom book requests</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- 3. Frequently Asked Questions (FAQ) -->
+        <section id="faq" class="pt-8">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Help &amp; Troubleshooting</span>
+            <h2 class="mt-3 text-3xl sm:text-4xl font-display font-extrabold text-slate-900 tracking-tight">Frequently Asked Questions</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">Find answers to common questions about book requests, camera scanning, and subscriptions.</p>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How does Books &amp; Vocab choose which words to include?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Each book's text is analyzed to identify the rarest, most sophisticated, and setting-specific terms that readers typically pause to look up in a dictionary, filtering out common conversational vocabulary.
+              </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">Why did the camera scanner miss a word on my printed page?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                On-device OCR works best when the printed page is flat, evenly illuminated, and parallel to your phone's lens. If your page has curved margins near the spine, harsh shadows, or angled glare, some characters might not register cleanly. Smooth the page gently, hold your phone directly overhead, and ensure good lighting. If a word is missing from the list, you can search for it directly in the deck's search bar.
+              </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do custom book requests work?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                If a title you plan to read isn't currently in our pre-indexed catalog, tap the <strong>+</strong> button, search, or choose <strong>Request Manually</strong>. Enter the book title, author, and preferably the 10- or 13-digit ISBN. Our system creates your custom vocabulary deck in chapter sequence alongside contextual definitions, setting illustrations, and mnemonics. Pro subscribers get up to 4 custom requests per month with prioritized processing.
+              </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I study words in chronological reading order?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Open any book deck, tap the <strong>☰ Menu</strong> icon in the top right, and ensure <strong>Book Order</strong> is checked under the Sort section. This arranges the cards in the exact order the words appear from chapter 1 through to the final page. Reviewing the first 50 words before starting your chapter ensures you never stumble over vocabulary while reading.
+              </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">Can I listen to audio pronunciations offline?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Yes! Word pronunciations are generated directly on your device, meaning you can listen to pronunciations offline without needing an active cellular or Wi-Fi connection.
+              </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I restore my purchases on a new device?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                If you upgrade your iPhone or reinstall the app, open the <strong>Account</strong> or <strong>Subscriptions</strong> screen, tap <strong>Restore</strong> in the top toolbar, and sign in with the Apple ID used to make your original purchase. Your Pro access will be restored immediately.
+              </div>
+            </details>
+
+            <!-- FAQ 7 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I manage or cancel my subscription?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                All subscriptions are billed securely through Apple and can be managed anytime in iOS Settings:
+                <ol class="mt-2 space-y-1 list-decimal list-inside pl-1 text-slate-700">
+                  <li>Open your iOS device's <strong>Settings</strong> app.</li>
+                  <li>Tap your <strong>Apple ID profile name</strong> at the very top.</li>
+                  <li>Tap <strong>Subscriptions</strong>.</li>
+                  <li>Select <strong>Books &amp; Vocab</strong> and choose <strong>Cancel Subscription</strong>.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- FAQ 8 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-emerald-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I delete my account and data?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-emerald-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                You can delete your account and associated data directly inside the app at any time:
+                <ol class="mt-2 space-y-1 list-decimal list-inside pl-1 text-slate-700">
+                  <li>Open the app and tap the top-right profile icon to open <strong>Account Settings</strong>.</li>
+                  <li>Scroll to the <strong>Delete Account</strong> section and tap the button.</li>
+                  <li>Type <code class="bg-slate-100 px-1 py-0.5 rounded text-xs font-mono font-bold">DELETE</code> to confirm.</li>
+                </ol>
+                <p class="mt-2 text-xs text-slate-500">
+                  This permanently removes your profile, requested book history, and saved vocabulary data. <em>Note: App Store subscriptions are billed separately by Apple and should be cancelled in your Apple ID settings.</em>
+                </p>
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 4. Contact & Support Information Box (App Store Compliant) -->
+        <section id="contact" class="pt-8 print-break">
+          <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800">
+            <div class="max-w-3xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-400/20 text-emerald-300 border border-emerald-400/30 text-xs font-bold uppercase tracking-wider">
+                App Store Support &amp; Contact
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white">Need Additional Help?</h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Whether you have questions about book requests, OCR page detection, feature suggestions, or need billing assistance, our dedicated team is here to help you.
+              </p>
+
+              <!-- App Store Metadata Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs sm:text-sm">
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Application Name</div>
+                  <div class="font-bold text-white">Books &amp; Vocab</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Publisher / Studio</div>
+                  <div class="font-bold text-white">HeyGhoshi</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Support Email</div>
+                  <div>
+                    <a href="mailto:human@heyghoshi.com?subject=Books%20%26%20Vocab%20Support" class="font-bold text-emerald-400 hover:underline">
+                      human@heyghoshi.com
+                    </a>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Typical Response Time</div>
+                  <div class="font-bold text-emerald-400">Within 24–48 hours</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">System Compatibility</div>
+                  <div class="text-slate-200">Requires iOS 17.0 or iPadOS 17.0 or later (iPhone &amp; iPad)</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">In-App Support</div>
+                  <div class="text-slate-200">Account &gt; Help &amp; Privacy</div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-6 flex flex-wrap gap-4 items-center">
+                <a
+                  href="mailto:human@heyghoshi.com?subject=Books%20%26%20Vocab%20Support"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
+                >
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  <span>Email Support Directly</span>
+                </a>
+                <a
+                  href="../../privacy/books-vocab/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Privacy Policy</span>
+                </a>
+                <a
+                  href="../../terms/books-vocab/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Terms of Use</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-slate-200/80 bg-white py-10 no-print">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex items-center gap-3">
+            <a href="../../" class="font-bold text-slate-800 hover:text-emerald-600 transition-colors">HeyGhoshi</a>
+            <span>•</span>
+            <span>&copy; 2026 HeyGhoshi. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="../" class="hover:text-emerald-600 transition-colors font-medium">All App Guides</a>
+            <a href="../../privacy/books-vocab/" class="hover:text-emerald-600 transition-colors font-medium">Privacy</a>
+            <a href="../../terms/books-vocab/" class="hover:text-emerald-600 transition-colors font-medium">Terms</a>
+            <a href="mailto:human@heyghoshi.com" class="hover:text-emerald-600 transition-colors font-medium">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
