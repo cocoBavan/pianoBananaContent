@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cute Artist Support &amp; User Guide — HeyGhoshi</title>
+    <meta
+      name="description"
+      content="User guide, troubleshooting, and support for the Cute Artist iOS drawing and colouring app. Learn how to use classic and magic brushes, save colourings, and manage Cute Artist Premium."
+    />
+    <link rel="canonical" href="https://heyghoshi.com/support/cute-artist/" />
+    <meta name="theme-color" content="#f43f5e" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="HeyGhoshi" />
+    <meta property="og:title" content="Cute Artist Support &amp; User Guide" />
+    <meta
+      property="og:description"
+      content="Drawing and colouring for young artists. Step-by-step guide, brush overview, FAQ, and support contact."
+    />
+    <meta property="og:url" content="https://heyghoshi.com/support/cute-artist/" />
+    <meta property="og:image" content="https://heyghoshi.com/images/icon_artist_256.jpg" />
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "sans-serif",
+              ],
+              display: [
+                "Sora",
+                '"Plus Jakarta Sans"',
+                "Inter",
+                "sans-serif",
+              ],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Plus Jakarta Sans", "Inter", sans-serif;
+        background-color: #f8fafc;
+        color: #1e293b;
+      }
+      .font-display {
+        font-family: "Sora", sans-serif;
+      }
+      details > summary::-webkit-details-marker {
+        display: none;
+      }
+      details[open] summary svg.chevron {
+        transform: rotate(180deg);
+      }
+      @media print {
+        .no-print {
+          display: none !important;
+        }
+        body {
+          background-color: #ffffff !important;
+          color: #000000 !important;
+        }
+        .print-break {
+          page-break-before: always;
+        }
+      }
+    </style>
+  </head>
+  <body class="min-h-screen flex flex-col bg-slate-50 text-slate-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+    <!-- Header / Navbar -->
+    <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-slate-200/80 no-print transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16 sm:h-20">
+          <!-- Logo & Brand -->
+          <a href="../../" class="flex items-center gap-3 group">
+            <div class="w-10 h-10 sm:w-12 sm:h-12 rounded-2xl overflow-hidden shadow-md shadow-rose-500/20 ring-1 ring-slate-200 shrink-0 group-hover:scale-105 transition-transform">
+              <img src="../../images/icon_artist_256.jpg" alt="Cute Artist app icon" class="w-full h-full object-cover" />
+            </div>
+            <div>
+              <span class="text-lg sm:text-xl font-display font-extrabold tracking-tight text-slate-900 block leading-tight">Cute Artist</span>
+              <span class="text-[11px] font-bold text-rose-600 tracking-wider uppercase">Support &amp; User Guide</span>
+            </div>
+          </a>
+
+          <!-- Action Controls -->
+          <div class="flex items-center gap-2 sm:gap-4">
+            <a
+              href="../"
+              class="hidden md:inline-flex items-center text-sm font-semibold text-slate-600 hover:text-slate-900 transition-colors"
+            >
+              All App Guides
+            </a>
+            <button
+              onclick="window.print()"
+              class="hidden sm:inline-flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 rounded-xl transition-colors cursor-pointer"
+              title="Print or Save as PDF"
+            >
+              <svg class="w-4 h-4 text-slate-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path>
+              </svg>
+              <span>Print Guide</span>
+            </button>
+            <a
+              href="#contact"
+              class="inline-flex items-center gap-1.5 px-3.5 py-2 text-xs sm:text-sm font-bold bg-rose-500 hover:bg-rose-400 text-white rounded-xl shadow-sm transition-all"
+            >
+              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <span>Contact Support</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Navigation Anchor Bar -->
+    <div class="sticky top-16 sm:top-20 z-30 bg-slate-100/90 backdrop-blur-md border-b border-slate-200/80 no-print overflow-x-auto py-2.5 px-4">
+      <div class="max-w-6xl mx-auto flex items-center gap-2 sm:gap-3 text-xs font-semibold whitespace-nowrap">
+        <span class="text-slate-400 uppercase tracking-wider text-[10px] hidden sm:inline mr-1">Jump to:</span>
+        <a href="#overview" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-rose-700 hover:bg-rose-50 border border-slate-200 shadow-2xs transition-colors">Overview</a>
+        <a href="#step-1" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-rose-700 hover:bg-rose-50 border border-slate-200 shadow-2xs transition-colors">1. Choose Artwork</a>
+        <a href="#step-2" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-rose-700 hover:bg-rose-50 border border-slate-200 shadow-2xs transition-colors">2. Brushes &amp; Colours</a>
+        <a href="#step-3" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-rose-700 hover:bg-rose-50 border border-slate-200 shadow-2xs transition-colors">3. Animate &amp; Save</a>
+        <a href="#step-4" class="px-3 py-1 rounded-full bg-white text-slate-700 hover:text-rose-700 hover:bg-rose-50 border border-slate-200 shadow-2xs transition-colors">4. Settings &amp; Premium</a>
+        <a href="#faq" class="px-3 py-1 rounded-full bg-rose-100/80 text-rose-900 hover:bg-rose-200 border border-rose-200/60 shadow-2xs transition-colors">FAQ</a>
+        <a href="#contact" class="px-3 py-1 rounded-full bg-slate-900 text-white hover:bg-slate-800 shadow-2xs transition-colors">Support Info</a>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main class="flex-1">
+      <!-- 1. Hero & Overview Section -->
+      <section id="overview" class="bg-gradient-to-b from-rose-500/10 via-rose-500/5 to-slate-50 border-b border-slate-200/60 py-12 sm:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="max-w-3xl">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-100 text-rose-900 border border-rose-200 text-xs font-bold uppercase tracking-wider mb-4">
+              <span class="w-2 h-2 rounded-full bg-rose-500 animate-pulse"></span>
+              Official iOS User Guide &amp; App Support
+            </div>
+            <h1 class="text-3xl sm:text-5xl font-display font-extrabold text-slate-900 tracking-tight leading-tight mb-4">
+              Cute Artist Support &amp; User Guide
+            </h1>
+            <p class="text-xl sm:text-2xl font-semibold text-rose-700 leading-snug mb-4">
+              Colour step by step, then watch your creation come to life.
+            </p>
+            <p class="text-base sm:text-lg text-slate-600 leading-relaxed">
+              <strong>Cute Artist</strong> is a playful drawing and colouring app designed for young artists on iPhone and iPad. Pick a character or scene, colour each part with classic and magic brushes, and enjoy cheerful animations and sound effects when you finish—with all your saved drawings kept privately on your device.
+            </p>
+          </div>
+
+          <!-- Feature Quick-Glance Cards -->
+          <div class="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 no-print">
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-rose-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-rose-100 text-rose-700 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Guided Step-by-Step</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Colour each part of a character or scene one step at a time with helpful outlines so every drawing looks great.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-rose-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Classic &amp; Magic Brushes</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">Switch between Crayon, Marker, Watercolor, Pencil, Rainbow, Neon, Glitter, and Polka Dots.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-rose-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-sky-100 text-sky-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Living Animations</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">When you finish colouring, your artwork animates on screen with playful sound effects.</p>
+            </div>
+
+            <div class="bg-white p-5 rounded-2xl border border-slate-200/80 shadow-sm hover:border-rose-300 transition-all">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-800 flex items-center justify-center mb-3">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                </svg>
+              </div>
+              <h2 class="font-bold text-slate-900 text-base mb-1">Private &amp; Local</h2>
+              <p class="text-xs text-slate-600 leading-relaxed">No accounts, no public gallery, and no ad tracking. All saved drawings stay on your device.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Step-by-Step Walkthrough Section -->
+      <section class="py-12 sm:py-16 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+        <div>
+          <div class="text-center max-w-2xl mx-auto mb-12">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-3 py-1 rounded-full">Step-by-Step Walkthrough</span>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-display font-extrabold text-slate-900 tracking-tight">How to Create &amp; Save in Cute Artist</h2>
+            <p class="mt-2 text-slate-600 text-sm sm:text-base">From picking a character to watching your finished drawing animate.</p>
+          </div>
+
+          <div class="space-y-8">
+            <!-- Step 1 -->
+            <div id="step-1" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white font-display font-extrabold text-xl flex items-center justify-center shrink-0 shadow-md shadow-rose-500/20">
+                1
+              </div>
+              <div class="space-y-3 flex-1">
+                <h3 class="text-xl font-display font-bold text-slate-900">Choose an Artwork or Revisit a Saved Drawing</h3>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Browse the artwork gallery to pick a character or scene you want to colour. If you have already saved drawings, you can swipe through your saved collection to view them or replay their animations anytime.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Free &amp; Premium Artworks</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Starter artworks are ready to colour right away. Additional characters and scenes unlock with Cute Artist Premium.</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Saved Carousel</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Every drawing you save appears in your local saved carousel so you can admire or delete it whenever you like.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div id="step-2" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white font-display font-extrabold text-xl flex items-center justify-center shrink-0 shadow-md shadow-rose-500/20">
+                2
+              </div>
+              <div class="space-y-3 flex-1">
+                <h3 class="text-xl font-display font-bold text-slate-900">Colour with Classic &amp; Magic Brushes</h3>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Tap any crayon along the side to pick a colour family, then choose a shade from the shade palette. Pick your brush style and brush size, and draw freely with your finger or Apple Pencil.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Classic Brushes</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed"><strong>Crayon</strong>, <strong>Marker</strong>, <strong>Watercolor</strong>, and <strong>Pencil</strong> give natural textures and smooth strokes, plus an <strong>Eraser</strong> to tidy up.</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Magic Brushes</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Add playful flair with <strong>Rainbow</strong>, <strong>Neon</strong>, <strong>Glitter</strong>, and <strong>Polka Dots</strong> (with custom dot pattern styles).</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div id="step-3" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white font-display font-extrabold text-xl flex items-center justify-center shrink-0 shadow-md shadow-rose-500/20">
+                3
+              </div>
+              <div class="space-y-3 flex-1">
+                <h3 class="text-xl font-display font-bold text-slate-900">Watch Your Artwork Animate &amp; Save It</h3>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Use the <strong>Next</strong> and <strong>Previous</strong> controls to move through each part of the drawing. When the final part is complete, your finished character comes to life on screen with animation and sound effects.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Save Locally</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Tap <strong>Save</strong> to store your finished colouring on your device so you can revisit it anytime.</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Delete Anytime</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Want to start fresh or tidy up? Tap <strong>Delete</strong> on any saved colouring to remove it immediately from your device.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div id="step-4" class="bg-white rounded-3xl border border-slate-200/80 shadow-sm p-6 sm:p-8 flex flex-col md:flex-row gap-6 md:gap-8 items-start">
+              <div class="w-12 h-12 rounded-2xl bg-rose-500 text-white font-display font-extrabold text-xl flex items-center justify-center shrink-0 shadow-md shadow-rose-500/20">
+                4
+              </div>
+              <div class="space-y-3 flex-1">
+                <h3 class="text-xl font-display font-bold text-slate-900">Settings, Music &amp; Cute Artist Premium</h3>
+                <p class="text-slate-600 text-sm sm:text-base leading-relaxed">
+                  Open <strong>Settings</strong> from the home screen to customise background music or manage your Cute Artist Premium access.
+                </p>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Background Music</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Toggle <strong>Background Music</strong> on or off at any time to play or mute cheerful music while you draw.</p>
+                  </div>
+                  <div class="bg-slate-50 rounded-2xl p-4 border border-slate-200/70">
+                    <h4 class="font-bold text-slate-900 text-sm mb-1">Premium &amp; Restore Purchases</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed">Unlock all artwork and brushes with a Monthly subscription or a one-time Lifetime unlock. Use <strong>Restore Purchases</strong> to sync your Apple ID entitlement on any device.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. FAQ Section -->
+        <section id="faq" class="pt-4">
+          <div class="text-center max-w-2xl mx-auto mb-10">
+            <span class="text-xs font-bold uppercase tracking-wider text-rose-700 bg-rose-100 px-3 py-1 rounded-full">Frequently Asked Questions</span>
+            <h2 class="mt-3 text-2xl sm:text-3xl font-display font-extrabold text-slate-900 tracking-tight">Common Questions &amp; Troubleshooting</h2>
+          </div>
+
+          <div class="max-w-3xl mx-auto space-y-4">
+            <!-- FAQ 1 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">Where are my saved drawings stored?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                All drawings and saved colourings are stored locally on your iPhone or iPad inside the app's private storage. Cute Artist does not have user accounts or an online gallery, and your artwork is never uploaded to our servers.
+              </div>
+            </details>
+
+            <!-- FAQ 2 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">Does Cute Artist work offline?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Yes—once an artwork pack is downloaded (or bundled in the app), you can colour and view your saved drawings offline. An internet connection is only needed to download new artwork packs or background music tracks, or to make or restore App Store purchases.
+              </div>
+            </details>
+
+            <!-- FAQ 3 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I turn off background music?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Open <strong>Settings</strong> inside Cute Artist and switch <strong>Background Music</strong> off. Your preference is saved automatically.
+              </div>
+            </details>
+
+            <!-- FAQ 4 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I restore my purchases on another device?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                All purchases are linked to your Apple ID. Open Cute Artist, go to <strong>Settings</strong>, and tap <strong>Restore Purchases</strong> while signed in with the same Apple ID used to make the original purchase.
+              </div>
+            </details>
+
+            <!-- FAQ 5 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I manage or cancel my subscription?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                All subscriptions are billed securely through Apple and can be managed anytime in iOS Settings:
+                <ol class="mt-2 space-y-1 list-decimal list-inside pl-1 text-slate-700">
+                  <li>Open your iOS device's <strong>Settings</strong> app.</li>
+                  <li>Tap your <strong>Apple ID profile name</strong> at the very top.</li>
+                  <li>Tap <strong>Subscriptions</strong>.</li>
+                  <li>Select <strong>Cute Artist</strong> and choose <strong>Cancel Subscription</strong>.</li>
+                </ol>
+              </div>
+            </details>
+
+            <!-- FAQ 6 -->
+            <details class="group bg-white rounded-2xl border border-slate-200/80 shadow-2xs overflow-hidden transition-all">
+              <summary class="flex items-center justify-between p-5 sm:p-6 cursor-pointer font-display font-bold text-slate-900 hover:text-rose-700 transition-colors list-none select-none">
+                <span class="text-sm sm:text-base">How do I delete my data?</span>
+                <svg class="chevron w-5 h-5 text-slate-400 group-hover:text-rose-600 transition-transform duration-200 shrink-0 ml-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                </svg>
+              </summary>
+              <div class="px-5 pb-5 sm:px-6 sm:pb-6 text-sm text-slate-600 leading-relaxed border-t border-slate-100 pt-3">
+                Because Cute Artist has no accounts and stores all drawings locally on your device, you can delete individual saved colourings inside the app or uninstall Cute Artist to permanently erase all local drawings and settings.
+              </div>
+            </details>
+          </div>
+        </section>
+
+        <!-- 4. Contact & Support Information Box (App Store Compliant) -->
+        <section id="contact" class="pt-8 print-break">
+          <div class="bg-gradient-to-br from-slate-900 via-slate-900 to-slate-950 text-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-800">
+            <div class="max-w-3xl space-y-6">
+              <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-400/20 text-rose-300 border border-rose-400/30 text-xs font-bold uppercase tracking-wider">
+                App Store Support &amp; Contact
+              </div>
+              <h2 class="text-2xl sm:text-3xl font-display font-extrabold text-white">Need Additional Help?</h2>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+                Have a question about brushes, artwork packs, saved drawings, or Cute Artist Premium? Reach out and we will be happy to help.
+              </p>
+
+              <!-- App Store Metadata Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-slate-800 text-xs sm:text-sm">
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Application Name</div>
+                  <div class="font-bold text-white">Cute Artist</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Publisher / Studio</div>
+                  <div class="font-bold text-white">HeyGhoshi</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Support Email</div>
+                  <div>
+                    <a href="mailto:human@heyghoshi.com?subject=Cute%20Artist%20Support" class="font-bold text-rose-400 hover:underline">
+                      human@heyghoshi.com
+                    </a>
+                  </div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">Typical Response Time</div>
+                  <div class="font-bold text-rose-400">Within 24–48 hours</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">System Compatibility</div>
+                  <div class="text-slate-200">Requires iOS 16.4 or iPadOS 16.4 or later (iPhone &amp; iPad)</div>
+                </div>
+                <div class="space-y-1">
+                  <div class="text-slate-400 text-xs font-medium uppercase tracking-wider">In-App Settings</div>
+                  <div class="text-slate-200">Home ▸ Settings</div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="pt-6 flex flex-wrap gap-4 items-center">
+                <a
+                  href="mailto:human@heyghoshi.com?subject=Cute%20Artist%20Support"
+                  class="inline-flex items-center gap-2 px-6 py-3 rounded-2xl bg-rose-500 hover:bg-rose-400 text-white font-bold text-sm shadow-md transition-all hover:scale-[1.02]"
+                >
+                  <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                  </svg>
+                  <span>Email Support Directly</span>
+                </a>
+                <a
+                  href="../../privacy/cute-artist/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Privacy Policy</span>
+                </a>
+                <a
+                  href="../../terms/cute-artist/"
+                  class="inline-flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold text-sm border border-slate-700 transition-colors"
+                >
+                  <span>Terms of Use</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-slate-200/80 bg-white py-10 no-print">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+          <div class="flex items-center gap-3">
+            <a href="../../" class="font-bold text-slate-800 hover:text-rose-600 transition-colors">HeyGhoshi</a>
+            <span>•</span>
+            <span>&copy; 2026 HeyGhoshi. All rights reserved.</span>
+          </div>
+          <div class="flex items-center gap-4">
+            <a href="../" class="hover:text-rose-600 transition-colors font-medium">All App Guides</a>
+            <a href="../../privacy/cute-artist/" class="hover:text-rose-600 transition-colors font-medium">Privacy</a>
+            <a href="../../terms/cute-artist/" class="hover:text-rose-600 transition-colors font-medium">Terms</a>
+            <a href="mailto:human@heyghoshi.com" class="hover:text-rose-600 transition-colors font-medium">Support</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
